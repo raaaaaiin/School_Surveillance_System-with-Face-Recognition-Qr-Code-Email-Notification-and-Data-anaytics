@@ -13,11 +13,11 @@ using System.Text.RegularExpressions;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class adminadddata : Form
+    public partial class SSadminadddata : Form
     {
         connection _con = new connection();
         function _func = new function();
-        public adminadddata()
+        public SSadminadddata()
         {
             InitializeComponent();
             ddfill.Enabled = false;
@@ -117,7 +117,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
-            QuestionBox Questionbox = new QuestionBox("Confirmation to Delete Category Data!");
+            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to Delete Category Data!");
             Questionbox.ShowDialog();
 
             if (Questionbox.answer == true)
@@ -138,7 +138,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton7_Click(object sender, EventArgs e)
         {
-            QuestionBox Questionbox = new QuestionBox("Confirmation to Delete Credit score data!");
+            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to Delete Credit score data!");
             Questionbox.ShowDialog();
             if (Questionbox.answer == true)
             {
@@ -165,7 +165,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton8_Click(object sender, EventArgs e)
         {
-            QuestionBox Questionbox = new QuestionBox("Confirmation to Remove selected year!");
+            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to Remove selected year!");
             Questionbox.ShowDialog();
             if (Questionbox.answer == true)
             {
@@ -191,7 +191,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton9_Click(object sender, EventArgs e)
         {
-            QuestionBox Questionbox = new QuestionBox("Confirmation to delete program of the selected year!");
+            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to delete program of the selected year!");
             Questionbox.ShowDialog();
             if (Questionbox.answer == true)
             {
@@ -211,7 +211,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton10_Click(object sender, EventArgs e)
         {
-            QuestionBox Questionbox = new QuestionBox("Confirmation to Section inside the program of selected year!");
+            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to Section inside the program of selected year!");
             Questionbox.ShowDialog();
             if (Questionbox.answer == true)
             {

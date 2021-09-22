@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class StdlogIn : Form
+    public partial class SSlogIn : Form
     {
         connection _con;
         function _func = new function();
         fileHandler _filehandler =  new fileHandler();
-        public StdlogIn()
+        public SSlogIn()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace Surveillance_FaceRecognition
             auth = _func.authentication();
             if (auth == true)
             {
-                menu manu = new menu();
+                SSmenu manu = new SSmenu();
                 manu.setrole = _func.role;
                 manu.preInit();
                 manu.Show();
@@ -76,7 +76,7 @@ namespace Surveillance_FaceRecognition
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dbConfiguration _new = new dbConfiguration(this);
+            SSdbConfiguration _new = new SSdbConfiguration(this);
             _new.Show();
             this.Hide();
         }

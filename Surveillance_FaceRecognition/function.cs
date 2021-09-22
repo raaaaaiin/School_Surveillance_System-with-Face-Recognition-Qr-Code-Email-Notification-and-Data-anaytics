@@ -252,7 +252,7 @@ namespace Surveillance_FaceRecognition
                     com.CommandText = "insert INTO book_categ_data(book_id,Category) values('" + book_id + "','" + category + "')";
                     com.ExecuteNonQuery();
                     con.Close();
-                    Messagebox MessageBox = new Messagebox("Added new category!"); MessageBox.Show();
+                    SSMessagebox MessageBox = new SSMessagebox("Added new category!"); MessageBox.Show();
                 }
                 catch
                 {
@@ -263,7 +263,7 @@ namespace Surveillance_FaceRecognition
             }
             else if(indicator == 1)
             {
-                Messagebox MessageBox = new Messagebox("Duplicate entry of category!"); MessageBox.Show();
+                SSMessagebox MessageBox = new SSMessagebox("Duplicate entry of category!"); MessageBox.Show();
             }
             
 
@@ -680,7 +680,7 @@ namespace Surveillance_FaceRecognition
             com.CommandType = System.Data.CommandType.Text;
             com.CommandText = "Update user_acc set Username = '" + username + "' ,Password= '" +password+ "' ,role= '" + Role + "' where UID = '" + id + "'";
             com.ExecuteNonQuery();
-            Messagebox MessageBox = new Messagebox("Updated Successfully");MessageBox.Show();
+            SSMessagebox MessageBox = new SSMessagebox("Updated Successfully");MessageBox.Show();
             con.Close();
         }
         public void updateBookinfo(string id,string title,string author, string page, string qty,string information)
@@ -694,11 +694,11 @@ namespace Surveillance_FaceRecognition
                 com.CommandText = "Update book set title = '" + title + "' ,author= '" + author + "' ,page= '" + page + "' ,Quantity= '" + qty + "',Information = '" + information + "' where ID = '" + id + "'";
                 com.ExecuteNonQuery();
                 con.Close();
-                Messagebox MessageBox = new Messagebox("Data updated successfully!");MessageBox.Show();
+                SSMessagebox MessageBox = new SSMessagebox("Data updated successfully!");MessageBox.Show();
             }
             catch
             {
-                Messagebox MessageBox = new Messagebox("Data updated failed!"); MessageBox.Show();
+                SSMessagebox MessageBox = new SSMessagebox("Data updated failed!"); MessageBox.Show();
 
             }
         }
