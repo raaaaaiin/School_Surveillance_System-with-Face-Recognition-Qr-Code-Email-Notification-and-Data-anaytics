@@ -3,24 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SURVEILLANCE_FACE_RECOGNITION", "Library_Management\SURVEILLANCE_FACE_RECOGNITION.csproj", "{9EFB1641-7635-4BE5-834D-8D531FBC4D51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SURVEILLANCE_FACE_RECOGNITION", "Surveillance_FaceRecognition\SURVEILLANCE_FACE_RECOGNITION.csproj", "{9EFB1641-7635-4BE5-834D-8D531FBC4D51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveRecognition_VS2010+", "..\C#\LiveRecognition_VS2010+.csproj", "{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Debug|x64.Build.0 = Debug|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Debug|x86.Build.0 = Debug|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Release|x64.ActiveCfg = Release|Any CPU
+		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Release|x64.Build.0 = Release|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Release|x86.ActiveCfg = Release|Any CPU
 		{9EFB1641-7635-4BE5-834D-8D531FBC4D51}.Release|x86.Build.0 = Release|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Debug|x64.Build.0 = Debug|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Debug|x86.Build.0 = Debug|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Release|x64.ActiveCfg = Release|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Release|x64.Build.0 = Release|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF5A3BAE-BA9A-43F7-B4CA-BCB0A8E8F322}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

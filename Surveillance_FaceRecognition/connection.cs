@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.OleDb;
 using MySql.Data.MySqlClient;
-
+using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
@@ -43,7 +43,7 @@ namespace Surveillance_FaceRecognition
         {
             con.Open();
             con.Close();
-
+            MessageBox.Show("Hello, world.");
         }
 
     }

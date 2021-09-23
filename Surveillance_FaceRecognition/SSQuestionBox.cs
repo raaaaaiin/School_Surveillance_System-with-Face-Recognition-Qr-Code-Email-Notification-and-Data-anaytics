@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class QuestionBox : Form
+    public partial class SSQuestionBox : Form
     {
         public bool answer = false;
-        public QuestionBox(string text)
+        public SSQuestionBox(string text)
         {
             InitializeComponent();
             label1.Text = text;

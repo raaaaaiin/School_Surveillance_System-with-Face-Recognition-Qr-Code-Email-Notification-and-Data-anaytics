@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-namespace MultiFaceRec
+namespace Surveillance_FaceRecognition
 {
-    public partial class Login : Form
+    public partial class FRLogin : Form
     {
         SqlConnection con;
-        public Login()
+        public FRLogin()
         {
             InitializeComponent();
             string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Reyn\Desktop\FaceRecProOV\MyDb.mdf;Integrated Security=True;Connect Timeout=30";
@@ -39,13 +39,13 @@ namespace MultiFaceRec
             if (usertype.Equals("Admin"))
             {
 
-                MakeRegistered mr = new MakeRegistered();
+                FRMakeRegistered mr = new FRMakeRegistered();
                 mr.Show();
             }
             else
             {
                 this.Hide();
-                FrmPrincipal fp = new FrmPrincipal();
+                FRMainForm fp = new FRMainForm();
                 fp.Show();
 
             }

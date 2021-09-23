@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class Messagebox : Form
+    public partial class SSMessagebox : Form
     {
-        public Messagebox(string text)
+        public SSMessagebox(string text)
         {
             InitializeComponent();
             label1.Text = text;

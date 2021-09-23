@@ -15,14 +15,14 @@ using MySql.Data.MySqlClient;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class massdataupdate : Form
+    public partial class SSmassdataupdate : Form
     {
         fileHandler _file = new fileHandler();
         connection _con = new connection();
         function _func = new function();
-        QuestionBox qb;
+        SSQuestionBox qb;
         Boolean record = true;
-        public massdataupdate()
+        public SSmassdataupdate()
         {
             InitializeComponent();
             
@@ -48,7 +48,7 @@ namespace Surveillance_FaceRecognition
                         conn.Open();
                         mb.ExportToFile(file);
                         conn.Close();
-                        Messagebox MessageBox = new Messagebox("Data Export success!");
+                        SSMessagebox MessageBox = new SSMessagebox("Data Export success!");
                     }
                 }
             }
@@ -77,7 +77,7 @@ namespace Surveillance_FaceRecognition
                         mb.ImportFromFile(file);
                         conn.Close();
 
-                        Messagebox MessageBox = new Messagebox("Data Export success!");
+                        SSMessagebox MessageBox = new SSMessagebox("Data Export success!");
                     }
                 }
             }
@@ -94,7 +94,7 @@ namespace Surveillance_FaceRecognition
             while (_con.reader.Read())
             {
                 MessageBox.Show("LOL");
-                qb = new QuestionBox("'" + _con.reader[0] + "' Did not return a book!");
+                qb = new SSQuestionBox("'" + _con.reader[0] + "' Did not return a book!");
                 qb.ShowDialog();
 
             }
@@ -128,7 +128,7 @@ namespace Surveillance_FaceRecognition
             while (_con.reader.Read())
             {
                 record = true;
-                qb = new QuestionBox("'" + _con.reader[0] + "' Did not return a book!");
+                qb = new SSQuestionBox("'" + _con.reader[0] + "' Did not return a book!");
                 qb.ShowDialog();
 
             }
@@ -141,7 +141,7 @@ namespace Surveillance_FaceRecognition
                 _con.com.CommandType = System.Data.CommandType.Text;
                 _con.com.CommandText = "Update user_info set stud_level = '" + year3.Text + "' ,stud_program= '" + prog3.Text + "' ,stud_section= '" + sec3.Text + "', stud_sy ='"+sy3.Text+"' where stud_level = '" + year2.Text + "' and stud_program = '" + prog2.Text + "' and stud_section ='" + sec2.Text + "' and stud_sy = '" + sy2.Text + "'";
                 _con.com.ExecuteNonQuery();
-                Messagebox MessageBox = new Messagebox("Updated Successfully"); MessageBox.Show();
+                SSMessagebox MessageBox = new SSMessagebox("Updated Successfully"); MessageBox.Show();
                 _con.condupe.Close();
             }
                 reload();

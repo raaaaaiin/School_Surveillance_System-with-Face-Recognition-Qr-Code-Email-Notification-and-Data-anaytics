@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class menu : Form
+    public partial class SSmenu : Form
     {
         static notificationBar _notif;
         static int upcontrol = 1;
         public string setrole = "";
-        public editStudentinfo _stdInfBox;
-        public editBookinfo _bookInfBox;
-        public adminForm _adminForm;
-        public menu()
+        public SSeditStudentinfo _stdInfBox;
+        public SSeditBookinfo _bookInfBox;
+        public SSadminForm _adminForm;
+        public SSmenu()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace Surveillance_FaceRecognition
            
           if(setrole.Equals("Admin"))
             {
-                previlages _priv = new previlages(this);
+                SSprevilages _priv = new SSprevilages(this);
                 _priv.TopLevel = false;
                 _priv.TopMost = true;
                 prvlg.Controls.Add(_priv);
@@ -81,7 +81,7 @@ namespace Surveillance_FaceRecognition
         }
         public void addbook()
         {
-            addBooks _addbooks = new addBooks(this);
+            SSaddBooks _addbooks = new SSaddBooks(this);
             _addbooks.TopLevel = false;
             _addbooks.TopMost = true;
             panel2.Controls.Add(_addbooks);
@@ -160,7 +160,7 @@ namespace Surveillance_FaceRecognition
         public void preinitstdfrm()
         {
             
-                _stdInfBox = new editStudentinfo(this);
+                _stdInfBox = new SSeditStudentinfo(this);
                 _stdInfBox.TopLevel = false;
                 _stdInfBox.TopMost = true;
                 _stdInfBox.Location = new Point(0, 0);
@@ -168,7 +168,7 @@ namespace Surveillance_FaceRecognition
                 _stdInfBox.Hide();
                 booksmenu.Hide();
             
-                _bookInfBox = new editBookinfo(this);
+                _bookInfBox = new SSeditBookinfo(this);
                 _bookInfBox.TopLevel = false;
                 _bookInfBox.TopMost = true;
                 _bookInfBox.Show();
@@ -213,7 +213,7 @@ namespace Surveillance_FaceRecognition
             panel2.Controls.Clear();
             notif.Hide();
             booksmenu.Hide();
-            _adminForm = new adminForm(this) { TopLevel = false };
+            _adminForm = new SSadminForm(this) { TopLevel = false };
             panel2.Controls.Add(_adminForm);
             _adminForm.Show();
 

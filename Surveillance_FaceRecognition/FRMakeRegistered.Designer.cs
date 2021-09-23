@@ -1,6 +1,6 @@
-﻿namespace MultiFaceRec
+﻿namespace Surveillance_FaceRecognition
 {
-    partial class MakeRegistered
+    partial class FRMakeRegistered
     {
         /// <summary>
         /// Required designer variable.

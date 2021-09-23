@@ -1,6 +1,6 @@
 ﻿namespace Surveillance_FaceRecognition
 {
-    partial class adminForm
+    partial class SSadminForm
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
-﻿namespace MultiFaceRec
+﻿namespace Surveillance_FaceRecognition
 {
-    partial class Login
+    partial class FRLogin
     {
         /// <summary>
         /// Required designer variable.

@@ -11,21 +11,21 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class studentBox : Form
+    public partial class SSstudentBox : Form
     {
         DataHandler cache = new DataHandler();
         public string fullname;
         public string section;
         public string id;
         notificationBar _notif;
-        menu _menu;
+        SSmenu _menu;
         function _func = new function();
         public static int count = 0;
         Color native;
         public string identify;
 
         Bitmap objBitmap;
-        public studentBox(menu ths, string name, string section, string id, string identifier)
+        public SSstudentBox(SSmenu ths, string name, string section, string id, string identifier)
         {
             InitializeComponent();
             this.fullname = name;

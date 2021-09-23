@@ -13,10 +13,10 @@ namespace Surveillance_FaceRecognition
     public partial class notificationBar : Form 
     {
 
-        menu _menu;
+        SSmenu _menu;
         connection _con = new connection();
         function _func = new function();
-        studentBox[] _Studentbox = new studentBox[9];
+        SSstudentBox[] _Studentbox = new SSstudentBox[9];
         DataHandler cache = new DataHandler();
         public string[,] info;
         static int next = 7;
@@ -27,7 +27,7 @@ namespace Surveillance_FaceRecognition
         int end = -1;
         string search = "";
         public static string identify = "null";
-        public notificationBar(menu ths)
+        public notificationBar(SSmenu ths)
         {
             InitializeComponent();
             _menu = ths;
@@ -37,7 +37,7 @@ namespace Surveillance_FaceRecognition
         {
             for (int i = 0; i <= 7; i++)
             {
-                _Studentbox[i] = new studentBox(_menu,"","","",identify) { TopLevel = false };
+                _Studentbox[i] = new SSstudentBox(_menu,"","","",identify) { TopLevel = false };
                 jonel.Controls.AddRange(_Studentbox);
                 _Studentbox[i].Location = new Point(0, loc);
                 loc += 68;

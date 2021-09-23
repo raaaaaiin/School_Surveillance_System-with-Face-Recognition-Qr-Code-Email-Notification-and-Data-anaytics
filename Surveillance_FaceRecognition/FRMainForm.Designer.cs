@@ -1,6 +1,6 @@
-﻿namespace MultiFaceRec
+﻿namespace Surveillance_FaceRecognition
 {
-    partial class FrmPrincipal
+    partial class FRMainForm
     {
         /// <summary>
         /// Variable del diseñador requerida.

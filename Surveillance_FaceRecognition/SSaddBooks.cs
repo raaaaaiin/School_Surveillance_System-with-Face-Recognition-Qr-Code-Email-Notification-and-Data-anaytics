@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class addBooks : Form
+    public partial class SSaddBooks : Form
     {
         public bool pressed = false;
         static int count = 0;
-        menu _main;
+        SSmenu _main;
         function _func = new function();
         bool indicator;
         public string id = "";
         Bunifu.UI.WinForms.BunifuButton.BunifuButton selectedbutton;
-        public addBooks(menu ths)
+        public SSaddBooks(SSmenu ths)
         {
             InitializeComponent();
             _func.fill("Category", categ,"book_categ", " Order by Category ASC");

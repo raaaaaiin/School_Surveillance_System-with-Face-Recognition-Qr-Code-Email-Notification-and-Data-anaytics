@@ -16,9 +16,9 @@ using Emgu.CV.CvEnum;
 using System.IO;
 using System.Diagnostics;
 using System.Data.SqlClient;
-namespace MultiFaceRec
+namespace Surveillance_FaceRecognition
 {
-    public partial class FrmPrincipal : Form
+    public partial class FRMainForm : Form
     {
         //Declararation of all variables, vectors and haarcascades
         Image<Bgr, Byte> currentFrame;
@@ -36,7 +36,7 @@ namespace MultiFaceRec
         string name, names = null;
         SqlConnection con;
 
-        public FrmPrincipal()
+        public FRMainForm()
         {
             InitializeComponent();
             string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Reyn\Desktop\FaceRecProOV\MyDb.mdf;Integrated Security=True;Connect Timeout=30";

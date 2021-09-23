@@ -18,9 +18,9 @@ namespace Surveillance_FaceRecognition
         public bool pressed = false;
         static int count = 0;
 
-        menu main;
+        SSmenu main;
          function _func = new function();
-        public AddstudentForm(menu ths)
+        public AddstudentForm(SSmenu ths)
         {
             InitializeComponent();
             bunifuButton1.Enabled = false;
@@ -100,7 +100,7 @@ namespace Surveillance_FaceRecognition
                 _func.addStudent(LastNameText.Text, FirstNameText.Text, MiddleNameText.Text, SuffixText.Text, year, sec, program, priv, sy);
 
                 timer1.Start();
-            } catch { Messagebox MessageBox = new Messagebox("Invalid Input!");MessageBox.Show();  }
+            } catch { SSMessagebox MessageBox = new SSMessagebox("Invalid Input!");MessageBox.Show();  }
 
             
         }

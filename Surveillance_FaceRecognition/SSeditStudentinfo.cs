@@ -6,15 +6,15 @@ using System.Drawing.Imaging;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class editStudentinfo : Form
+    public partial class SSeditStudentinfo : Form
     {
-        menu _main;
+        SSmenu _main;
         fileHandler _file = new fileHandler();
         function _func = new function();
         DataHandler _cache = new DataHandler();
         Bitmap objBitmap;
         private string id = "";
-        public editStudentinfo(menu ths)
+        public SSeditStudentinfo(SSmenu ths)
         {
             InitializeComponent();
             _func.Editstudent(id);
@@ -158,7 +158,7 @@ namespace Surveillance_FaceRecognition
             }
             else
             {
-                Messagebox MessageBox = new Messagebox("Password does not match!");MessageBox.Show();
+                SSMessagebox MessageBox = new SSMessagebox("Password does not match!");MessageBox.Show();
             }
         }
 

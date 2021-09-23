@@ -80,5 +80,11 @@ namespace Surveillance_FaceRecognition
             _new.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LFRForm1 reg = new LFRForm1();
+            reg.Show();
+        }
     }
 }

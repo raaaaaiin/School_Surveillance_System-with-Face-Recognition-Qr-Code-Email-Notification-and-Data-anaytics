@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-namespace MultiFaceRec
+namespace Surveillance_FaceRecognition
 {
-    public partial class MakeRegistered : Form
+    public partial class FRMakeRegistered : Form
     {
         SqlConnection con;
-        public MakeRegistered()
+        public FRMakeRegistered()
         {
             InitializeComponent();
             string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Reyn\Desktop\FaceRecProOV\MyDb.mdf;Integrated Security=True;Connect Timeout=30";

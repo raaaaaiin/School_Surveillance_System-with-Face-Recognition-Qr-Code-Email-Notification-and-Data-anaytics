@@ -94,6 +94,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\FaceRecProOV\bin\Debug\Emgu.Util.dll</HintPath>
     </Reference>
+    <Reference Include="FaceSDK.NET">
+      <HintPath>..\..\C#\bin\Debug\FaceSDK.NET.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -121,79 +124,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addBooks.cs">
+    <Compile Include="LFRForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addBooks.Designer.cs">
-      <DependentUpon>addBooks.cs</DependentUpon>
+    <Compile Include="LFRForm1.Designer.cs">
+      <DependentUpon>LFRForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="addStd.cs">
+    <Compile Include="LFRInputName.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addStd.Designer.cs">
-      <DependentUpon>addStd.cs</DependentUpon>
+    <Compile Include="LFRInputName.Designer.cs">
+      <DependentUpon>LFRInputName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSaddBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSaddBooks.Designer.cs">
+      <DependentUpon>SSaddBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSaddStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSaddStd.Designer.cs">
+      <DependentUpon>SSaddStd.cs</DependentUpon>
     </Compile>
     <Compile Include="EigenObjectRecognizer.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="FRLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="FRLogin.Designer.cs">
+      <DependentUpon>FRLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="FRMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="FRMainForm.Designer.cs">
+      <DependentUpon>FRMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakeRegistered.cs">
+    <Compile Include="FRMakeRegistered.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MakeRegistered.Designer.cs">
-      <DependentUpon>MakeRegistered.cs</DependentUpon>
+    <Compile Include="FRMakeRegistered.Designer.cs">
+      <DependentUpon>FRMakeRegistered.cs</DependentUpon>
     </Compile>
-    <Compile Include="massdataupdate.cs">
+    <Compile Include="SSmassdataupdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="massdataupdate.Designer.cs">
-      <DependentUpon>massdataupdate.cs</DependentUpon>
+    <Compile Include="SSmassdataupdate.Designer.cs">
+      <DependentUpon>SSmassdataupdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminForm.cs">
+    <Compile Include="SSadminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adminForm.Designer.cs">
-      <DependentUpon>adminForm.cs</DependentUpon>
+    <Compile Include="SSadminForm.Designer.cs">
+      <DependentUpon>SSadminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminadddata.cs">
+    <Compile Include="SSadminadddata.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adminadddata.Designer.cs">
-      <DependentUpon>adminadddata.cs</DependentUpon>
+    <Compile Include="SSadminadddata.Designer.cs">
+      <DependentUpon>SSadminadddata.cs</DependentUpon>
     </Compile>
     <Compile Include="dataHandler.cs" />
-    <Compile Include="dbConfiguration.cs">
+    <Compile Include="SSdbConfiguration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dbConfiguration.Designer.cs">
-      <DependentUpon>dbConfiguration.cs</DependentUpon>
+    <Compile Include="SSdbConfiguration.Designer.cs">
+      <DependentUpon>SSdbConfiguration.cs</DependentUpon>
     </Compile>
-    <Compile Include="adminrecord.cs">
+    <Compile Include="SSadminrecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adminrecord.Designer.cs">
-      <DependentUpon>adminrecord.cs</DependentUpon>
+    <Compile Include="SSadminrecord.Designer.cs">
+      <DependentUpon>SSadminrecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="editBookinfo.cs">
+    <Compile Include="SSeditBookinfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editBookinfo.Designer.cs">
-      <DependentUpon>editBookinfo.cs</DependentUpon>
+    <Compile Include="SSeditBookinfo.Designer.cs">
+      <DependentUpon>SSeditBookinfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="editStudentinfo.cs">
+    <Compile Include="SSeditStudentinfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editStudentinfo.Designer.cs">
-      <DependentUpon>editStudentinfo.cs</DependentUpon>
+    <Compile Include="SSeditStudentinfo.Designer.cs">
+      <DependentUpon>SSeditStudentinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="fileHandler.cs" />
     <Compile Include="MyDbDataSet.Designer.cs">
@@ -201,17 +216,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="QuestionBox.cs">
+    <Compile Include="SSQuestionBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuestionBox.Designer.cs">
-      <DependentUpon>QuestionBox.cs</DependentUpon>
+    <Compile Include="SSQuestionBox.Designer.cs">
+      <DependentUpon>SSQuestionBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Messagebox.cs">
+    <Compile Include="SSMessagebox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Messagebox.Designer.cs">
-      <DependentUpon>Messagebox.cs</DependentUpon>
+    <Compile Include="SSMessagebox.Designer.cs">
+      <DependentUpon>SSMessagebox.cs</DependentUpon>
     </Compile>
     <Compile Include="notificationBar.cs">
       <SubType>Form</SubType>
@@ -220,93 +235,99 @@
       <DependentUpon>notificationBar.cs</DependentUpon>
     </Compile>
     <Compile Include="createInfo.cs" />
-    <Compile Include="menu.cs">
+    <Compile Include="SSmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu.Designer.cs">
-      <DependentUpon>menu.cs</DependentUpon>
+    <Compile Include="SSmenu.Designer.cs">
+      <DependentUpon>SSmenu.cs</DependentUpon>
     </Compile>
     <Compile Include="function.cs" />
     <Compile Include="connection.cs" />
-    <Compile Include="StdlogIn.cs">
+    <Compile Include="SSlogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StdlogIn.Designer.cs">
-      <DependentUpon>StdlogIn.cs</DependentUpon>
+    <Compile Include="SSlogIn.Designer.cs">
+      <DependentUpon>SSlogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="previlages.cs">
+    <Compile Include="SSprevilages.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="previlages.Designer.cs">
-      <DependentUpon>previlages.cs</DependentUpon>
+    <Compile Include="SSprevilages.Designer.cs">
+      <DependentUpon>SSprevilages.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.cs">
+    <Compile Include="FRRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
-      <DependentUpon>Register.cs</DependentUpon>
+    <Compile Include="FRRegister.Designer.cs">
+      <DependentUpon>FRRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="studentBox.cs">
+    <Compile Include="SSstudentBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="studentBox.Designer.cs">
-      <DependentUpon>studentBox.cs</DependentUpon>
+    <Compile Include="SSstudentBox.Designer.cs">
+      <DependentUpon>SSstudentBox.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="addBooks.resx">
-      <DependentUpon>addBooks.cs</DependentUpon>
+    <EmbeddedResource Include="LFRForm1.resx">
+      <DependentUpon>LFRForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addStd.resx">
-      <DependentUpon>addStd.cs</DependentUpon>
+    <EmbeddedResource Include="LFRInputName.resx">
+      <DependentUpon>LFRInputName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="SSaddBooks.resx">
+      <DependentUpon>SSaddBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="SSaddStd.resx">
+      <DependentUpon>SSaddStd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MakeRegistered.resx">
-      <DependentUpon>MakeRegistered.cs</DependentUpon>
+    <EmbeddedResource Include="FRLogin.resx">
+      <DependentUpon>FRLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="massdataupdate.resx">
-      <DependentUpon>massdataupdate.cs</DependentUpon>
+    <EmbeddedResource Include="FRMainForm.resx">
+      <DependentUpon>FRMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminForm.resx">
-      <DependentUpon>adminForm.cs</DependentUpon>
+    <EmbeddedResource Include="FRMakeRegistered.resx">
+      <DependentUpon>FRMakeRegistered.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminadddata.resx">
-      <DependentUpon>adminadddata.cs</DependentUpon>
+    <EmbeddedResource Include="SSmassdataupdate.resx">
+      <DependentUpon>SSmassdataupdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="adminrecord.resx">
-      <DependentUpon>adminrecord.cs</DependentUpon>
+    <EmbeddedResource Include="SSadminForm.resx">
+      <DependentUpon>SSadminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dbConfiguration.resx">
-      <DependentUpon>dbConfiguration.cs</DependentUpon>
+    <EmbeddedResource Include="SSadminadddata.resx">
+      <DependentUpon>SSadminadddata.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editBookinfo.resx">
-      <DependentUpon>editBookinfo.cs</DependentUpon>
+    <EmbeddedResource Include="SSadminrecord.resx">
+      <DependentUpon>SSadminrecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editStudentinfo.resx">
-      <DependentUpon>editStudentinfo.cs</DependentUpon>
+    <EmbeddedResource Include="SSdbConfiguration.resx">
+      <DependentUpon>SSdbConfiguration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuestionBox.resx">
-      <DependentUpon>QuestionBox.cs</DependentUpon>
+    <EmbeddedResource Include="SSeditBookinfo.resx">
+      <DependentUpon>SSeditBookinfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Messagebox.resx">
-      <DependentUpon>Messagebox.cs</DependentUpon>
+    <EmbeddedResource Include="SSeditStudentinfo.resx">
+      <DependentUpon>SSeditStudentinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSQuestionBox.resx">
+      <DependentUpon>SSQuestionBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSMessagebox.resx">
+      <DependentUpon>SSMessagebox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="notificationBar.resx">
       <DependentUpon>notificationBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu.resx">
-      <DependentUpon>menu.cs</DependentUpon>
+    <EmbeddedResource Include="SSmenu.resx">
+      <DependentUpon>SSmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StdlogIn.resx">
-      <DependentUpon>StdlogIn.cs</DependentUpon>
+    <EmbeddedResource Include="SSlogIn.resx">
+      <DependentUpon>SSlogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="previlages.resx">
-      <DependentUpon>previlages.cs</DependentUpon>
+    <EmbeddedResource Include="SSprevilages.resx">
+      <DependentUpon>SSprevilages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -318,11 +339,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
-      <DependentUpon>Register.cs</DependentUpon>
+    <EmbeddedResource Include="FRRegister.resx">
+      <DependentUpon>FRRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="studentBox.resx">
-      <DependentUpon>studentBox.cs</DependentUpon>
+    <EmbeddedResource Include="SSstudentBox.resx">
+      <DependentUpon>SSstudentBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MyDbDataSet.xsc">
       <DependentUpon>MyDbDataSet.xsd</DependentUpon>

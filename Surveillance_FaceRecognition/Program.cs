@@ -1,7 +1,7 @@
-﻿using MultiFaceRec;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
@@ -9,14 +9,14 @@ namespace Surveillance_FaceRecognition
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Register());
+            Application.Run(new SSlogIn());
         }
     }
 }

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class dbConfiguration : Form
+    public partial class SSdbConfiguration : Form
     {
         fileHandler _handler = new fileHandler();
         connection _con = new connection();
-        StdlogIn mainlogin;
-        public dbConfiguration(StdlogIn loginform)
+        SSlogIn mainlogin;
+        public SSdbConfiguration(SSlogIn loginform)
         {
             InitializeComponent();
             mainlogin = loginform;

@@ -1,6 +1,6 @@
 ﻿namespace Surveillance_FaceRecognition
 {
-    partial class Messagebox
+    partial class SSMessagebox
     {
         /// <summary>
         /// Required designer variable.

@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-namespace MultiFaceRec
+namespace Surveillance_FaceRecognition
 {
-    public partial class Register : Form
+    public partial class FRRegister : Form
     {
         SqlConnection con;
-       
+        connection conn = new connection();
 
-        public Register()
+        public FRRegister()
         {
             InitializeComponent();
             //replace
@@ -30,6 +30,7 @@ namespace MultiFaceRec
         private void button1_Click(object sender, EventArgs e)
         {
             string reg = "no";
+            
             string querry = "insert into Register_User( user_name,e_mail,pwd,contact,user_type,reg_date,spec,roll_no,Registered)values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + comboBox1.SelectedItem.ToString() + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + reg + "')";
            SqlCommand cmd = new SqlCommand(querry, con);
            con.Open();
@@ -50,7 +51,7 @@ namespace MultiFaceRec
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login l = new Login();
+            FRLogin l = new FRLogin();
             l.Show();
             
         }
@@ -80,5 +81,7 @@ namespace MultiFaceRec
                 textBox6.Visible = false;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e) => conn.checkCon();
     }
 }

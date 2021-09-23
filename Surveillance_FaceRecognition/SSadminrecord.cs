@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class adminrecord : Form
+    public partial class SSadminrecord : Form
     {
         string table = "";
         string column = "";
         string parameter = "";
         string search = "";
         connection _con = new connection();
-        public adminrecord()
+        public SSadminrecord()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace Surveillance_FaceRecognition
             }
             catch
             {
-                Messagebox MessageBox = new Messagebox("There is no selected filter!"); MessageBox.Show();
+                SSMessagebox MessageBox = new SSMessagebox("There is no selected filter!"); MessageBox.Show();
             }
            
         }

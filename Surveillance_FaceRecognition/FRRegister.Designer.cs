@@ -1,6 +1,6 @@
-﻿namespace MultiFaceRec
+﻿namespace Surveillance_FaceRecognition
 {
-    partial class Register
+    partial class FRRegister
     {
         /// <summary>
         /// Required designer variable.
@@ -47,6 +47,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -219,12 +220,23 @@
             this.textBox7.TabIndex = 29;
             this.textBox7.Visible = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(411, 387);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 35;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(645, 434);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label8);
@@ -273,5 +285,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button3;
     }
 }

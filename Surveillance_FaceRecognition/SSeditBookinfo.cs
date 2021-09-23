@@ -6,15 +6,15 @@ using System.Drawing.Imaging;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class editBookinfo : Form
+    public partial class SSeditBookinfo : Form
     {
         fileHandler _file = new fileHandler();
         function _func = new function();
         DataHandler _cache = new DataHandler();
-        menu _main;
+        SSmenu _main;
         Bitmap objBitmap;
         private string id = "";
-        public editBookinfo(menu ths)
+        public SSeditBookinfo(SSmenu ths)
         {
             InitializeComponent();
             bunifuPictureBox1.BorderRadius = 0;

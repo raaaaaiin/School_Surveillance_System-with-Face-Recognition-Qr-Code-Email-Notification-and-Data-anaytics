@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class adminForm : Form
+    public partial class SSadminForm : Form
     {
-        menu _main;
-        public adminForm(menu ths)
+        SSmenu _main;
+        public SSadminForm(SSmenu ths)
         {
             InitializeComponent();
             _main = ths;
@@ -22,7 +22,7 @@ namespace Surveillance_FaceRecognition
         private void Showall(object sender, EventArgs e)
         {
             panel11.Controls.Clear();
-            adminrecord _all = new adminrecord() { TopLevel = false};
+            SSadminrecord _all = new SSadminrecord() { TopLevel = false};
             panel11.Controls.Add(_all);
             _all.Show();
             panel6.BackColor = Color.FromArgb(45, 45, 45);
@@ -33,7 +33,7 @@ namespace Surveillance_FaceRecognition
         private void label1_Click(object sender, EventArgs e)
         {
             panel11.Controls.Clear();
-            adminadddata _manage = new adminadddata() { TopLevel = false };
+            SSadminadddata _manage = new SSadminadddata() { TopLevel = false };
             panel11.Controls.Add(_manage);
             _manage.Show();
             panel6.BackColor = Color.Gold;
@@ -44,7 +44,7 @@ namespace Surveillance_FaceRecognition
         private void label2_Click(object sender, EventArgs e)
         {
             panel11.Controls.Clear();
-            massdataupdate _massupdate = new massdataupdate() { TopLevel = false };
+            SSmassdataupdate _massupdate = new SSmassdataupdate() { TopLevel = false };
             panel11.Controls.Add(_massupdate);
             _massupdate.Show();
             panel6.BackColor = Color.FromArgb(45, 45, 45);

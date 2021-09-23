@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class previlages : Form
+    public partial class SSprevilages : Form
     {
         bool[] isPressed = {false,false,false,false,false,false,false,false};
         bool isResetable = false;
         
-        menu _main;
+        SSmenu _main;
         function _func = new function();
-        public previlages(menu ths)
+        public SSprevilages(SSmenu ths)
         {
             InitializeComponent();
             _main = ths;
