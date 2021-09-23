@@ -164,13 +164,16 @@ namespace Surveillance_FaceRecognition
                 _stdInfBox.TopLevel = false;
                 _stdInfBox.TopMost = true;
                 _stdInfBox.Location = new Point(0, 0);
-                booksmenu.Controls.Add(_stdInfBox);
+            booksmenu.Controls.Add(_stdInfBox);
+
                 _stdInfBox.Hide();
                 booksmenu.Hide();
             
                 _bookInfBox = new SSeditBookinfo(this);
                 _bookInfBox.TopLevel = false;
                 _bookInfBox.TopMost = true;
+           
+
                 _bookInfBox.Show();
                 booksmenu.Controls.Add(_bookInfBox);
                 _bookInfBox.Hide();

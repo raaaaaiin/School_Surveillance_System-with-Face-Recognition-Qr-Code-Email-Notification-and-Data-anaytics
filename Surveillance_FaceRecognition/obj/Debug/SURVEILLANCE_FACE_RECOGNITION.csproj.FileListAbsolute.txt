@@ -26,16 +26,9 @@ C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\MetroFramework.dll
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\MySql.Data.dll
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\MySqlBackup.dll
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\Emgu.CV.xml
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\Emgu.CV.UI.xml
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\Emgu.Util.xml
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csproj.CopyComplete
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.exe
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.pdb
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.FRLogin.resources
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.FRMainForm.resources
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.FRMakeRegistered.resources
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.FRRegister.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\FaceSDK.NET.dll
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRForm1.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRInputName.resources

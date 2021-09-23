@@ -42,11 +42,11 @@ namespace Surveillance_FaceRecognition
         {
             if ((count % 2) == 0)
             {
-                panel1.BackColor = Color.FromArgb(50, 50, 50);
-                label1.BackColor = Color.FromArgb(50, 50, 50);
-                label2.BackColor = Color.FromArgb(50, 50, 50);
-                bunifuButton1.OnIdleState.FillColor = Color.FromArgb(45, 45, 45);
-                bunifuButton1.OnIdleState.BorderColor = Color.FromArgb(45, 45, 45);
+                panel1.BackColor = Color.FromArgb(250, 250, 250);
+                label1.BackColor = Color.FromArgb(250, 250, 250);
+                label2.BackColor = Color.FromArgb(250, 250, 250);
+                bunifuButton1.OnIdleState.FillColor = Color.FromArgb(0, 131, 86);
+                bunifuButton1.OnIdleState.BorderColor = Color.FromArgb(0, 131, 86);
             }
             label1.Text = fullname;
             label2.Text = section;

@@ -76,24 +76,6 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Desktop\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="Emgu.CV, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FaceRecProOV\bin\Debug\Emgu.CV.dll</HintPath>
-    </Reference>
-    <Reference Include="Emgu.CV.GPU">
-      <HintPath>..\..\FaceRecProOV\bin\Debug\Emgu.CV.GPU.dll</HintPath>
-    </Reference>
-    <Reference Include="Emgu.CV.ML">
-      <HintPath>..\..\FaceRecProOV\bin\Debug\Emgu.CV.ML.dll</HintPath>
-    </Reference>
-    <Reference Include="Emgu.CV.UI, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FaceRecProOV\bin\Debug\Emgu.CV.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Emgu.Util, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\FaceRecProOV\bin\Debug\Emgu.Util.dll</HintPath>
-    </Reference>
     <Reference Include="FaceSDK.NET">
       <HintPath>..\..\C#\bin\Debug\FaceSDK.NET.dll</HintPath>
     </Reference>
@@ -147,25 +129,6 @@
     </Compile>
     <Compile Include="SSaddStd.Designer.cs">
       <DependentUpon>SSaddStd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EigenObjectRecognizer.cs" />
-    <Compile Include="FRLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRLogin.Designer.cs">
-      <DependentUpon>FRLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FRMainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMainForm.Designer.cs">
-      <DependentUpon>FRMainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FRMakeRegistered.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRMakeRegistered.Designer.cs">
-      <DependentUpon>FRMakeRegistered.cs</DependentUpon>
     </Compile>
     <Compile Include="SSmassdataupdate.cs">
       <SubType>Form</SubType>
@@ -257,12 +220,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FRRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FRRegister.Designer.cs">
-      <DependentUpon>FRRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="SSstudentBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,15 +237,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SSaddStd.resx">
       <DependentUpon>SSaddStd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRLogin.resx">
-      <DependentUpon>FRLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRMainForm.resx">
-      <DependentUpon>FRMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FRMakeRegistered.resx">
-      <DependentUpon>FRMakeRegistered.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSmassdataupdate.resx">
       <DependentUpon>SSmassdataupdate.cs</DependentUpon>
@@ -339,9 +287,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FRRegister.resx">
-      <DependentUpon>FRRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SSstudentBox.resx">
       <DependentUpon>SSstudentBox.cs</DependentUpon>
     </EmbeddedResource>

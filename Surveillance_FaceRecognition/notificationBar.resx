@@ -121,19 +121,21 @@
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGwAAAAbCAYAAACZQWq0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVGhD7ZqxDYAwDAQzCl2SLZiARalpGSULUDEBGAoX
-        iDKW8tIhpY0in8+2kFPi04tAznkqpax2Ls54MTA+28PIM6vWugNqPFAfJs2BAWt4WG/lA5hYCwAYwDRK
-        i2oLwDAMw7BIezEMwzAMw8QsABjA/HchPUwsGQAGMIYOepiYBQADGENHpAWRdzN0iNkLMIAxJVISxSwA
-        GMB+p8QWmRnc3aVVnD502M7bbEE9CGyXwEbsdp7GaNHbeOXF6QZ9mCYt3Eb2cwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVGhD7doxDgFBGIbhv1GoFC4gYezYXcsRKHQiKtE6
+        gVbvOGqto7iAyglGZjMKyfbmS94vebq/e9vfmOCKohi5prp57wPyM2nKe2yUcpm5Zf0YHtfBrgdkaHDa
+        BLeonimXWazYdYh8tI2+I1j+CCaGYGIIJoZgYggmhmBiCCaGYGIIJoZgYggmhmBiCCaGYGIIJoZgYggm
+        hmBiCCbmJ1j8yOmft52H+L/eZR+m1eydcrV/iStXl69YEfmJscbzcpdyMZ2ZfQAfX7Bt8GPNtAAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="bunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGwAAAAbCAYAAACZQWq0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVGhD7ZqxDYAwDAQzCl2SLZiARalpGSULUDEBGAoX
-        iDKW8tIhpY0in8+2kFPi04tAznkqpax2Ls54MTA+28PIM6vWugNqPFAfJs2BAWt4WG/lA5hYCwAYwDRK
-        i2oLwDAMw7BIezEMwzAMw8QsABjA/HchPUwsGQAGMIYOepiYBQADGENHpAWRdzN0iNkLMIAxJVISxSwA
-        GMB+p8QWmRnc3aVVnD502M7bbEE9CGyXwEbsdp7GaNHbeOXF6QZ9mCYt3Eb2cwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVGhD7doxDgFBGIbhv1GoFC4gYezYXcsRKHQiKtE6
+        gVbvOGqto7iAyglGZjMKyfbmS94vebq/e9vfmOCKohi5prp57wPyM2nKe2yUcpm5Zf0YHtfBrgdkaHDa
+        BLeonimXWazYdYh8tI2+I1j+CCaGYGIIJoZgYggmhmBiCCaGYGIIJoZgYggmhmBiCCaGYGIIJoZgYggm
+        hmBiCCbmJ1j8yOmft52H+L/eZR+m1eydcrV/iStXl69YEfmJscbzcpdyMZ2ZfQAfX7Bt8GPNtAAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
 </root>
