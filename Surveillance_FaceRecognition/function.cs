@@ -710,8 +710,32 @@ namespace Surveillance_FaceRecognition
            // loadDataBook();
         }
 
+        public byte[] retrieveFaceData()
+        {
+            byte[] faceData = {0x12,0x32};
+            try
+            {
+                con.Open();
+                com = con.CreateCommand();
+                com.CommandType = System.Data.CommandType.Text;
+                com.CommandText = "Select tracker from faceData";
+                reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    faceData = (byte[]) reader["tracker"];
 
-}
+                }
+                con.Close();
+                
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error Loading face data");
+                con.Close();
+            }
+            return faceData;
+        }
+
+    }
 
 }
 

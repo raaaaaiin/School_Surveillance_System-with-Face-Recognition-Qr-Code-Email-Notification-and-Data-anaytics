@@ -45,6 +45,5 @@ namespace Surveillance_FaceRecognition
             con.Close();
             MessageBox.Show("Hello, world.");
         }
-
     }
 }
