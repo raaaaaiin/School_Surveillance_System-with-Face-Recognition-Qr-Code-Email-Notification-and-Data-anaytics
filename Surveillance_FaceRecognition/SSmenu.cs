@@ -81,7 +81,7 @@ namespace Surveillance_FaceRecognition
         }
         public void addbook()
         {
-            SSaddBooks _addbooks = new SSaddBooks(this);
+            SSaddCourse _addbooks = new SSaddCourse(this);
             _addbooks.TopLevel = false;
             _addbooks.TopMost = true;
             panel2.Controls.Add(_addbooks);

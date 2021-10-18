@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class SSaddBooks : Form
+    public partial class SSaddCourse : Form
     {
         public bool pressed = false;
         static int count = 0;
@@ -19,7 +19,7 @@ namespace Surveillance_FaceRecognition
         bool indicator;
         public string id = "";
         Bunifu.UI.WinForms.BunifuButton.BunifuButton selectedbutton;
-        public SSaddBooks(SSmenu ths)
+        public SSaddCourse(SSmenu ths)
         {
             InitializeComponent();
             _func.fill("Category", categ,"book_categ", " Order by Category ASC");

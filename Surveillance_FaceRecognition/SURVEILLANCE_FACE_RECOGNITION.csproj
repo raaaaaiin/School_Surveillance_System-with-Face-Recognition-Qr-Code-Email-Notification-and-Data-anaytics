@@ -118,11 +118,11 @@
     <Compile Include="LFRInputName.Designer.cs">
       <DependentUpon>LFRInputName.cs</DependentUpon>
     </Compile>
-    <Compile Include="SSaddBooks.cs">
+    <Compile Include="SSaddCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SSaddBooks.Designer.cs">
-      <DependentUpon>SSaddBooks.cs</DependentUpon>
+    <Compile Include="SSaddCourse.Designer.cs">
+      <DependentUpon>SSaddCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="SSaddStd.cs">
       <SubType>Form</SubType>
@@ -232,8 +232,8 @@
     <EmbeddedResource Include="LFRInputName.resx">
       <DependentUpon>LFRInputName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SSaddBooks.resx">
-      <DependentUpon>SSaddBooks.cs</DependentUpon>
+    <EmbeddedResource Include="SSaddCourse.resx">
+      <DependentUpon>SSaddCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSaddStd.resx">
       <DependentUpon>SSaddStd.cs</DependentUpon>

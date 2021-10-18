@@ -32,3 +32,37 @@ C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRForm1.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRInputName.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\FaceSDK.NET.dll
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MyDb.mdf
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MyDb_log.ldf
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\Surveillance_FaceRecognition.exe.config
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\Surveillance_FaceRecognition.exe
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\Surveillance_FaceRecognition.pdb
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\FaceSDK.NET.dll
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MetroFramework.dll
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MySql.Data.dll
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MySqlBackup.dll
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRForm1.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRInputName.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSaddCourse.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.AddstudentForm.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSmassdataupdate.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSadminForm.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSadminadddata.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSadminrecord.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSdbConfiguration.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSeditBookinfo.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSeditStudentinfo.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSQuestionBox.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSMessagebox.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.notificationBar.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSmenu.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSlogIn.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSprevilages.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.Properties.Resources.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSstudentBox.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csproj.GenerateResource.cache
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csproj.CoreCompileInputs.cache
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csproj.CopyComplete
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.exe
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.pdb
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csprojAssemblyReference.cache

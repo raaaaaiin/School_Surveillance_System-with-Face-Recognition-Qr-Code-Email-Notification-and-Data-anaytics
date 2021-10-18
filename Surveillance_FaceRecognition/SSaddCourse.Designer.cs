@@ -1,6 +1,6 @@
 ﻿namespace Surveillance_FaceRecognition
 {
-    partial class SSaddBooks
+    partial class SSaddCourse
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SSaddBooks));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SSaddCourse));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -40,7 +40,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.qty = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -61,7 +60,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.bunifuLabel9);
             this.panel4.Controls.Add(this.qty);
             this.panel4.Controls.Add(this.bunifuLabel12);
@@ -80,16 +78,6 @@
             this.panel4.Size = new System.Drawing.Size(759, 64);
             this.panel4.TabIndex = 39;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F);
-            this.label1.Location = new System.Drawing.Point(68, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "label1";
             // 
             // bunifuLabel9
             // 
@@ -488,7 +476,7 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // SSaddBooks
+            // SSaddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -496,7 +484,7 @@
             this.ClientSize = new System.Drawing.Size(753, 58);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SSaddBooks";
+            this.Name = "SSaddCourse";
             this.Text = "AddBooks";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -520,7 +508,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
-        private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
     }
 }

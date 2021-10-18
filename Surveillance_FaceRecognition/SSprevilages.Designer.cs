@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SSprevilages));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.adminlogout = new Bunifu.Framework.UI.BunifuTileButton();
@@ -43,6 +44,7 @@
             this.RecordTile = new System.Windows.Forms.Panel();
             this.paneladminlo = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +72,7 @@
             this.panel1.Controls.Add(this.EditStudent);
             this.panel1.Controls.Add(this.AddBooks);
             this.panel1.Controls.Add(this.AddStudent);
+            this.panel1.Controls.Add(this.bunifuTileButton1);
             this.panel1.Controls.Add(this.Books);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -174,7 +177,7 @@
             this.AddStudent.ImageZoom = 45;
             this.AddStudent.LabelPosition = 26;
             this.AddStudent.LabelText = "";
-            this.AddStudent.Location = new System.Drawing.Point(3, 280);
+            this.AddStudent.Location = new System.Drawing.Point(4, 283);
             this.AddStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddStudent.Name = "AddStudent";
             this.AddStudent.Size = new System.Drawing.Size(53, 66);
@@ -190,12 +193,12 @@
             this.Books.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Books.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Books.ForeColor = System.Drawing.Color.White;
-            this.Books.Image = global::Surveillance_FaceRecognition.Properties.Resources.books_invert_;
+            this.Books.Image = ((System.Drawing.Image)(resources.GetObject("Books.Image")));
             this.Books.ImagePosition = 7;
             this.Books.ImageZoom = 45;
             this.Books.LabelPosition = 26;
             this.Books.LabelText = "";
-            this.Books.Location = new System.Drawing.Point(3, 239);
+            this.Books.Location = new System.Drawing.Point(4, 205);
             this.Books.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Books.Name = "Books";
             this.Books.Size = new System.Drawing.Size(53, 66);
@@ -256,6 +259,26 @@
             this.panel7.Size = new System.Drawing.Size(10, 716);
             this.panel7.TabIndex = 6;
             // 
+            // bunifuTileButton1
+            // 
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTileButton1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
+            this.bunifuTileButton1.ImagePosition = 7;
+            this.bunifuTileButton1.ImageZoom = 45;
+            this.bunifuTileButton1.LabelPosition = 26;
+            this.bunifuTileButton1.LabelText = "";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(3, 246);
+            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuTileButton1.Name = "bunifuTileButton1";
+            this.bunifuTileButton1.Size = new System.Drawing.Size(53, 66);
+            this.bunifuTileButton1.TabIndex = 9;
+            // 
             // SSprevilages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,5 +315,6 @@
         private System.Windows.Forms.Panel paneladminlo;
         private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuTileButton AddBooks;
+        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
     }
 }
