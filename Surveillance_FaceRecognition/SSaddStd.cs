@@ -27,12 +27,12 @@ namespace Surveillance_FaceRecognition
             main = ths;
             if ((count % 2) == 0)
             {
-                panel1.BackColor = Color.FromArgb(45, 45, 45); ;
+                panel1.BackColor = Color.FromArgb(245, 245, 245); ;
                 count++;
             }
             else
             {
-                panel1.BackColor = Color.FromArgb(50, 50, 50);
+                panel1.BackColor = Color.FromArgb(235, 235, 235);
                 count++;
             }
 

@@ -59,6 +59,7 @@
             // 
             // panel11
             // 
+            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Location = new System.Drawing.Point(222, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(630, 578);
@@ -66,6 +67,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
@@ -76,7 +78,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel8.Controls.Add(this.label3);
             this.panel8.Controls.Add(this.panel7);
             this.panel8.Location = new System.Drawing.Point(0, 156);
@@ -87,8 +89,9 @@
             // 
             // label3
             // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label3.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.label3.Location = new System.Drawing.Point(15, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 63);
@@ -107,7 +110,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Location = new System.Drawing.Point(0, 78);
@@ -119,7 +122,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.label2.Location = new System.Drawing.Point(15, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 63);
@@ -138,7 +141,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -150,7 +153,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.label1.Location = new System.Drawing.Point(15, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 63);
@@ -169,7 +172,7 @@
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel12.BackColor = System.Drawing.Color.Silver;
             this.panel12.Location = new System.Drawing.Point(220, -5);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(2, 716);
@@ -177,24 +180,24 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel13.BackColor = System.Drawing.Color.Silver;
             this.panel13.Location = new System.Drawing.Point(-22, 26);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(892, 1);
             this.panel13.TabIndex = 8;
             // 
-            // adminForm
+            // SSadminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(850, 606);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "adminForm";
+            this.Name = "SSadminForm";
             this.Text = "adminForm";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

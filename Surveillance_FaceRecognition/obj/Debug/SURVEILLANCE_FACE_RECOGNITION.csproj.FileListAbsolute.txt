@@ -29,6 +29,6 @@ C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csproj.CopyComplete
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.exe
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.pdb
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\FaceSDK.NET.dll
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRForm1.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRInputName.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\FaceSDK.NET.dll

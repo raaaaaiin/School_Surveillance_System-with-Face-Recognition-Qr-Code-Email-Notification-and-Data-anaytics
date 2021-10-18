@@ -21,7 +21,7 @@ namespace Surveillance_FaceRecognition
         {
             InitializeComponent();
             _main = ths;
-            bunifuPictureBox1.BorderRadius = 25;
+           
 
 
         }
@@ -155,6 +155,11 @@ namespace Surveillance_FaceRecognition
         private void Records_Click(object sender, EventArgs e)
         {
             _main.showRecord();
+        }
+
+        private void adminlogout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

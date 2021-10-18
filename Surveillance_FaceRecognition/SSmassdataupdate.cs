@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows;
 using System.Text.RegularExpressions;
-using MySql.Data.MySqlClient; 
 
 
 namespace Surveillance_FaceRecognition

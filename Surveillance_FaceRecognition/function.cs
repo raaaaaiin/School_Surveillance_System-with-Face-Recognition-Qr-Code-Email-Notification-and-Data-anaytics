@@ -720,9 +720,13 @@ namespace Surveillance_FaceRecognition
                 com.CommandType = System.Data.CommandType.Text;
                 com.CommandText = "Select tracker from faceData";
                 reader = com.ExecuteReader();
-                while (reader.Read())
+                if (reader.Read())
                 {
                     faceData = (byte[]) reader["tracker"];
+
+                }
+                else
+                {
 
                 }
                 con.Close();

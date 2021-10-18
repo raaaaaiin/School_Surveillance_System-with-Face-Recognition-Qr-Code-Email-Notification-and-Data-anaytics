@@ -40,6 +40,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.qty = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuLabel12 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -59,7 +60,8 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.bunifuLabel9);
             this.panel4.Controls.Add(this.qty);
             this.panel4.Controls.Add(this.bunifuLabel12);
@@ -79,6 +81,16 @@
             this.panel4.TabIndex = 39;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 8.25F);
+            this.label1.Location = new System.Drawing.Point(68, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 97;
+            this.label1.Text = "label1";
+            // 
             // bunifuLabel9
             // 
             this.bunifuLabel9.AutoEllipsis = false;
@@ -88,7 +100,7 @@
             this.bunifuLabel9.Location = new System.Drawing.Point(417, 9);
             this.bunifuLabel9.Name = "bunifuLabel9";
             this.bunifuLabel9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel9.Size = new System.Drawing.Size(21, 17);
+            this.bunifuLabel9.Size = new System.Drawing.Size(20, 15);
             this.bunifuLabel9.TabIndex = 95;
             this.bunifuLabel9.Text = "Qty";
             this.bunifuLabel9.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -101,12 +113,12 @@
             this.qty.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.qty.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.qty.Font = new System.Drawing.Font("Roboto", 12F);
-            this.qty.ForeColor = System.Drawing.Color.White;
+            this.qty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.qty.HintForeColor = System.Drawing.Color.White;
             this.qty.HintText = "";
             this.qty.isPassword = false;
             this.qty.LineFocusedColor = System.Drawing.Color.Gold;
-            this.qty.LineIdleColor = System.Drawing.Color.Gray;
+            this.qty.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.qty.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.qty.LineThickness = 2;
             this.qty.Location = new System.Drawing.Point(418, 21);
@@ -126,7 +138,7 @@
             this.bunifuLabel12.Location = new System.Drawing.Point(361, 9);
             this.bunifuLabel12.Name = "bunifuLabel12";
             this.bunifuLabel12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel12.Size = new System.Drawing.Size(28, 17);
+            this.bunifuLabel12.Size = new System.Drawing.Size(28, 15);
             this.bunifuLabel12.TabIndex = 96;
             this.bunifuLabel12.Text = "Page";
             this.bunifuLabel12.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -139,12 +151,12 @@
             this.pg.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.pg.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pg.Font = new System.Drawing.Font("Roboto", 12F);
-            this.pg.ForeColor = System.Drawing.Color.White;
+            this.pg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.pg.HintForeColor = System.Drawing.Color.White;
             this.pg.HintText = "";
             this.pg.isPassword = false;
             this.pg.LineFocusedColor = System.Drawing.Color.Gold;
-            this.pg.LineIdleColor = System.Drawing.Color.Gray;
+            this.pg.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.pg.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.pg.LineThickness = 2;
             this.pg.Location = new System.Drawing.Point(357, 21);
@@ -161,7 +173,7 @@
             this.bunifuButton1.AnimationSpeed = 200;
             this.bunifuButton1.AutoGenerateColors = false;
             this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.DimGray;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton1.ButtonText = "Add";
@@ -185,10 +197,10 @@
             this.bunifuButton1.IconMarginLeft = 11;
             this.bunifuButton1.IconPadding = 10;
             this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DimGray;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.IdleBorderRadius = 3;
             this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DimGray;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
@@ -213,7 +225,7 @@
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.bunifuButton1.OnPressedState = stateProperties2;
-            this.bunifuButton1.Size = new System.Drawing.Size(34, 27);
+            this.bunifuButton1.Size = new System.Drawing.Size(35, 27);
             this.bunifuButton1.TabIndex = 6;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextMarginLeft = 0;
@@ -223,26 +235,26 @@
             // categ
             // 
             this.categ.AllowDrop = true;
-            this.categ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.categ.BackColor = System.Drawing.Color.WhiteSmoke;
             this.categ.BorderRadius = 1;
-            this.categ.Color = System.Drawing.Color.Gray;
+            this.categ.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.categ.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.categ.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.categ.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.categ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.categ.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.categ.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
             this.categ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categ.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.categ.FillDropDown = false;
             this.categ.FillIndicator = false;
             this.categ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categ.Font = new System.Drawing.Font("Roboto", 12F);
-            this.categ.ForeColor = System.Drawing.Color.White;
+            this.categ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.categ.FormattingEnabled = true;
             this.categ.Icon = null;
             this.categ.IndicatorColor = System.Drawing.Color.Gold;
             this.categ.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.categ.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.categ.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.categ.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.categ.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.categ.ItemForeColor = System.Drawing.Color.White;
             this.categ.ItemHeight = 18;
             this.categ.ItemHighLightColor = System.Drawing.Color.Gold;
@@ -390,7 +402,7 @@
             this.bunifuLabel10.Location = new System.Drawing.Point(479, 9);
             this.bunifuLabel10.Name = "bunifuLabel10";
             this.bunifuLabel10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel10.Size = new System.Drawing.Size(48, 17);
+            this.bunifuLabel10.Size = new System.Drawing.Size(47, 15);
             this.bunifuLabel10.TabIndex = 32;
             this.bunifuLabel10.Text = "Category";
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -405,7 +417,7 @@
             this.bunifuLabel11.Location = new System.Drawing.Point(8, 9);
             this.bunifuLabel11.Name = "bunifuLabel11";
             this.bunifuLabel11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel11.Size = new System.Drawing.Size(53, 17);
+            this.bunifuLabel11.Size = new System.Drawing.Size(54, 15);
             this.bunifuLabel11.TabIndex = 11;
             this.bunifuLabel11.Text = "Book Title";
             this.bunifuLabel11.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -420,7 +432,7 @@
             this.bunifuLabel13.Location = new System.Drawing.Point(182, 9);
             this.bunifuLabel13.Name = "bunifuLabel13";
             this.bunifuLabel13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel13.Size = new System.Drawing.Size(36, 17);
+            this.bunifuLabel13.Size = new System.Drawing.Size(36, 15);
             this.bunifuLabel13.TabIndex = 13;
             this.bunifuLabel13.Text = "Author";
             this.bunifuLabel13.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -433,12 +445,12 @@
             this.title.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.title.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.title.Font = new System.Drawing.Font("Roboto", 12F);
-            this.title.ForeColor = System.Drawing.Color.White;
+            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.title.HintForeColor = System.Drawing.Color.White;
             this.title.HintText = "Book Title";
             this.title.isPassword = false;
             this.title.LineFocusedColor = System.Drawing.Color.Gold;
-            this.title.LineIdleColor = System.Drawing.Color.Gray;
+            this.title.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.title.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.title.LineThickness = 2;
             this.title.Location = new System.Drawing.Point(8, 21);
@@ -456,12 +468,12 @@
             this.author.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.author.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.author.Font = new System.Drawing.Font("Roboto", 12F);
-            this.author.ForeColor = System.Drawing.Color.White;
+            this.author.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.author.HintForeColor = System.Drawing.Color.White;
             this.author.HintText = "Book author";
             this.author.isPassword = false;
             this.author.LineFocusedColor = System.Drawing.Color.Gold;
-            this.author.LineIdleColor = System.Drawing.Color.Gray;
+            this.author.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.author.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.author.LineThickness = 2;
             this.author.Location = new System.Drawing.Point(182, 21);
@@ -476,7 +488,7 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // addBooks
+            // SSaddBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -484,7 +496,7 @@
             this.ClientSize = new System.Drawing.Size(753, 58);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "addBooks";
+            this.Name = "SSaddBooks";
             this.Text = "AddBooks";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -495,19 +507,20 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton6;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
         private Bunifu.Framework.UI.BunifuMaterialTextbox title;
         private Bunifu.Framework.UI.BunifuMaterialTextbox author;
         private Bunifu.UI.WinForms.BunifuDropdown categ;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private System.Windows.Forms.Timer timer1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Bunifu.Framework.UI.BunifuMaterialTextbox qty;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
         private Bunifu.Framework.UI.BunifuMaterialTextbox pg;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
     }
 }

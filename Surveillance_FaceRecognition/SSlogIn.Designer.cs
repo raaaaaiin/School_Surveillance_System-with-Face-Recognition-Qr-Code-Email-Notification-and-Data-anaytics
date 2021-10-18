@@ -55,6 +55,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(187, 254);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
@@ -65,18 +66,18 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(149, 226);
+            this.panel1.Location = new System.Drawing.Point(180, 226);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(121, 89);
+            this.panel1.Size = new System.Drawing.Size(90, 89);
             this.panel1.TabIndex = 7;
             // 
             // Button1
             // 
             this.Button1.Active = false;
-            this.Button1.Activecolor = System.Drawing.Color.Goldenrod;
+            this.Button1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button1.BorderRadius = 0;
+            this.Button1.BorderRadius = 5;
             this.Button1.ButtonText = "LogIn";
             this.Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button1.DisabledColor = System.Drawing.Color.Gray;
@@ -95,7 +96,7 @@
             this.Button1.Location = new System.Drawing.Point(22, 278);
             this.Button1.Name = "Button1";
             this.Button1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
-            this.Button1.OnHovercolor = System.Drawing.Color.Gold;
+            this.Button1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.Button1.OnHoverTextColor = System.Drawing.Color.White;
             this.Button1.selected = false;
             this.Button1.Size = new System.Drawing.Size(241, 48);
@@ -114,7 +115,7 @@
             this.Textbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Textbox2.Font = new System.Drawing.Font("Roboto", 12F);
             this.Textbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.Textbox2.HintForeColor = System.Drawing.Color.White;
+            this.Textbox2.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.Textbox2.HintText = "Password";
             this.Textbox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Textbox2.isPassword = true;

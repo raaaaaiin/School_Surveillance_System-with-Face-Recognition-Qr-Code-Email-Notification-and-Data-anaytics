@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,6 +34,7 @@ namespace Surveillance_FaceRecognition
         public LFRForm1()
         {
             InitializeComponent();
+            loaddata();
             savedFacedata = _func.retrieveFaceData();
             MessageBox.Show(savedFacedata.ToString());
         }
@@ -94,7 +96,7 @@ namespace Surveillance_FaceRecognition
                     FSDK.CreateTracker(ref tracker); // if could not be loaded, create a new tracker
 
             int err = 0; // set realtime face detection parameters
-            FSDK.SetTrackerMultipleParameters(tracker, "HandleArbitraryRotations=false; DetermineFaceRotationAngle=false; InternalResizeWidth=100; FaceDetectionThreshold=5;", ref err);
+            FSDK.SetTrackerMultipleParameters(tracker, "HandleArbitraryRotations=false; DetectMultipleFaces=true; DetermineFaceRotationAngle=false; InternalResizeWidth=384; FaceDetectionThreshold=1;", ref err);
 
             while (!needClose) 
             {
@@ -135,6 +137,15 @@ namespace Surveillance_FaceRecognition
 
                         gr.DrawString(name, new System.Drawing.Font("Arial", 16),
                             new System.Drawing.SolidBrush(System.Drawing.Color.LightGreen),
+                            facePosition.xc, top + w + 5, format);
+                    }
+                    if (FSDK.FSDKE_OK == res && name.Equals("Unknown Face"))
+                    { // draw name
+                        StringFormat format = new StringFormat();
+                        format.Alignment = StringAlignment.Center;
+
+                        gr.DrawString(name, new System.Drawing.Font("Arial", 16),
+                            new System.Drawing.SolidBrush(System.Drawing.Color.Red),
                             facePosition.xc, top + w + 5, format);
                     }
 
@@ -188,22 +199,8 @@ namespace Surveillance_FaceRecognition
 
             byte[] trackerData;
             FSDK.SaveTrackerMemoryToBuffer(1, out trackerData, 50000);
-            try {
-            conn.condupe.Open();
-            conn.com = conn.condupe.CreateCommand();
-            conn.com.CommandType = System.Data.CommandType.Text;
-            conn.com.Parameters.Add("@tracker", MySqlDbType.Blob).Value = trackerData;
-            conn.com.CommandText = "INSERT INTO faceData SET tracker = @tracker";
-            conn.com.ExecuteNonQuery();
-            conn.condupe.Close();
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Saving data failed Error");
-                MessageBox.Show(ex.ToString());
-
-            }
-
-            MessageBox.Show(trackerData.ToString());
+            Console.WriteLine(trackerData);
+            checkData(trackerData);
             //end my personal file
             FSDK.FreeTracker(tracker);
             FSDKCam.CloseVideoCamera(cameraHandle);
@@ -230,6 +227,108 @@ namespace Surveillance_FaceRecognition
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+        public void checkData(byte[] trackerData)
+        {
+
+            Boolean isExist = false;
+            conn.condupe.Open();
+            conn.com = conn.condupe.CreateCommand();
+            conn.com.CommandType = System.Data.CommandType.Text;
+            conn.com.CommandText = "Select tracker from faceData";
+            conn.reader = conn.com.ExecuteReader();
+            if (conn.reader.Read())
+            {
+                isExist = true;
+                
+
+            }
+            else
+            {
+                isExist = false;
+                
+            }
+            conn.condupe.Close();
+
+            if (isExist == true)
+            {
+                try
+                {
+                    conn.condupe.Open();
+                    conn.com = conn.condupe.CreateCommand();
+                    conn.com.CommandType = System.Data.CommandType.Text;
+                    conn.com.Parameters.Add("@tracker", MySqlDbType.Blob).Value = trackerData;
+                    conn.com.CommandText = "Update faceData SET tracker = @tracker";
+                    conn.com.ExecuteNonQuery();
+                    conn.condupe.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Saving data failed Error");
+                    MessageBox.Show(ex.ToString());
+                    conn.condupe.Close();
+
+
+                }
+
+            } else if(isExist == false){
+                try
+                {
+                    conn.condupe.Open();
+                    conn.com = conn.condupe.CreateCommand();
+                    conn.com.CommandType = System.Data.CommandType.Text;
+                    conn.com.Parameters.Add("@tracker", MySqlDbType.Blob).Value = trackerData;
+                    conn.com.CommandText = "INSERT INTO faceData SET tracker = @tracker";
+                    conn.com.ExecuteNonQuery();
+                    conn.condupe.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Saving data failed Error");
+                    MessageBox.Show(ex.ToString());
+                    conn.condupe.Close();
+
+
+                }
+            }
+
+        }
+        public void loaddata()
+        {
+            try
+            {
+
+                conn.condupe.Open( );
+                conn.com = conn.condupe.CreateCommand();
+                conn.com.CommandType = System.Data.CommandType.Text;
+                conn.com.CommandText = "Select tracker from faceData";
+                conn.reader = conn.com.ExecuteReader();
+                if (conn.reader.Read())
+                {
+                    savedFacedata =(byte[]) conn.reader["tracker"]; 
+
+                }
+                else
+                {
+                    MessageBox.Show("Data Does not Exist");
+                }
+                conn.condupe.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Loading face data");
+                MessageBox.Show(ex.ToString()) ;
+                conn.condupe.Close();
+            }
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
