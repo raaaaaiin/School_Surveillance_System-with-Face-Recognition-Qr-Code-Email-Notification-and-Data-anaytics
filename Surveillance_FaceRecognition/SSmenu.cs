@@ -81,7 +81,7 @@ namespace Surveillance_FaceRecognition
         }
         public void addbook()
         {
-            SSaddCourse _addbooks = new SSaddCourse(this);
+            SSaddStd _addbooks = new SSaddStd(this);
             _addbooks.TopLevel = false;
             _addbooks.TopMost = true;
             panel2.Controls.Add(_addbooks);
@@ -95,6 +95,24 @@ namespace Surveillance_FaceRecognition
                 upcontrol = 0;
                 addbook();
             }
+
+        }
+        public void addStd()
+        {
+            SSaddStd _addStd = new SSaddStd(this);
+            _addStd.TopLevel = false;
+            _addStd.TopMost = true;
+            panel2.Controls.Add(_addStd);
+            _addStd.Top = upcontrol * 68;
+            upcontrol = upcontrol + 1;
+            if (upcontrol >= 9)
+            {
+                panel2.Controls.Clear();
+                panel2.Refresh();
+                upcontrol = 0;
+                addStd();
+            }
+            _addStd.Show();
 
         }
 
@@ -221,7 +239,11 @@ namespace Surveillance_FaceRecognition
             _adminForm.Show();
 
         }
-        
+
+        private void prvlg_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
  

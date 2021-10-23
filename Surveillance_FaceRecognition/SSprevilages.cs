@@ -161,5 +161,18 @@ namespace Surveillance_FaceRecognition
         {
 
         }
+
+        private void bunifuTileButton1_Click_1(object sender, EventArgs e)
+        {
+            lightup(paneledit);
+            if (isPressed[2] == false)
+            {
+                _main.reset();
+                reset();
+                _main.addbook();
+                isPressed[2] = true;
+
+            }
+        }
     }
 }

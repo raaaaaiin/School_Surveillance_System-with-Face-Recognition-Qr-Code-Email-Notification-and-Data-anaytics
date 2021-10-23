@@ -32,8 +32,8 @@ namespace Surveillance_FaceRecognition
             }
             else
             {
-                _inf.inserteacc(id, lastname, firstname + lastname + section, "Student");
-            }
+                    _inf.inserteacc(id, lastname, "staff", "Staff");
+                }
             loadDataStud();
             }
             catch
@@ -210,9 +210,33 @@ namespace Surveillance_FaceRecognition
             con.Close();
             return id;
         }
+        public string readStdID(string stdID)
+        {
+            string id = "";
+            con.Open();
+            com = con.CreateCommand();
+            com.CommandType = System.Data.CommandType.Text;
+            com.CommandText = "Select stdID from std Where StdID = '" + stdID + "'";
+            reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                if (reader[0].ToString().Length != 0)
+                {
+                    id = (reader[0].ToString());
+                }
+                else
+                {
+
+                }
+
+
+            }
+            con.Close();
+            return id;
+        }
         public void addBooks(string title, string author, string category, string page, string qty)
         {
-             
+
             con.Open();
             com = con.CreateCommand();
             com.CommandType = System.Data.CommandType.Text;
@@ -220,6 +244,18 @@ namespace Surveillance_FaceRecognition
             com.ExecuteNonQuery();
             con.Close();
             book_id = readIdBook(title, author);
+
+        }
+        public void addStd(string stdId,string lastname, string firstname, string middlename, string suffix, string year, string section, string program,  string sy)
+        {
+
+            con.Open();
+            com = con.CreateCommand();
+            com.CommandType = System.Data.CommandType.Text;
+            com.CommandText = "insert into Std values('" + stdId + "','" + firstname + "','" + middlename + "','" + lastname + "','" + suffix + "','" + program + "','" + year + "','" + section + "','" + sy + "')";
+            com.ExecuteNonQuery();
+            con.Close();
+            //book_id = readIdBook(title, author);
 
         }
         public void addBookscateg(string book_id,string category)
@@ -283,6 +319,17 @@ namespace Surveillance_FaceRecognition
             com.CommandText = "Delete From book_categ_data Where book_id = '" + id + "' ";
             com.ExecuteNonQuery();
             con.Close();
+        }
+        public void delStd(string stdID)
+        {
+            string id = readStdID(stdID);
+            con.Open();
+            com = con.CreateCommand();
+            com.CommandType = System.Data.CommandType.Text;
+            com.CommandText = "Delete From Std Where stdID = '" + id + "'";
+            com.ExecuteNonQuery();
+            con.Close();
+            
         }
         public void logIn(String username, string password)
         {

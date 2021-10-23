@@ -118,17 +118,17 @@
     <Compile Include="LFRInputName.Designer.cs">
       <DependentUpon>LFRInputName.cs</DependentUpon>
     </Compile>
-    <Compile Include="SSaddCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SSaddCourse.Designer.cs">
-      <DependentUpon>SSaddCourse.cs</DependentUpon>
-    </Compile>
     <Compile Include="SSaddStd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SSaddStd.Designer.cs">
       <DependentUpon>SSaddStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSaddEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSaddEmp.Designer.cs">
+      <DependentUpon>SSaddEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="SSmassdataupdate.cs">
       <SubType>Form</SubType>
@@ -232,11 +232,11 @@
     <EmbeddedResource Include="LFRInputName.resx">
       <DependentUpon>LFRInputName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SSaddCourse.resx">
-      <DependentUpon>SSaddCourse.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SSaddStd.resx">
       <DependentUpon>SSaddStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSaddEmp.resx">
+      <DependentUpon>SSaddEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSmassdataupdate.resx">
       <DependentUpon>SSmassdataupdate.cs</DependentUpon>

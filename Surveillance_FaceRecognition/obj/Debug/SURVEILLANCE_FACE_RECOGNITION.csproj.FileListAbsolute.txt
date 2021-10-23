@@ -1,5 +1,4 @@
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csprojAssemblyReference.cache
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSaddBooks.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.AddstudentForm.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSmassdataupdate.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSadminForm.resources
@@ -31,7 +30,6 @@ C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.pdb
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRForm1.resources
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.LFRInputName.resources
-C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\bin\Debug\FaceSDK.NET.dll
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MyDb.mdf
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\MyDb_log.ldf
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\bin\Debug\Surveillance_FaceRecognition.exe.config
@@ -66,3 +64,4 @@ C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_Face
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.exe
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.pdb
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csprojAssemblyReference.cache
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSaddStd.resources

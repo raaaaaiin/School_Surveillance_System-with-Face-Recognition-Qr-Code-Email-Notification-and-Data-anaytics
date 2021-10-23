@@ -36,6 +36,7 @@
             this.EditStudent = new Bunifu.Framework.UI.BunifuTileButton();
             this.AddBooks = new Bunifu.Framework.UI.BunifuTileButton();
             this.AddStudent = new Bunifu.Framework.UI.BunifuTileButton();
+            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.Books = new Bunifu.Framework.UI.BunifuTileButton();
             this.panelbooks = new System.Windows.Forms.Panel();
             this.paneledit = new System.Windows.Forms.Panel();
@@ -44,7 +45,6 @@
             this.RecordTile = new System.Windows.Forms.Panel();
             this.paneladminlo = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -184,6 +184,27 @@
             this.AddStudent.TabIndex = 2;
             this.AddStudent.Click += new System.EventHandler(this.bunifuTileButton2_Click);
             // 
+            // bunifuTileButton1
+            // 
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTileButton1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
+            this.bunifuTileButton1.ImagePosition = 7;
+            this.bunifuTileButton1.ImageZoom = 45;
+            this.bunifuTileButton1.LabelPosition = 26;
+            this.bunifuTileButton1.LabelText = "";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(3, 246);
+            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuTileButton1.Name = "bunifuTileButton1";
+            this.bunifuTileButton1.Size = new System.Drawing.Size(53, 66);
+            this.bunifuTileButton1.TabIndex = 9;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click_1);
+            // 
             // Books
             // 
             this.Books.BackColor = System.Drawing.Color.Transparent;
@@ -258,26 +279,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 716);
             this.panel7.TabIndex = 6;
-            // 
-            // bunifuTileButton1
-            // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 7;
-            this.bunifuTileButton1.ImageZoom = 45;
-            this.bunifuTileButton1.LabelPosition = 26;
-            this.bunifuTileButton1.LabelText = "";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(3, 246);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(53, 66);
-            this.bunifuTileButton1.TabIndex = 9;
             // 
             // SSprevilages
             // 
