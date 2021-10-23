@@ -54,9 +54,9 @@ namespace Surveillance_FaceRecognition
                     try
                     {
                         _Studentbox[i].identify = "STD";
-                        _Studentbox[i].fullname = cache.returnstud_info(index, 0);
-                        _Studentbox[i].section = cache.returnstud_info(index, 1);
-                        _Studentbox[i].id = cache.returnstud_info(index, 2);
+                        _Studentbox[i].fullname = cache.returnstaff_info(index, 0);
+                        _Studentbox[i].section = cache.returnstaff_info(index, 1);
+                        _Studentbox[i].id = cache.returnstaff_info(index, 2);
                         _Studentbox[i].process();
                         _Studentbox[i].Show();
                         index++;
@@ -76,9 +76,9 @@ namespace Surveillance_FaceRecognition
                     try
                     {
                         _Studentbox[i].identify = "Books";
-                        _Studentbox[i].fullname = cache.returnbook_info(index, 0);
-                        _Studentbox[i].section = cache.returnbook_info(index, 1);
-                        _Studentbox[i].id = cache.returnbook_info(index, 2);
+                        _Studentbox[i].fullname = cache.returnstd_info(index, 0);
+                        _Studentbox[i].section = cache.returnstd_info(index, 1);
+                        _Studentbox[i].id = cache.returnstd_info(index, 2);
                         _Studentbox[i].process();
                         _Studentbox[i].Show();
                         index++;
@@ -103,9 +103,9 @@ namespace Surveillance_FaceRecognition
                 try
                 {
 
-                    _Studentbox[i].fullname = cache.returnstud_info(index, 0);
-                    _Studentbox[i].section = cache.returnstud_info(index, 1);
-                    _Studentbox[i].id = cache.returnstud_info(index, 2);
+                    _Studentbox[i].fullname = cache.returnstaff_info(index, 0);
+                    _Studentbox[i].section = cache.returnstaff_info(index, 1);
+                    _Studentbox[i].id = cache.returnstaff_info(index, 2);
                     _Studentbox[i].process();
                     _Studentbox[i].Show();
                     index++;
@@ -132,9 +132,9 @@ namespace Surveillance_FaceRecognition
                     try
                     {
 
-                        _Studentbox[i].fullname = cache.returnbook_info(index, 0);
-                        _Studentbox[i].section = cache.returnbook_info(index, 1);
-                        _Studentbox[i].id = cache.returnbook_info(index, 2);
+                        _Studentbox[i].fullname = cache.returnstd_info(index, 0);
+                        _Studentbox[i].section = cache.returnstd_info(index, 1);
+                        _Studentbox[i].id = cache.returnstd_info(index, 2);
                         _Studentbox[i].process();
                         _Studentbox[i].Show();
                         index++;

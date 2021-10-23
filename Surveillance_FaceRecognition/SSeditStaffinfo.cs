@@ -34,25 +34,25 @@ namespace Surveillance_FaceRecognition
         }
         public void loaddata()
         {
-            Username.Text = _cache.returnslctd_std(7);
-            Password.Text = _cache.returnslctd_std(8);
-            Confirmpass.Text =  _cache.returnslctd_std(8);
-            lastname.Text = _cache.returnslctd_std(2);
-            middlename.Text = _cache.returnslctd_std(1);
-            gradelevel.Text = _cache.returnslctd_std(4) + " " + _cache.returnslctd_std(10) + " " + _cache.returnslctd_std(5) ;
-            firstname.Text = _cache.returnslctd_std(0);
-            label17.Text = _cache.returnslctd_std(2) + " " + _cache.returnslctd_std(0) + " " + _cache.returnslctd_std(1);
+            Username.Text = _cache.returnslctd_staff(7);
+            Password.Text = _cache.returnslctd_staff(8);
+            Confirmpass.Text =  _cache.returnslctd_staff(8);
+            lastname.Text = _cache.returnslctd_staff(2);
+            middlename.Text = _cache.returnslctd_staff(1);
+            gradelevel.Text = _cache.returnslctd_staff(4) + " " + _cache.returnslctd_staff(10) + " " + _cache.returnslctd_staff(5) ;
+            firstname.Text = _cache.returnslctd_staff(0);
+            label17.Text = _cache.returnslctd_staff(2) + " " + _cache.returnslctd_staff(0) + " " + _cache.returnslctd_staff(1);
             _func.fill("year", year, "stud_year");
-            if (_cache.returnslctd_std(9).ToString().Equals("Admin")){
+            if (_cache.returnslctd_staff(9).ToString().Equals("Admin")){
                 Adminchk();
             }
             else
             {
                 Studentchk();
             }
-            year.Text = _cache.returnslctd_std(4);
-            program.Text = _cache.returnslctd_std(10);
-            section.Text = _cache.returnslctd_std(5);
+            year.Text = _cache.returnslctd_staff(4);
+            program.Text = _cache.returnslctd_staff(10);
+            section.Text = _cache.returnslctd_staff(5);
             string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
             path = path.Remove(path.LastIndexOfAny(new char[] { '\\' }, path.LastIndexOf('\\') - 0));
             path += '\\';
@@ -164,7 +164,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-            _func.delStud(_cache.returnslctd_std(0), _cache.returnslctd_std(1), _cache.returnslctd_std(2), _cache.returnslctd_std(3));
+            _func.delStud(_cache.returnslctd_staff(0), _cache.returnslctd_staff(1), _cache.returnslctd_staff(2), _cache.returnslctd_staff(3));
             _func.loadDataStud();
             _main.showMenu2("STD");
             

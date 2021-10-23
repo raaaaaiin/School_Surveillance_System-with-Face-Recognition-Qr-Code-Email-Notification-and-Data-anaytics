@@ -382,9 +382,9 @@ namespace Surveillance_FaceRecognition
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    _cache.populatestud_info(counter, reader[0].ToString(), 0);
-                    _cache.populatestud_info(counter, reader[1].ToString(), 1);
-                    _cache.populatestud_info(counter, reader["UID"].ToString(), 2);
+                    _cache.populatestaff_info(counter, reader[0].ToString(), 0);
+                    _cache.populatestaff_info(counter, reader[1].ToString(), 1);
+                    _cache.populatestaff_info(counter, reader["UID"].ToString(), 2);
 
                     counter++;
                 }
@@ -416,7 +416,7 @@ namespace Surveillance_FaceRecognition
                 con.Close();
             }
             con.Close();
-            _cache.setstud_info(counter);
+            _cache.setstaff_info(counter);
         }
         public void loadDataBook(/*string search,string filter*/)
         {
@@ -431,9 +431,9 @@ namespace Surveillance_FaceRecognition
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    _cache.populatebook_info(counter, reader["Title"].ToString(), 0);
-                    _cache.populatebook_info(counter, reader["Author"].ToString(), 1);
-                    _cache.populatebook_info(counter, reader["ID"].ToString(), 2);
+                    _cache.populatestd_info(counter, reader["Title"].ToString(), 0);
+                    _cache.populatestd_info(counter, reader["Author"].ToString(), 1);
+                    _cache.populatestd_info(counter, reader["ID"].ToString(), 2);
 
                     counter++;
                 }
@@ -464,7 +464,7 @@ namespace Surveillance_FaceRecognition
                 con.Close();
             }
             con.Close();
-            _cache.setbook_info(counter);
+            _cache.setstd_info(counter);
         }
         public void overWriteloadDataBook(string search)
         {
@@ -485,9 +485,9 @@ namespace Surveillance_FaceRecognition
                     reader = com.ExecuteReader();
                     while (reader.Read())
                     {
-                        _cache.populatebook_info(counter, reader[1].ToString(), 0);
-                        _cache.populatebook_info(counter, reader[2].ToString(), 1);
-                        _cache.populatebook_info(counter, reader[0].ToString(), 2);
+                        _cache.populatestd_info(counter, reader[1].ToString(), 0);
+                        _cache.populatestd_info(counter, reader[2].ToString(), 1);
+                        _cache.populatestd_info(counter, reader[0].ToString(), 2);
 
                         counter++;
                     }
@@ -520,7 +520,7 @@ namespace Surveillance_FaceRecognition
                 con.Close();
             }
             con.Close();
-            _cache.setbook_info(counter);
+            _cache.setstd_info(counter);
         }
         public void OverwriteloadDataSTD(string search)
         {
@@ -558,9 +558,9 @@ namespace Surveillance_FaceRecognition
                     reader = com.ExecuteReader();
                     while (reader.Read())
                     {
-                        _cache.populatestud_info(counter, reader[0].ToString(), 0);
-                        _cache.populatestud_info(counter, reader[1].ToString(), 1);
-                        _cache.populatestud_info(counter, reader[2].ToString(), 2);
+                        _cache.populatestaff_info(counter, reader[0].ToString(), 0);
+                        _cache.populatestaff_info(counter, reader[1].ToString(), 1);
+                        _cache.populatestaff_info(counter, reader[2].ToString(), 2);
                         counter++;
                     }
                     con.Close();
@@ -610,7 +610,7 @@ namespace Surveillance_FaceRecognition
 
             }
             con.Close();
-            _cache.setstud_info(counter);
+            _cache.setstaff_info(counter);
 
         }
         public void Editstudent(string id)
@@ -624,16 +624,16 @@ namespace Surveillance_FaceRecognition
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    _cache.populateslctd_std(11, reader[0].ToString());//uid
-                    _cache.populateslctd_std(0, reader[1].ToString());//Firstname
-                    _cache.populateslctd_std(1, reader[2].ToString());//Mn
-                    _cache.populateslctd_std(2, reader[3].ToString());//Ln
-                    _cache.populateslctd_std(3, reader[4].ToString());//suffix
-                    _cache.populateslctd_std(4, reader[5].ToString());//stdlvl
-                    _cache.populateslctd_std(5, reader[6].ToString());//stdsec
-                    _cache.populateslctd_std(6, reader[7].ToString());//stdsy
-                    _cache.populateslctd_std(9, reader[8].ToString());//role
-                    _cache.populateslctd_std(10, reader[9].ToString());//program
+                    _cache.populateslctd_staff(11, reader[0].ToString());//uid
+                    _cache.populateslctd_staff(0, reader[1].ToString());//Firstname
+                    _cache.populateslctd_staff(1, reader[2].ToString());//Mn
+                    _cache.populateslctd_staff(2, reader[3].ToString());//Ln
+                    _cache.populateslctd_staff(3, reader[4].ToString());//suffix
+                    _cache.populateslctd_staff(4, reader[5].ToString());//stdlvl
+                    _cache.populateslctd_staff(5, reader[6].ToString());//stdsec
+                    _cache.populateslctd_staff(6, reader[7].ToString());//stdsy
+                    _cache.populateslctd_staff(9, reader[8].ToString());//role
+                    _cache.populateslctd_staff(10, reader[9].ToString());//program
                 }
                 con.Close();
                 con.Open();
@@ -643,8 +643,8 @@ namespace Surveillance_FaceRecognition
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    _cache.populateslctd_std(7, reader[0].ToString());//username
-                    _cache.populateslctd_std(8, reader[1].ToString());//password
+                    _cache.populateslctd_staff(7, reader[0].ToString());//username
+                    _cache.populateslctd_staff(8, reader[1].ToString());//password
                 }
                 con.Close();
                 
