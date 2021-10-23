@@ -34,6 +34,7 @@ namespace Surveillance_FaceRecognition
        
         public void loaddata()
         {
+            /*
             this.id = _cache.returnslctd_std(0);
             setcateg.Items.Clear();
             Category.Items.Clear();
@@ -79,7 +80,7 @@ namespace Surveillance_FaceRecognition
                 objBitmap = new Bitmap(Image.FromFile(path + "Books\\default.jpeg"), new Size(300, 300));
             }
 
-            bunifuPictureBox1.Image = objBitmap;
+            bunifuPictureBox1.Image = objBitmap;*/
         }
 
 
@@ -120,7 +121,7 @@ namespace Surveillance_FaceRecognition
         }
         private void bunifuGradientPanel2_Paint(object sender, PaintEventArgs e)
         {
-            _func.fill("category", Category, "book_categ", " Order by Category ASC");
+           // _func.fill("category", Category, "book_categ", " Order by Category ASC");
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
@@ -155,14 +156,14 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton2_Click_1(object sender, EventArgs e)
         {
-            _func.updateBookinfo(id, booktitle.Text, author.Text, page.Text, qty.Text, info.Text);
+            //_func.updateBookinfo(id, booktitle.Text, author.Text, page.Text, qty.Text, info.Text);
             _func.loadDataBook();
             _main.showMenu2("Book");
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
-            _func.addBookscateg(id,Category.Text);
+            //_func.addBookscateg(id,Category.Text);
             loaddata();
         }
 
