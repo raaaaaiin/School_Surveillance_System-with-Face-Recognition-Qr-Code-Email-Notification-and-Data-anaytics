@@ -34,25 +34,25 @@ namespace Surveillance_FaceRecognition
        
         public void loaddata()
         {
-            this.id = _cache.returnslctd_book(0);
+            this.id = _cache.returnslctd_std(0);
             setcateg.Items.Clear();
             Category.Items.Clear();
             _func.fill("category", setcateg, "book_categ_data", "where book_id = '" + this.id + "' Order by Category ASC");
             _func.fill("category", Category, "book_categ"," Order by Category ASC");
 
-            label17.Text = _cache.returnslctd_book(1);
-            booktitle.Text = _cache.returnslctd_book(1);
-            author.Text = _cache.returnslctd_book(2);
-            page.Text = _cache.returnslctd_book(3);
+            label17.Text = _cache.returnslctd_std(1);
+            booktitle.Text = _cache.returnslctd_std(1);
+            author.Text = _cache.returnslctd_std(2);
+            page.Text = _cache.returnslctd_std(3);
             //index 4 = categ
-            info.Text = _cache.returnslctd_book(4);
-            qty.Text = _cache.returnslctd_book(5);
+            info.Text = _cache.returnslctd_std(4);
+            qty.Text = _cache.returnslctd_std(5);
             try
             {
-                latest_borrow.Text = _cache.returnslctd_book(7);
-                latest_return.Text = _cache.returnslctd_book(8);
-                date_borrowed.Text = _cache.returnslctd_book(9);
-                date_return.Text = _cache.returnslctd_book(10);
+                latest_borrow.Text = _cache.returnslctd_std(7);
+                latest_return.Text = _cache.returnslctd_std(8);
+                date_borrowed.Text = _cache.returnslctd_std(9);
+                date_return.Text = _cache.returnslctd_std(10);
 
             }
             catch
@@ -147,7 +147,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            _func.delBooks(_cache.returnslctd_book(1),_cache.returnslctd_book(2));
+            _func.delBooks(_cache.returnslctd_std(1),_cache.returnslctd_std(2));
             _func.loadDataBook();
             _main.showMenu2("Book");
             this.Hide();

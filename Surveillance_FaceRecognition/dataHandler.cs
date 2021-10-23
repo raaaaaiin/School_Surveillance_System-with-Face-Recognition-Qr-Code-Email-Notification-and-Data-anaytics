@@ -35,11 +35,11 @@ namespace Surveillance_FaceRecognition
         {
             return slctd_staff[index];
         }
-        public void populateslctd_book(int index, string info)
+        public void populateslctd_std(int index, string info)
         {
             slctd_std[index] = info;
         }
-        public string returnslctd_book(int index)
+        public string returnslctd_std(int index)
         {
             return slctd_staff[index];
         }

@@ -670,12 +670,12 @@ namespace Surveillance_FaceRecognition
                 _cache.clearslctd();
                 while (reader.Read())
                 {
-                    _cache.populateslctd_book(0, reader[0].ToString());
-                    _cache.populateslctd_book(1, reader[1].ToString());
-                    _cache.populateslctd_book(2, reader[2].ToString());
-                    _cache.populateslctd_book(3, reader[3].ToString());
-                    _cache.populateslctd_book(4, reader[4].ToString());
-                    _cache.populateslctd_book(5, reader[5].ToString());
+                    _cache.populateslctd_std(0, reader[0].ToString());
+                    _cache.populateslctd_std(1, reader[1].ToString());
+                    _cache.populateslctd_std(2, reader[2].ToString());
+                    _cache.populateslctd_std(3, reader[3].ToString());
+                    _cache.populateslctd_std(4, reader[4].ToString());
+                    _cache.populateslctd_std(5, reader[5].ToString());
                 }
                 con.Close();
                 con.Open();
@@ -685,11 +685,11 @@ namespace Surveillance_FaceRecognition
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    _cache.populateslctd_book(0, reader[0].ToString());
-                    _cache.populateslctd_book(7, reader[1].ToString());
-                    _cache.populateslctd_book(8, reader[2].ToString());
-                    _cache.populateslctd_book(9, reader[3].ToString());
-                    _cache.populateslctd_book(10, reader[4].ToString());
+                    _cache.populateslctd_std(0, reader[0].ToString());
+                    _cache.populateslctd_std(7, reader[1].ToString());
+                    _cache.populateslctd_std(8, reader[2].ToString());
+                    _cache.populateslctd_std(9, reader[3].ToString());
+                    _cache.populateslctd_std(10, reader[4].ToString());
                 }
                 con.Close();
             }
