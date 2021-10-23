@@ -6,7 +6,7 @@ using System.Drawing.Imaging;
 
 namespace Surveillance_FaceRecognition
 {
-    public partial class SSeditStudentinfo : Form
+    public partial class SSeditStaffinfo : Form
     {
         SSmenu _main;
         fileHandler _file = new fileHandler();
@@ -14,7 +14,7 @@ namespace Surveillance_FaceRecognition
         DataHandler _cache = new DataHandler();
         Bitmap objBitmap;
         private string id = "";
-        public SSeditStudentinfo(SSmenu ths)
+        public SSeditStaffinfo(SSmenu ths)
         {
             InitializeComponent();
             _func.Editstudent(id);

@@ -46,8 +46,8 @@
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,12 +58,12 @@
             this.Address.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Address.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Address.Font = new System.Drawing.Font("Roboto", 12F);
-            this.Address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Address.HintForeColor = System.Drawing.Color.White;
+            this.Address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Address.HintForeColor = System.Drawing.Color.LightGray;
             this.Address.HintText = "Server";
             this.Address.isPassword = false;
             this.Address.LineFocusedColor = System.Drawing.Color.Gold;
-            this.Address.LineIdleColor = System.Drawing.Color.Gray;
+            this.Address.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.Address.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.Address.LineThickness = 4;
             this.Address.Location = new System.Drawing.Point(13, 48);
@@ -81,12 +81,12 @@
             this.Port.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Port.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Port.Font = new System.Drawing.Font("Roboto", 12F);
-            this.Port.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Port.HintForeColor = System.Drawing.Color.White;
+            this.Port.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Port.HintForeColor = System.Drawing.Color.LightGray;
             this.Port.HintText = "Port";
             this.Port.isPassword = false;
             this.Port.LineFocusedColor = System.Drawing.Color.Gold;
-            this.Port.LineIdleColor = System.Drawing.Color.Gray;
+            this.Port.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.Port.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.Port.LineThickness = 4;
             this.Port.Location = new System.Drawing.Point(13, 99);
@@ -104,12 +104,12 @@
             this.Database.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Database.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Database.Font = new System.Drawing.Font("Roboto", 12F);
-            this.Database.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Database.HintForeColor = System.Drawing.Color.White;
+            this.Database.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Database.HintForeColor = System.Drawing.Color.LightGray;
             this.Database.HintText = "Database";
             this.Database.isPassword = false;
             this.Database.LineFocusedColor = System.Drawing.Color.Gold;
-            this.Database.LineIdleColor = System.Drawing.Color.Gray;
+            this.Database.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.Database.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.Database.LineThickness = 4;
             this.Database.Location = new System.Drawing.Point(13, 150);
@@ -127,12 +127,12 @@
             this.User.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.User.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.User.Font = new System.Drawing.Font("Roboto", 12F);
-            this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.User.HintForeColor = System.Drawing.Color.White;
+            this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.User.HintForeColor = System.Drawing.Color.LightGray;
             this.User.HintText = "Username";
             this.User.isPassword = false;
             this.User.LineFocusedColor = System.Drawing.Color.Gold;
-            this.User.LineIdleColor = System.Drawing.Color.Gray;
+            this.User.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.User.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.User.LineThickness = 4;
             this.User.Location = new System.Drawing.Point(13, 201);
@@ -150,12 +150,12 @@
             this.Pass.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Pass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Pass.Font = new System.Drawing.Font("Roboto", 12F);
-            this.Pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Pass.HintForeColor = System.Drawing.Color.White;
+            this.Pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Pass.HintForeColor = System.Drawing.Color.LightGray;
             this.Pass.HintText = "";
             this.Pass.isPassword = true;
             this.Pass.LineFocusedColor = System.Drawing.Color.Gold;
-            this.Pass.LineIdleColor = System.Drawing.Color.Gray;
+            this.Pass.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.Pass.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.Pass.LineThickness = 4;
             this.Pass.Location = new System.Drawing.Point(13, 252);
@@ -172,7 +172,7 @@
             this.bunifuButton1.AnimationSpeed = 200;
             this.bunifuButton1.AutoGenerateColors = false;
             this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton1.ButtonText = "Create Connection";
@@ -196,10 +196,10 @@
             this.bunifuButton1.IconMarginLeft = 11;
             this.bunifuButton1.IconPadding = 10;
             this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.IdleBorderRadius = 3;
             this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
@@ -223,7 +223,7 @@
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.bunifuButton1.OnPressedState = stateProperties2;
-            this.bunifuButton1.Size = new System.Drawing.Size(164, 28);
+            this.bunifuButton1.Size = new System.Drawing.Size(164, 33);
             this.bunifuButton1.TabIndex = 10;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextMarginLeft = 0;
@@ -236,7 +236,7 @@
             this.bunifuButton2.AnimationSpeed = 200;
             this.bunifuButton2.AutoGenerateColors = false;
             this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton2.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton2.BackgroundImage")));
             this.bunifuButton2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton2.ButtonText = "Test";
@@ -260,10 +260,10 @@
             this.bunifuButton2.IconMarginLeft = 11;
             this.bunifuButton2.IconPadding = 10;
             this.bunifuButton2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton2.IdleBorderRadius = 3;
             this.bunifuButton2.IdleBorderThickness = 1;
-            this.bunifuButton2.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
@@ -287,7 +287,7 @@
             stateProperties4.IconLeftImage = null;
             stateProperties4.IconRightImage = null;
             this.bunifuButton2.OnPressedState = stateProperties4;
-            this.bunifuButton2.Size = new System.Drawing.Size(43, 28);
+            this.bunifuButton2.Size = new System.Drawing.Size(43, 33);
             this.bunifuButton2.TabIndex = 11;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextMarginLeft = 0;
@@ -296,7 +296,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.bunifuButton3);
             this.panel1.Location = new System.Drawing.Point(-1, -13);
@@ -304,13 +304,24 @@
             this.panel1.Size = new System.Drawing.Size(245, 61);
             this.panel1.TabIndex = 12;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Database Configuration";
+            // 
             // bunifuButton3
             // 
             this.bunifuButton3.AllowToggling = false;
             this.bunifuButton3.AnimationSpeed = 200;
             this.bunifuButton3.AutoGenerateColors = false;
             this.bunifuButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton3.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.bunifuButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton3.BackgroundImage")));
             this.bunifuButton3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton3.ButtonText = "X";
@@ -334,14 +345,14 @@
             this.bunifuButton3.IconMarginLeft = 11;
             this.bunifuButton3.IconPadding = 10;
             this.bunifuButton3.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton3.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton3.IdleBorderRadius = 3;
             this.bunifuButton3.IdleBorderThickness = 1;
-            this.bunifuButton3.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton3.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = false;
-            this.bunifuButton3.Location = new System.Drawing.Point(204, 9);
+            this.bunifuButton3.Location = new System.Drawing.Point(206, 9);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties5.BorderRadius = 3;
@@ -361,29 +372,18 @@
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
             this.bunifuButton3.OnPressedState = stateProperties6;
-            this.bunifuButton3.Size = new System.Drawing.Size(41, 58);
+            this.bunifuButton3.Size = new System.Drawing.Size(41, 52);
             this.bunifuButton3.TabIndex = 0;
             this.bunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton3.TextMarginLeft = 0;
             this.bunifuButton3.UseDefaultRadiusAndThickness = true;
             this.bunifuButton3.Click += new System.EventHandler(this.bunifuButton3_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Database Configuration";
-            // 
-            // Dbms
+            // SSdbConfiguration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(240, 346);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuButton2);
@@ -394,7 +394,7 @@
             this.Controls.Add(this.Port);
             this.Controls.Add(this.Address);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dbms";
+            this.Name = "SSdbConfiguration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dbms";
             this.panel1.ResumeLayout(false);

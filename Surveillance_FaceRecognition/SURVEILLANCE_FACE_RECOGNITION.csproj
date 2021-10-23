@@ -161,17 +161,17 @@
     <Compile Include="SSadminrecord.Designer.cs">
       <DependentUpon>SSadminrecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="SSeditBookinfo.cs">
+    <Compile Include="SSeditStdinfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SSeditBookinfo.Designer.cs">
-      <DependentUpon>SSeditBookinfo.cs</DependentUpon>
+    <Compile Include="SSeditStdinfo.Designer.cs">
+      <DependentUpon>SSeditStdinfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="SSeditStudentinfo.cs">
+    <Compile Include="SSeditStaffinfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SSeditStudentinfo.Designer.cs">
-      <DependentUpon>SSeditStudentinfo.cs</DependentUpon>
+    <Compile Include="SSeditStaffinfo.Designer.cs">
+      <DependentUpon>SSeditStaffinfo.cs</DependentUpon>
     </Compile>
     <Compile Include="fileHandler.cs" />
     <Compile Include="MyDbDataSet.Designer.cs">
@@ -253,11 +253,11 @@
     <EmbeddedResource Include="SSdbConfiguration.resx">
       <DependentUpon>SSdbConfiguration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SSeditBookinfo.resx">
-      <DependentUpon>SSeditBookinfo.cs</DependentUpon>
+    <EmbeddedResource Include="SSeditStdinfo.resx">
+      <DependentUpon>SSeditStdinfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SSeditStudentinfo.resx">
-      <DependentUpon>SSeditStudentinfo.cs</DependentUpon>
+    <EmbeddedResource Include="SSeditStaffinfo.resx">
+      <DependentUpon>SSeditStaffinfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSQuestionBox.resx">
       <DependentUpon>SSQuestionBox.cs</DependentUpon>

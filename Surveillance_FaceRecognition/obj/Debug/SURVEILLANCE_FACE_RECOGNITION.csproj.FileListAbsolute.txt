@@ -65,3 +65,5 @@ C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_Face
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.pdb
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION - Copy (2)\Surveillance_FaceRecognition\obj\Debug\SURVEILLANCE_FACE_RECOGNITION.csprojAssemblyReference.cache
 C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSaddStd.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSeditStdinfo.resources
+C:\Users\Reyn\Desktop\SURVEILLANCE_FACE_RECOGNITION\Surveillance_FaceRecognition\obj\Debug\Surveillance_FaceRecognition.SSeditStaffinfo.resources

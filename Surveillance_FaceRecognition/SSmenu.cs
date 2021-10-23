@@ -15,8 +15,8 @@ namespace Surveillance_FaceRecognition
         static notificationBar _notif;
         static int upcontrol = 1;
         public string setrole = "";
-        public SSeditStudentinfo _stdInfBox;
-        public SSeditBookinfo _bookInfBox;
+        public SSeditStaffinfo _stdInfBox;
+        public SSeditStdinfo _bookInfBox;
         public SSadminForm _adminForm;
         public SSmenu()
         {
@@ -178,7 +178,7 @@ namespace Surveillance_FaceRecognition
         public void preinitstdfrm()
         {
             
-                _stdInfBox = new SSeditStudentinfo(this);
+                _stdInfBox = new SSeditStaffinfo(this);
                 _stdInfBox.TopLevel = false;
                 _stdInfBox.TopMost = true;
                 _stdInfBox.Location = new Point(0, 0);
@@ -187,7 +187,7 @@ namespace Surveillance_FaceRecognition
                 _stdInfBox.Hide();
                 booksmenu.Hide();
             
-                _bookInfBox = new SSeditBookinfo(this);
+                _bookInfBox = new SSeditStdinfo(this);
                 _bookInfBox.TopLevel = false;
                 _bookInfBox.TopMost = true;
            
