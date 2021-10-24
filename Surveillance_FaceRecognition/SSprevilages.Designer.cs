@@ -37,7 +37,6 @@
             this.AddBooks = new Bunifu.Framework.UI.BunifuTileButton();
             this.AddStudent = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.Books = new Bunifu.Framework.UI.BunifuTileButton();
             this.panelbooks = new System.Windows.Forms.Panel();
             this.paneledit = new System.Windows.Forms.Panel();
             this.paneladd = new System.Windows.Forms.Panel();
@@ -73,7 +72,6 @@
             this.panel1.Controls.Add(this.AddBooks);
             this.panel1.Controls.Add(this.AddStudent);
             this.panel1.Controls.Add(this.bunifuTileButton1);
-            this.panel1.Controls.Add(this.Books);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(95, 767);
@@ -205,27 +203,6 @@
             this.bunifuTileButton1.TabIndex = 9;
             this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click_1);
             // 
-            // Books
-            // 
-            this.Books.BackColor = System.Drawing.Color.Transparent;
-            this.Books.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Books.color = System.Drawing.Color.Transparent;
-            this.Books.colorActive = System.Drawing.Color.Transparent;
-            this.Books.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Books.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Books.ForeColor = System.Drawing.Color.White;
-            this.Books.Image = ((System.Drawing.Image)(resources.GetObject("Books.Image")));
-            this.Books.ImagePosition = 7;
-            this.Books.ImageZoom = 45;
-            this.Books.LabelPosition = 26;
-            this.Books.LabelText = "";
-            this.Books.Location = new System.Drawing.Point(4, 205);
-            this.Books.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Books.Name = "Books";
-            this.Books.Size = new System.Drawing.Size(53, 66);
-            this.Books.TabIndex = 1;
-            this.Books.Click += new System.EventHandler(this.bunifuTileButton1_Click);
-            // 
             // panelbooks
             // 
             this.panelbooks.BackColor = System.Drawing.Color.Gold;
@@ -304,7 +281,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuTileButton AddStudent;
-        private Bunifu.Framework.UI.BunifuTileButton Books;
         private System.Windows.Forms.Panel panelbooks;
         private System.Windows.Forms.Panel paneledit;
         private System.Windows.Forms.Panel paneladd;

@@ -47,7 +47,7 @@ namespace Surveillance_FaceRecognition
             }
            
             timer1.Start();
-            label1.Text = "Library management: Connected to Database2.accdb : Developed by Raineer Filosopo";
+          
 
         }
 
@@ -58,7 +58,7 @@ namespace Surveillance_FaceRecognition
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label2.Text = "Time : " + DateTime.Now.ToString("HH:mm:ss");
+           
         }
         public void addstud()
         {
@@ -134,7 +134,6 @@ namespace Surveillance_FaceRecognition
         }
         public void showMenu2(string identifier)
         {
-            
             notif.Show();
             _notif.Show();
             _notif.forshow(identifier);
@@ -221,7 +220,10 @@ namespace Surveillance_FaceRecognition
             preinitstdfrm();
             showMenu2();
         }
-
+        public void hidepanel()
+        {
+            panel2.Hide();
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             showStdFrm("1");

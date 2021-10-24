@@ -112,14 +112,14 @@ namespace Surveillance_FaceRecognition
 
         private void Goldy(object sender, EventArgs e)
         {
-            bunifuGradientPanel1.GradientBottomLeft = Color.Gold;
+            
 
         }
 
         private void plainey(object sender, EventArgs e)
         {
 
-            bunifuGradientPanel1.GradientBottomLeft = Color.White;
+            
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)

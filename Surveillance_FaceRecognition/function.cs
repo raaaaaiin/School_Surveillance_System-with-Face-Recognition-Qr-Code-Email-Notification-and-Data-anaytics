@@ -511,14 +511,30 @@ namespace Surveillance_FaceRecognition
                 {
                     con.Open();
                     com = con.CreateCommand();
-                    com.CommandText = "Select ID,Title,Author from book where Title like '%"+search+"%' or Author like '%" + search +"%' order by ID desc";
+                    com.CommandText = "SELECT concat(Last_Name,' ',First_Name,' ',SUBSTRING(Middle_Name,1,1),'.'),Concat(std_program,' ',std_section),StdID FROM `std` where " +
+                        "StdID like '%" + search + "%' or " +
+                        "First_Name like '%" + search + "%' or " +
+                        "Middle_name like '%" + search + "%' or " +
+                        "Last_Name like '%" + search + "%' or " +
+                        "suffix like '%" + search + "%' or " +
+                        "std_level like '%" + search + "%' or " +
+                        "std_program like '%" + search + "%' or " +
+                        "std_section like '%" + search + "%' or " +
+                        "std_sy like '%" + search + "%' or " +
+                        "concat(First_Name,' ',Middle_Name,' ',Last_Name) like '%" + search + "%' or " +
+                        "concat(Last_Name,' ',First_Name,' ',Middle_Name) like '%" + search + "%' or " +
+                        "concat(std_section,' ',std_level) like '%" + search + "%' or " +
+                        "concat(std_program,' ',std_section) like '%" + search + "%' or " +
+                        "concat(std_level,' ',std_section) like '%" + search + "%' or " +
+                        "concat(std_section,' ',std_sy) like '%" + search + "%' or " +
+                        "concat(std_sy,' ',std_section) like '%" + search + "%'";
                     reader = com.ExecuteReader();
                     while (reader.Read())
                     {
-                        _cache.populatestd_info(counter, reader[1].ToString(), 0);
-                        _cache.populatestd_info(counter, reader[2].ToString(), 1);
-                        _cache.populatestd_info(counter, reader[0].ToString(), 2);
-
+                        _cache.populatestd_info(counter, reader[0].ToString(), 0);
+                        _cache.populatestd_info(counter, reader[1].ToString(), 1);
+                        _cache.populatestd_info(counter, reader[2].ToString(), 2);
+                       
                         counter++;
                     }
                     con.Close();
@@ -538,7 +554,23 @@ namespace Surveillance_FaceRecognition
             {
                 con.Open();
                 com = con.CreateCommand();
-                com.CommandText = "Select ID,Title,Author from book where Title like '%" + search + "%' or Author like '%" + search + "%' order by ID desc";
+                com.CommandText = "SELECT concat(Last_Name,' ',First_Name,' ',SUBSTRING(Middle_Name,1,1),'.'),Concat(std_program,' ',std_section),StdID FROM `std` where " +
+                        "StdID like '%" + search + "%' or " +
+                        "First_Name like '%" + search + "%' or " +
+                        "Middle_name like '%" + search + "%' or " +
+                        "Last_Name like '%" + search + "%' or " +
+                        "suffix like '%" + search + "%' or " +
+                        "std_level like '%" + search + "%' or " +
+                        "std_program like '%" + search + "%' or " +
+                        "std_section like '%" + search + "%' or " +
+                        "std_sy like '%" + search + "%' or " +
+                        "concat(First_Name,' ',Middle_Name,' ',Last_Name) like '%" + search + "%' or " +
+                        "concat(Last_Name,' ',First_Name,' ',Middle_Name) like '%" + search + "%' or " +
+                        "concat(std_section,' ',std_level) like '%" + search + "%' or " +
+                        "concat(std_program,' ',std_section) like '%" + search + "%' or " +
+                        "concat(std_level,' ',std_section) like '%" + search + "%' or " +
+                        "concat(std_section,' ',std_sy) like '%" + search + "%' or " +
+                        "concat(std_sy,' ',std_section) like '%" + search + "%'";
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
