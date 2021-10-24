@@ -34,7 +34,7 @@ namespace Surveillance_FaceRecognition
             {
 
                 _main.hide();
-                _func.loadDataBook();
+                _func.loadDataStd();
                 reset();
                 _main.showMenu2("Book");
                 isPressed[0] = true;
@@ -87,14 +87,18 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuTileButton3_Click(object sender, EventArgs e)
         {
-            lightup(paneledit);
-            if (isPressed[2] == false)
+            lightup(panelbooks);
+
+            if (isPressed[0] == false)
             {
-                _main.reset();
+
+                _main.hide();
+                _func.loadDataStd();
                 reset();
-                _main.addbook();
-                isPressed[2] = true;
-                
+                _main.showMenu2("Book");
+                isPressed[0] = true;
+
+
             }
         }
 
@@ -109,7 +113,7 @@ namespace Surveillance_FaceRecognition
             if (isPressed[4] == false)
             {
                 _main.hide();
-                _func.loadDataBook();
+                _func.loadDataStd();
                 reset();
                 _main.showMenu2("STD");
                 isPressed[4] = true;

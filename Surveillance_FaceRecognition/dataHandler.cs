@@ -14,7 +14,7 @@ namespace Surveillance_FaceRecognition
         private static string[] slctd_staff = new string[13];
         private static string[] slctd_std = new string[13];
         private static string[] user_std = new string[13];
-
+        
         private string selected_stdId;
         
         public string selected_stdID
@@ -38,10 +38,11 @@ namespace Surveillance_FaceRecognition
         public void populateslctd_std(int index, string info)
         {
             slctd_std[index] = info;
+            
         }
         public string returnslctd_std(int index)
         {
-            return slctd_staff[index];
+            return slctd_std[index];
         }
         public void populateuser_staff(int index, string info)
         {

@@ -65,7 +65,7 @@ namespace Surveillance_FaceRecognition
                 label1.Text = "Connection Success";
 
                 _func.loadDataStud();
-                _func.loadDataBook();
+                _func.loadDataStd();
             }
             catch
             {

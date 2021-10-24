@@ -418,7 +418,37 @@ namespace Surveillance_FaceRecognition
             con.Close();
             _cache.setstaff_info(counter);
         }
-        public void loadDataBook(/*string search,string filter*/)
+        public void loadDataStd(/*string search,string filter*/)
+        {
+            readBook();
+
+            int counter = 0;
+            try
+            {
+                con.Open();
+                com = con.CreateCommand();
+                com.CommandText = "Select concat(Last_Name,' ',First_Name,' ',SUBSTRING(Middle_Name,1,1),'.'),concat(std_program,' ',std_section),StdID from std  order by stdID desc";
+                reader = com.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    _cache.populatestd_info(counter, reader[0].ToString(), 0);
+                    _cache.populatestd_info(counter, reader[1].ToString(), 1);
+                    _cache.populatestd_info(counter, reader["StdID"].ToString(), 2);
+
+                    counter++;
+                }
+                con.Close();
+            }
+            catch
+            {
+                con.Close();
+
+            }
+           
+        }
+        public void loadDataBooke(/*string search,string filter*/)
         {
             readBook();
 
@@ -452,7 +482,7 @@ namespace Surveillance_FaceRecognition
             {
                 con.Open();
                 com = con.CreateCommand();
-                com.CommandText = "Select ID from book order by ID desc";
+                com.CommandText = "Select stdID from Std order by stdID desc";
                 reader = com.ExecuteReader();
                 while (reader.Read())
                 {
@@ -470,7 +500,7 @@ namespace Surveillance_FaceRecognition
         {
             if (search.Equals(""))
             {
-                loadDataBook();
+                loadDataStd();
             }
             else
             {
@@ -665,7 +695,7 @@ namespace Surveillance_FaceRecognition
                 con.Open();
                 com = con.CreateCommand();
                 com.CommandType = System.Data.CommandType.Text;
-                com.CommandText = "select * from book where id = '"+id+"'";
+                com.CommandText = "select * from book where id = '" + id + "'";
                 reader = com.ExecuteReader();
                 _cache.clearslctd();
                 while (reader.Read())
@@ -699,6 +729,60 @@ namespace Surveillance_FaceRecognition
                 con.Close();
             }
 
+
+        }
+        public void editStd(string id)
+        {
+            try
+            {
+                con.Open();
+                com = con.CreateCommand();
+                com.CommandType = System.Data.CommandType.Text;
+                com.CommandText = "Select StdID, First_Name, Middle_Name, Last_Name, Suffix, Std_Level, Std_Section, Std_Sy,Std_Program from Std where StdID = '" + id + "'";
+                MessageBox.Show("Select StdID, First_Name, Middle_Name, Last_Name, Suffix, Std_Level, Std_Section, Std_Sy,Std_Program from Std where StdID = '" + id + "'");
+                reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    _cache.populateslctd_std(11, reader[0].ToString());//uid
+                    MessageBox.Show(reader[0].ToString());
+                    _cache.populateslctd_std(0, reader[1].ToString());//Firstname
+                    MessageBox.Show(reader[1].ToString());
+
+                   _cache.populateslctd_std(1, reader[2].ToString());//Mn
+                    MessageBox.Show(reader[2].ToString());
+
+                   _cache.populateslctd_std(2, reader[3].ToString());//Ln
+                    MessageBox.Show(reader[3].ToString());
+
+                   _cache.populateslctd_std(3, reader[4].ToString());//suffix
+                    MessageBox.Show(reader[4].ToString());
+
+                   _cache.populateslctd_std(4, reader[5].ToString());//stdlvl
+                    MessageBox.Show(reader[5].ToString());
+
+                   _cache.populateslctd_std(5, reader[6].ToString());//stdsec
+                    MessageBox.Show(reader[6].ToString());
+
+                   _cache.populateslctd_std(6, reader[7].ToString());//stdsy
+                    MessageBox.Show(reader[7    ].ToString());
+                    // _cache.populateslctd_std(9, reader[8].ToString());//role student aint have role
+                   _cache.populateslctd_std(10, reader[8].ToString());//program
+                    MessageBox.Show(reader[0].ToString());
+                }
+                con.Close();
+                for(int i = 0; i <= 5; i++)
+                {
+
+                    MessageBox.Show(_cache.returnslctd_std(i));
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                con.Close();
+            }
 
         }
         public void Updatestudent(string id, string firstname, string middlename, string lastname, string suffix, string studlevel, string studsection, string studsy,string stdprogram)

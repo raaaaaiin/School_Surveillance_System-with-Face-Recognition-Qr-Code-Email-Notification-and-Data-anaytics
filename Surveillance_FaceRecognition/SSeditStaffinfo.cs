@@ -24,13 +24,15 @@ namespace Surveillance_FaceRecognition
         }
         public void changedata(string id)
         {
+
+
+            MessageBox.Show(id);
             _func.Editstudent(id);
             this.id = id;
             loaddata();
         }
         public void changedata2(string id)
         {
-            
         }
         public void loaddata()
         {

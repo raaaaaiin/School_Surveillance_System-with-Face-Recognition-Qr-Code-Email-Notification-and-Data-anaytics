@@ -18,15 +18,15 @@ namespace Surveillance_FaceRecognition
         {
             InitializeComponent();
             bunifuPictureBox1.BorderRadius = 0;
-
+            
             _main = ths;
             
         }
         public void changedata(string id)
         {
 
+            _func.editStd(id);
             
-            _func.Editbook(id);
             loaddata();
 
             
@@ -34,53 +34,29 @@ namespace Surveillance_FaceRecognition
        
         public void loaddata()
         {
-            /*
-            this.id = _cache.returnslctd_std(0);
-            setcateg.Items.Clear();
-            Category.Items.Clear();
-            _func.fill("category", setcateg, "book_categ_data", "where book_id = '" + this.id + "' Order by Category ASC");
-            _func.fill("category", Category, "book_categ"," Order by Category ASC");
-
-            label17.Text = _cache.returnslctd_std(1);
-            booktitle.Text = _cache.returnslctd_std(1);
-            author.Text = _cache.returnslctd_std(2);
-            page.Text = _cache.returnslctd_std(3);
-            //index 4 = categ
-            info.Text = _cache.returnslctd_std(4);
-            qty.Text = _cache.returnslctd_std(5);
-            try
-            {
-                latest_borrow.Text = _cache.returnslctd_std(7);
-                latest_return.Text = _cache.returnslctd_std(8);
-                date_borrowed.Text = _cache.returnslctd_std(9);
-                date_return.Text = _cache.returnslctd_std(10);
-
-            }
-            catch
-            {
-                latest_borrow.Text = "";
-                latest_return.Text = "";
-                date_borrowed.Text = "";
-                date_return.Text = "";
-
-            }
-            
+            wholeName.Text = _cache.returnslctd_std(2) + " " + _cache.returnslctd_std(0) + " " + _cache.returnslctd_std(1);
+            firstname.Text = _cache.returnslctd_std(0);
+            lastname.Text = _cache.returnslctd_std(2);
+            middlename.Text = _cache.returnslctd_std(1);
+            suffix.Text = _cache.returnslctd_std(3);
+            gradelevel.Text = _cache.returnslctd_std(4) + " " + _cache.returnslctd_std(10) + " " + _cache.returnslctd_std(5);
+            _func.fill("year", year, "stud_year");
+            year.Text = _cache.returnslctd_std(4);
+            program.Text = _cache.returnslctd_std(10);
+            section.Text = _cache.returnslctd_std(5);
             string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
             path = path.Remove(path.LastIndexOfAny(new char[] { '\\' }, path.LastIndexOf('\\') - 0));
             path += '\\';
             bunifuPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             try
             {
-
-                objBitmap = new Bitmap(Image.FromFile(path + "Books\\" + id + ".jpeg"), new Size(300, 300));
-                
+                objBitmap = new Bitmap(Image.FromFile(path + "Student\\" + id + ".jpeg"), new Size(150, 150));
             }
-            catch 
+            catch
             {
-                objBitmap = new Bitmap(Image.FromFile(path + "Books\\default.jpeg"), new Size(300, 300));
+                objBitmap = new Bitmap(Image.FromFile(path + "Student\\default.jpeg"), new Size(150, 150));
             }
-
-            bunifuPictureBox1.Image = objBitmap;*/
+            bunifuPictureBox1.Image = objBitmap;
         }
 
 
@@ -149,7 +125,7 @@ namespace Surveillance_FaceRecognition
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             _func.delBooks(_cache.returnslctd_std(1),_cache.returnslctd_std(2));
-            _func.loadDataBook();
+            _func.loadDataStd();
             _main.showMenu2("Book");
             this.Hide();
         }
@@ -157,7 +133,7 @@ namespace Surveillance_FaceRecognition
         private void bunifuButton2_Click_1(object sender, EventArgs e)
         {
             //_func.updateBookinfo(id, booktitle.Text, author.Text, page.Text, qty.Text, info.Text);
-            _func.loadDataBook();
+            _func.loadDataStd();
             _main.showMenu2("Book");
         }
 

@@ -171,7 +171,9 @@ namespace Surveillance_FaceRecognition
         }
         public void showbookFrm(string id)
         {
+
             _bookInfBox.changedata(id);
+
             showBookEdit();
         }
 

@@ -78,12 +78,12 @@ namespace Surveillance_FaceRecognition
                 bunifuPictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 try
                 {
-                    objBitmap = new Bitmap(Image.FromFile(path + "Books\\" + id + ".jpeg"), new Size(150, 150));
+                    objBitmap = new Bitmap(Image.FromFile(path + "Student\\" + id + ".jpeg"), new Size(150, 150));
                 
                 }
                 catch
                 {
-                    objBitmap = new Bitmap(Image.FromFile(path + "Books\\default.jpeg"), new Size(150, 150));
+                    objBitmap = new Bitmap(Image.FromFile(path + "Student\\default.jpeg"), new Size(150, 150));
                    
                 }
                 bunifuPictureBox1.Image = objBitmap;
@@ -104,6 +104,7 @@ namespace Surveillance_FaceRecognition
             if (identify.Equals("STD"))
             {
                 _menu.showStdFrm(this.id);
+                MessageBox.Show("STD");
             }
             else
             {
