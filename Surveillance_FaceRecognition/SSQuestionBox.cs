@@ -44,5 +44,10 @@ namespace Surveillance_FaceRecognition
             answer = false;
             this.Close();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
