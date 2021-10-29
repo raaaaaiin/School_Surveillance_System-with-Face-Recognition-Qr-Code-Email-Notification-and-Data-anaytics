@@ -28,8 +28,7 @@ namespace Surveillance_FaceRecognition
         function _func = new function();
 
         // WinAPI procedure to release HBITMAP handles returned by FSDKCam.GrabFrame
-        [DllImport("gdi32.dll")]
-        static extern bool DeleteObject(IntPtr hObject);
+        [DllImport("gdi32.dll")]        static extern bool DeleteObject(IntPtr hObject);
 
         public LFRForm1()
         {
@@ -64,10 +63,13 @@ namespace Surveillance_FaceRecognition
             FSDKCam.GetVideoFormatList(ref cameraName, out formatList, out count);
 
             int VideoFormat = 0; // choose a video format
-            pictureBox1.Width = formatList[VideoFormat].Width;
-            pictureBox1.Height = formatList[VideoFormat].Height;
-            this.Width = formatList[VideoFormat].Width + 48;
-            this.Height = formatList[VideoFormat].Height + 96;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            //pictureBox1.Width = formatList[VideoFormat].Width;
+            //pictureBox1.Height = formatList[VideoFormat].Height;
+            //this.Width = pictureBox1.Width +48;
+            //this.Height = pictureBox1.Height + 96;
+            //this.Width = formatList[VideoFormat].Width + 48;
+            //this.Height = formatList[VideoFormat].Height + 96;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -193,14 +195,14 @@ namespace Surveillance_FaceRecognition
                 GC.Collect(); // collect the garbage after the deletion
             }
             //original code to save to file is below 
-            //FSDK.SaveTrackerMemoryToFile(tracker, TrackerMemoryFile); 
+            FSDK.SaveTrackerMemoryToFile(tracker, TrackerMemoryFile); 
 
             //Save to Database mysql free to delete
 
-            byte[] trackerData;
-            FSDK.SaveTrackerMemoryToBuffer(1, out trackerData, 50000);
-            Console.WriteLine(trackerData);
-            checkData(trackerData);
+            //byte[] trackerData;
+            //FSDK.SaveTrackerMemoryToBuffer(1, out trackerData, 50000);
+            //Console.WriteLine(trackerData);
+            //checkData(trackerData);
             //end my personal file
             FSDK.FreeTracker(tracker);
             FSDKCam.CloseVideoCamera(cameraHandle);
@@ -329,6 +331,11 @@ namespace Surveillance_FaceRecognition
         private void button2_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+
         }
     }
 }

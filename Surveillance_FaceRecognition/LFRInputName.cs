@@ -109,5 +109,10 @@ namespace Surveillance_FaceRecognition
                 bunifuMetroTextbox2.Text = "";
             }
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
