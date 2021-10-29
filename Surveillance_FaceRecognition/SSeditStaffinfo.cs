@@ -224,5 +224,13 @@ namespace Surveillance_FaceRecognition
         {
 
         }
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+            _func.Updatestudent(id, firstname.Text, middlename.Text, lastname.Text, suffix.Text, year.Text, section.Text, studsy.Text, program.Text);
+            loaddata();
+            _func.loadDataStud();
+            _main.showMenu2("STD");
+        }
     }
 }
