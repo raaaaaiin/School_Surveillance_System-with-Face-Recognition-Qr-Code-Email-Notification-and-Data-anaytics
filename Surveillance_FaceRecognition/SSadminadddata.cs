@@ -20,7 +20,7 @@ namespace Surveillance_FaceRecognition
         public SSadminadddata()
         {
             InitializeComponent();
-            ddfill.Enabled = false;
+           
         }
 
         private void adminrecord_Load(object sender, EventArgs e)
@@ -31,13 +31,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            _con.condupe.Open();
-            _con.com = _con.condupe.CreateCommand();
-            _con.com.CommandType = System.Data.CommandType.Text;
-            _con.com.CommandText = "insert into book_categ values('"+categ.Text+"')";
-            _con.com.ExecuteNonQuery();
-            _con.condupe.Close();
-            reload();
+          
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)
@@ -74,12 +68,8 @@ namespace Surveillance_FaceRecognition
         {
             yeard.Items.Clear();
             year2d.Items.Clear();
-            categfill.Items.Clear();
-            ccfill.Items.Clear();
             _func.fill("year", yeard, "stud_year");
             _func.fill("year", year2d, "stud_year");
-            _func.fill("category", categfill, "book_categ");
-            _func.fill("creditscore", ccfill, "borrow_duration");
             _func.fill("year", yeardfill, "stud_year");
             _func.fill("year", yeard2fill, "stud_year");
 
@@ -106,61 +96,23 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton5_Click(object sender, EventArgs e)
         {
-            _con.condupe.Open();
-            _con.com = _con.condupe.CreateCommand();
-            _con.com.CommandType = System.Data.CommandType.Text;
-            _con.com.CommandText = "insert into borrow_duration values('" + cc.Text + "','"+dd.Text+"')";
-            _con.com.ExecuteNonQuery();
-            _con.condupe.Close();
-            reload();
+           
         }
 
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
-            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to Delete Category Data!");
-            Questionbox.ShowDialog();
-
-            if (Questionbox.answer == true)
-            {
-                _con.condupe.Open();
-                _con.com = _con.condupe.CreateCommand();
-                _con.com.CommandType = System.Data.CommandType.Text;
-                _con.com.CommandText = "Delete From book_categ Where category = '" + categfill.Text + "'";
-                _con.com.ExecuteNonQuery();
-                _con.condupe.Close();
-                reload();
-            }
-            else
-            {
-
-            }
+            
         }
 
         private void bunifuButton7_Click(object sender, EventArgs e)
         {
-            SSQuestionBox Questionbox = new SSQuestionBox("Confirmation to Delete Credit score data!");
-            Questionbox.ShowDialog();
-            if (Questionbox.answer == true)
-            {
-                _con.condupe.Open();
-                _con.com = _con.condupe.CreateCommand();
-                _con.com.CommandType = System.Data.CommandType.Text;
-                _con.com.CommandText = "Delete From borrow_duration Where creditscore = '" + ccfill.Text + "'";
-                _con.com.ExecuteNonQuery();
-                _con.condupe.Close();
-                reload();
-            }
-            else
-            {
-
-            }
-
+           
         }
 
         private void ccfill_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            ddfill.Text = _func.getfill("duration", "borrow_duration","where creditscore = '"+ccfill.Text+"'");
+           
         }
 
         private void bunifuButton8_Click(object sender, EventArgs e)
