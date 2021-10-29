@@ -35,6 +35,11 @@ namespace Surveillance_FaceRecognition
 
                 _main.hide();
                 _func.loadDataStd();
+                if (isPressed[3] == true)
+                {
+                    _main.offCam();
+                    isPressed[3] = false;
+                }
                 reset();
                 _main.showMenu2("Book");
                 isPressed[0] = true;
@@ -76,6 +81,11 @@ namespace Surveillance_FaceRecognition
             if (isPressed[1] == false)
             {
                 _main.reset();
+                if (isPressed[3] == true)
+                {
+                    _main.offCam();
+                    isPressed[3] = false;
+                }
                 reset();
                 _main.addstud();
                 isPressed[1] = true;
@@ -94,6 +104,11 @@ namespace Surveillance_FaceRecognition
 
                 _main.hide();
                 _func.loadDataStd();
+                if (isPressed[3] == true)
+                {
+                    _main.offCam();
+                    isPressed[3] = false;
+                }
                 reset();
                 _main.showMenu2("Book");
                 isPressed[0] = true;
@@ -114,6 +129,11 @@ namespace Surveillance_FaceRecognition
             {
                 _main.hide();
                 _func.loadDataStd();
+                if (isPressed[3] == true)
+                {
+                    _main.offCam();
+                    isPressed[3] = false;
+                }
                 reset();
                 _main.showMenu2("STD");
                 isPressed[4] = true;
@@ -172,9 +192,32 @@ namespace Surveillance_FaceRecognition
             if (isPressed[2] == false)
             {
                 _main.reset();
+                if (isPressed[3] == true)
+                {
+                    _main.offCam();
+                    isPressed[3] = false;
+                }
                 reset();
                 _main.addbook();
                 isPressed[2] = true;
+
+            }
+            
+        }
+
+        private void bunifuTileButton2_Click_1(object sender, EventArgs e)
+        {
+            if (isPressed[3] == false)
+            {
+                _main.reset();
+                if (isPressed[3] == true)
+                {
+                    _main.offCam();
+                    isPressed[3] = false;
+                }
+                reset();
+                _main.InitiateCamera();
+                isPressed[3] = true;
 
             }
         }
