@@ -51,15 +51,15 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 24);
+            this.panel1.Location = new System.Drawing.Point(1, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 95);
+            this.panel1.Size = new System.Drawing.Size(246, 95);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Surveillance_FaceRecognition.Properties.Resources.warning_icon_png_2749;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,12 +78,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Roboto", 12F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(55, 12);
+            this.label1.Location = new System.Drawing.Point(57, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 75);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
@@ -149,11 +148,11 @@
             this.bunifuButton3.IndicateFocus = false;
             this.bunifuButton3.Location = new System.Drawing.Point(230, -6);
             this.bunifuButton3.Name = "bunifuButton3";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             stateProperties3.BorderRadius = 3;
             stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             stateProperties3.ForeColor = System.Drawing.Color.White;
             stateProperties3.IconLeftImage = null;
             stateProperties3.IconRightImage = null;
