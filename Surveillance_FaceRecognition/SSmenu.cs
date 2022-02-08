@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 // Below is for Camera
 
 
@@ -23,11 +22,14 @@ namespace Surveillance_FaceRecognition
         static int upcontrol = 1;
         public string setrole = "";
         public SSeditStaffinfo _stdInfBox;
-        public SSeditStdinfo _bookInfBox;
+        public SSeditStdinfo _editstdinfo;
         public SSadminForm _adminForm;
-
-
-
+        public SSnextback[] _nextback = new SSnextback[1];
+        public SSsectionBox[] _Sectionbox;
+        public long[] IDs;
+        public long faceCount = 0;
+        public string[] signalLock;
+        public int counter;
 
 
 
@@ -51,20 +53,29 @@ namespace Surveillance_FaceRecognition
         {
             InitializeComponent();
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void Menu_Load(object sender, EventArgs e)
         {
+
             notif.Hide();
-            booksmenu.Hide();
-           
-          if(setrole.Equals("Admin"))
+            stdstaffmenu.Hide();
+            pictureBox3.Hide();
+            if (setrole.Equals("Admin"))
             {
                 SSprevilages _priv = new SSprevilages(this);
+                _priv.TopLevel = false;
+                _priv.TopMost = true;
+                prvlg.Controls.Add(_priv);
+                _priv.Show();
+            }
+            else if (setrole.Equals("Staff"))
+            {
+                SSprevilagesUser _priv = new SSprevilagesUser(this);
                 _priv.TopLevel = false;
                 _priv.TopMost = true;
                 prvlg.Controls.Add(_priv);
@@ -74,9 +85,9 @@ namespace Surveillance_FaceRecognition
             {
                 MessageBox.Show("There is no role such as : " + setrole);
             }
-           
-            timer1.Start();
 
+            timer1.Start();
+            timer2.Start();
 
 
 
@@ -119,12 +130,13 @@ namespace Surveillance_FaceRecognition
 
         private void label1_Click(object sender, EventArgs e)
         {
-             
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           
+            _func.resetLock();
+
         }
         public void addstud()
         {
@@ -142,25 +154,27 @@ namespace Surveillance_FaceRecognition
                 upcontrol = 0;
                 addstud();
             }
+            panel2.Show();
 
-            
+
         }
-        public void addbook()
+        public void addstdstaff()
         {
-            SSaddStd _addbooks = new SSaddStd(this);
-            _addbooks.TopLevel = false;
-            _addbooks.TopMost = true;
-            panel2.Controls.Add(_addbooks);
-            _addbooks.Show();
-            _addbooks.Top = upcontrol * 68;
+            SSaddStd _SSaddstd = new SSaddStd(this);
+            _SSaddstd.TopLevel = false;
+            _SSaddstd.TopMost = true;
+            panel2.Controls.Add(_SSaddstd);
+            _SSaddstd.Show();
+            _SSaddstd.Top = upcontrol * 68;
             upcontrol = upcontrol + 1;
             if (upcontrol >= 9)
             {
                 panel2.Controls.Clear();
                 panel2.Refresh();
                 upcontrol = 0;
-                addbook();
+                addstdstaff();
             }
+            panel2.Show();
 
         }
         public void addStd()
@@ -179,20 +193,26 @@ namespace Surveillance_FaceRecognition
                 addStd();
             }
             _addStd.Show();
-
+            panel2.Show();
         }
 
         public void reset()
         {
+            offCam();
+            pictureBox3.Hide();
             panel2.Controls.Clear();
             notif.Hide();
-            booksmenu.Hide();
+            stdstaffmenu.Hide();
+            panel2.Hide();
             upcontrol = 0;
         }
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             needClose = true;
-            this.Close();
+            this.Dispose();
+            SSlogIn _log = new SSlogIn();
+            _log.Show();
+            Application.Exit();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -202,9 +222,10 @@ namespace Surveillance_FaceRecognition
         public void showMenu2(string identifier)
         {
             notif.Show();
+            _notif.resetIndex();
             _notif.Show();
             _notif.forshow(identifier);
-            booksmenu.Show();
+            stdstaffmenu.Show();
 
 
         }
@@ -212,15 +233,16 @@ namespace Surveillance_FaceRecognition
         public void showMenu2()
         {
 
-           _notif = new notificationBar(this);
+            _notif = new notificationBar(this);
+            _notif.resetIndex();
             _notif.forinitiatebox();
             _notif.TopLevel = false;
             _notif.TopMost = true;
             notif.Controls.Add(_notif);
-            
+
 
         }
-      
+
         private void notif_Paint(object sender, PaintEventArgs e)
         {
 
@@ -232,55 +254,55 @@ namespace Surveillance_FaceRecognition
         }
         public void hide()
         {
-            _bookInfBox.Hide();
+            _editstdinfo.Hide();
             _stdInfBox.Hide();
         }
-        public void showbookFrm(string id)
+        public void showstdinfoFrm(string id)
         {
 
-            _bookInfBox.changedata(id);
+            _editstdinfo.changedata(id);
 
-            showBookEdit();
+            showstdinfoEdit();
         }
 
         public void preinitstdfrm()
         {
-            
-                _stdInfBox = new SSeditStaffinfo(this);
-                _stdInfBox.TopLevel = false;
-                _stdInfBox.TopMost = true;
-                _stdInfBox.Location = new Point(0, 0);
-            booksmenu.Controls.Add(_stdInfBox);
 
-                _stdInfBox.Hide();
-                booksmenu.Hide();
-            
-                _bookInfBox = new SSeditStdinfo(this);
-                _bookInfBox.TopLevel = false;
-                _bookInfBox.TopMost = true;
-           
+            _stdInfBox = new SSeditStaffinfo(this);
+            _stdInfBox.TopLevel = false;
+            _stdInfBox.TopMost = true;
+            _stdInfBox.Location = new Point(0, 0);
+            stdstaffmenu.Controls.Add(_stdInfBox);
 
-                _bookInfBox.Show();
-                booksmenu.Controls.Add(_bookInfBox);
-                _bookInfBox.Hide();
-                booksmenu.Hide();
+            _stdInfBox.Hide();
+            stdstaffmenu.Hide();
 
-            
-                
+            _editstdinfo = new SSeditStdinfo(this);
+            _editstdinfo.TopLevel = false;
+            _editstdinfo.TopMost = true;
 
-            
-            
+
+            _editstdinfo.Show();
+            stdstaffmenu.Controls.Add(_editstdinfo);
+            _editstdinfo.Hide();
+            stdstaffmenu.Hide();
+
+
+
+
+
+
         }
         public void showStdEdit()
         {
 
-            _bookInfBox.Hide();
+            _editstdinfo.Hide();
             _stdInfBox.Show();
         }
-        public void showBookEdit()
+        public void showstdinfoEdit()
         {
             _stdInfBox.Hide();
-            _bookInfBox.Show();
+            _editstdinfo.Show();
         }
         public void preInit()
         {
@@ -302,12 +324,17 @@ namespace Surveillance_FaceRecognition
         }
         public void showRecord()
         {
+
             panel2.Controls.Clear();
             notif.Hide();
-            booksmenu.Hide();
+            stdstaffmenu.Hide();
             _adminForm = new SSadminForm(this) { TopLevel = false };
             panel2.Controls.Add(_adminForm);
             _adminForm.Show();
+            panel2.Show();
+
+
+
 
         }
 
@@ -338,7 +365,6 @@ namespace Surveillance_FaceRecognition
 
 
 
-        
 
 
 
@@ -346,6 +372,142 @@ namespace Surveillance_FaceRecognition
 
 
         public void InitiateCamera()
+        {
+            pictureBox3.Show();
+
+            needClose = false;
+            int cameraHandle = 0;
+
+            int r = FSDKCam.OpenVideoCamera(ref cameraName, ref cameraHandle);
+            if (r != FSDK.FSDKE_OK)
+            {
+                MessageBox.Show("Error opening the first camera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+
+            int tracker = 0; 	// creating a Tracker
+            if (FSDK.FSDKE_OK != FSDK.LoadTrackerMemoryFromFile(ref tracker, TrackerMemoryFile))
+            {
+                MessageBox.Show("Not Loaded");
+                FSDK.CreateTracker(ref tracker);
+            }// try to load saved tracker state
+             // if could not be loaded, create a new tracker
+            int err = 0; // set realtime face detection parameters
+            FSDK.SetTrackerMultipleParameters(tracker, "HandleArbitraryRotations=false; DetectMultipleFaces=true; DetermineFaceRotationAngle=false; InternalResizeWidth=384; FaceDetectionThreshold=1;", ref err);
+
+            while (!needClose)
+            {
+                Int32 imageHandle = 0;
+                if (FSDK.FSDKE_OK != FSDKCam.GrabFrame(cameraHandle, ref imageHandle)) // grab the current frame from the camera
+                {
+                    Application.DoEvents();
+                    continue;
+                }
+                FSDK.CImage image = new FSDK.CImage(imageHandle);
+
+                faceCount = 0;
+                FSDK.FeedFrame(tracker, 0, image.ImageHandle, ref faceCount, out IDs, sizeof(long) * 256); // maximum of 256 faces detected
+                Array.Resize(ref IDs, (int)faceCount);
+                counter = 0;
+
+                // make UI controls accessible (to find if the user clicked on a face)
+                Application.DoEvents();
+
+                Image frameImage = image.ToCLRImage();
+                Graphics gr = Graphics.FromImage(frameImage);
+
+                for (int i = 0; i < IDs.Length; ++i)
+                {
+                    FSDK.TFacePosition facePosition = new FSDK.TFacePosition();
+                    FSDK.GetTrackerFacePosition(tracker, 0, IDs[i], ref facePosition);
+
+                    int left = facePosition.xc - (int)(facePosition.w * 0.6);
+                    int top = facePosition.yc - (int)(facePosition.w * 0.5);
+                    int w = (int)(facePosition.w * 1.2);
+
+                    String name;
+                    int res = FSDK.GetAllNames(tracker, IDs[i], out name, 65536); // maximum of 65536 characters
+
+                    if (FSDK.FSDKE_OK == res && name.Length > 0)
+                    { // draw name
+                        StringFormat format = new StringFormat();
+                        format.Alignment = StringAlignment.Center;
+
+                        gr.DrawString(name, new System.Drawing.Font("Arial", 16),
+                            new System.Drawing.SolidBrush(System.Drawing.Color.LightGreen),
+                            facePosition.xc, top + w + 5, format);
+
+
+
+                    }
+                    if (FSDK.FSDKE_OK == res && name.Equals("Unknown Face"))
+                    {
+                        // draw name
+                        StringFormat format = new StringFormat();
+                        format.Alignment = StringAlignment.Center;
+                        gr.DrawString(name, new System.Drawing.Font("Arial", 16),
+                            new System.Drawing.SolidBrush(System.Drawing.Color.Red),
+                            facePosition.xc, top + w + 5, format);
+                    }
+
+                    Pen pen = Pens.LightGreen;
+
+                    if (mouseX >= left && mouseX <= left + w && mouseY >= top && mouseY <= top + w)
+                    {
+                        pen = Pens.Blue;
+                        Console.WriteLine("Hatodoko2");
+                        if (ProgramState.psRemember == programState)
+                        {
+                            Console.WriteLine("Hatodoko1");
+                            if (FSDK.FSDKE_OK == FSDK.LockID(tracker, IDs[i]))
+                            {
+                                // get the user name
+                                Console.WriteLine("Hatodoko");
+                                LFRInputName inputName = new LFRInputName();
+                                if (DialogResult.OK == inputName.ShowDialog())
+                                {
+                                    userName = inputName.userName;
+                                    if (userName == null || userName.Length == 0)
+                                    {
+                                        String s = "Unknown";
+                                        FSDK.SetName(tracker, IDs[i], "Unknown Face");
+                                    }
+                                    else
+                                    {
+                                        FSDK.SetName(tracker, IDs[i], userName);
+
+
+                                    }
+                                    FSDK.UnlockID(tracker, IDs[i]);
+                                }
+                            }
+                        }
+                    }
+                    gr.DrawRectangle(pen, left, top, w, w);
+                }
+                programState = ProgramState.psRecognize;
+
+                // display current frame
+                pictureBox3.Image = frameImage;
+                GC.Collect(); // collect the garbage after the deletion
+            }
+            //original code to save to file is below 
+            FSDK.SaveTrackerMemoryToFile(tracker, TrackerMemoryFile);
+
+            //Save to Database mysql free to delete
+
+            //byte[] trackerData;
+            //FSDK.SaveTrackerMemoryToBuffer(1, out trackerData, 50000);
+            //Console.WriteLine(trackerData);
+            //checkData(trackerData);
+            //end my personal file
+            FSDK.FreeTracker(tracker);
+            FSDKCam.CloseVideoCamera(cameraHandle);
+            FSDKCam.FinalizeCapturing();
+        }
+
+
+        public void InitiateSurveillance()
         {
             pictureBox3.Show();
             needClose = false;
@@ -364,7 +526,7 @@ namespace Surveillance_FaceRecognition
                 MessageBox.Show("Not Loaded");
                 FSDK.CreateTracker(ref tracker);
             }// try to load saved tracker state
-                 // if could not be loaded, create a new tracker
+             // if could not be loaded, create a new tracker
             int err = 0; // set realtime face detection parameters
             FSDK.SetTrackerMultipleParameters(tracker, "HandleArbitraryRotations=false; DetectMultipleFaces=true; DetermineFaceRotationAngle=false; InternalResizeWidth=384; FaceDetectionThreshold=1;", ref err);
 
@@ -410,18 +572,18 @@ namespace Surveillance_FaceRecognition
                             new System.Drawing.SolidBrush(System.Drawing.Color.LightGreen),
                             facePosition.xc, top + w + 5, format);
                     }
-                    if (FSDK.FSDKE_OK == res && name.Equals("Unknown Face"))
+                    if (FSDK.FSDKE_OK == res && name.Equals(""))
                     { // draw name
                         StringFormat format = new StringFormat();
                         format.Alignment = StringAlignment.Center;
 
-                        gr.DrawString(name, new  System.Drawing.Font("Arial", 16),
+                        gr.DrawString(name, new System.Drawing.Font("Arial", 16),
                             new System.Drawing.SolidBrush(System.Drawing.Color.Red),
                             facePosition.xc, top + w + 5, format);
                     }
 
                     Pen pen = Pens.LightGreen;
-                    
+
                     if (mouseX >= left && mouseX <= left + w && mouseY >= top && mouseY <= top + w)
                     {
                         pen = Pens.Blue;
@@ -444,6 +606,7 @@ namespace Surveillance_FaceRecognition
                                     else
                                     {
                                         FSDK.SetName(tracker, IDs[i], userName);
+
                                     }
                                     FSDK.UnlockID(tracker, IDs[i]);
                                 }
@@ -473,6 +636,7 @@ namespace Surveillance_FaceRecognition
             FSDKCam.FinalizeCapturing();
         }
 
+
         private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
         {
             programState = ProgramState.psRemember;
@@ -480,7 +644,7 @@ namespace Surveillance_FaceRecognition
 
         private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
         {
-            mouseX = e.X  + TempX;
+            mouseX = e.X + TempX;
             mouseY = e.Y + TempY;
         }
 
@@ -490,24 +654,128 @@ namespace Surveillance_FaceRecognition
             mouseY = 0;
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            TempX += 1;
-            label1.Text = TempX.ToString();
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            TempY += 1;
-            label1.Text = TempY.ToString();
-        }
-
         public void offCam()
         {
-            needClose = true;
             pictureBox3.Hide();
+            needClose = true;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //For client
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public string[,] info;
+        static int next = 7;
+        static int current = 0;
+        int locX = 2;
+        int locY = 0;
+        static int index = 0;
+        string filter = "";
+        int end = -1;
+        string search = "";
+        public static string identify = "null";
+
+        public void showRecSurv(LFRForm1 asd)
+        {
+            panel2.Controls.Clear();
+            notif.Hide();
+            stdstaffmenu.Hide();
+            SSUserpanel _userpanel = new SSUserpanel(asd) { TopLevel = false };
+            panel2.Controls.Add(_userpanel);
+            _userpanel.Show();
+            panel2.Show();
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            label3.Text = "Time: " + DateTime.Now.ToString();
+        }
+
+        private void SSmenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            reset();
+        }
+
+        private void SSmenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reset();
+        }
+
+        public void initiateSection()
+        {
+
+            locX = 0;
+            locY = 0;
+            panel2.Hide();
+            current = 0;
+            panel2.Controls.Clear();
+            pictureBox2.Hide();
+            for (int z = 0; z <= 2; z++)
+            {
+                for (int i = 0; i <= 3; i++)
+                {
+                    _Sectionbox[current] = new SSsectionBox(this) { TopLevel = false };
+                    panel2.Controls.AddRange(_Sectionbox);
+                    _Sectionbox[current].Location = new Point(locX, locY);
+                    _Sectionbox[current].Show();
+                    current += 1;
+                    locX += 233;
+
+
+                }
+                locX = 0;
+                locY += 195;
+            }
+            locY = panel2.Size.Height - 35;
+            _nextback[0] = new SSnextback(this, "", "", "", "") { TopLevel = false };
+            panel2.Controls.AddRange(_nextback);
+            _nextback[0].Location = new Point((panel2.Width - _nextback[0].Size.Width) / 2, locY);
+            _nextback[0].Show();
+            panel2.Show();
+        }
+
+
+
+
     }
+   
+    
 }
  

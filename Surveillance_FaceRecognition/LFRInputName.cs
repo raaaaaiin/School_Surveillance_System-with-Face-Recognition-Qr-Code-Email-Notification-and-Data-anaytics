@@ -52,7 +52,7 @@ namespace Surveillance_FaceRecognition
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
             this.id = bunifuMetroTextbox2.Text;
-            _func.Editstudent(id);
+            _func.editStd(id);
                 loaddata();
             
         }
@@ -60,16 +60,16 @@ namespace Surveillance_FaceRecognition
         public void loaddata()
         {
            
-            lastname.Text = _cache.returnslctd_staff(2);
-            middlename.Text = _cache.returnslctd_staff(1);
-            gradelevel.Text = _cache.returnslctd_staff(4) + " " + _cache.returnslctd_staff(10) + " " + _cache.returnslctd_staff(5);
-            firstname.Text = _cache.returnslctd_staff(0);
-            label17.Text = _cache.returnslctd_staff(2) + " " + _cache.returnslctd_staff(0) + " " + _cache.returnslctd_staff(1);
+            lastname.Text = _cache.returnslctd_std(2);
+            middlename.Text = _cache.returnslctd_std(1);
+            gradelevel.Text = _cache.returnslctd_std(4) + " " + _cache.returnslctd_std(7) + " " + _cache.returnslctd_std(5);
+            firstname.Text = _cache.returnslctd_std(0);
+            label17.Text = _cache.returnslctd_std(2) + " " + _cache.returnslctd_std(0) + " " + _cache.returnslctd_std(1);
             _func.fill("year", year, "stud_year");
-         
-            year.Text = _cache.returnslctd_staff(4);
-            program.Text = _cache.returnslctd_staff(10);
-            section.Text = _cache.returnslctd_staff(5);
+            studsy.Text = _cache.returnslctd_std(6);
+            year.Text = _cache.returnslctd_std(4);
+            program.Text = _cache.returnslctd_std(7);
+            section.Text = _cache.returnslctd_std(5);
             string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
             path = path.Remove(path.LastIndexOfAny(new char[] { '\\' }, path.LastIndexOf('\\') - 0));
             path += '\\';

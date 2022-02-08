@@ -21,7 +21,7 @@ namespace Surveillance_FaceRecognition
         public string[,] info;
         static int next = 7;
         static int current = 0;
-        int loc = 0;
+        int loc = 3;
         static int index = 0;
         string filter = "";
         int end = -1;
@@ -35,6 +35,7 @@ namespace Surveillance_FaceRecognition
         
         public void forinitiatebox()
         {
+            jonel.Hide();
             for (int i = 0; i <= 7; i++)
             {
                 _Studentbox[i] = new SSstudentBox(_menu,"","","",identify) { TopLevel = false };
@@ -42,10 +43,11 @@ namespace Surveillance_FaceRecognition
                 _Studentbox[i].Location = new Point(0, loc);
                 loc += 68;
             }
-           
+            jonel.Show();
         }
         public void forshow(string identifier)
         {
+            jonel.Hide();
             identify = identifier;
             if (identify.Equals("STD"))
             {
@@ -91,8 +93,10 @@ namespace Surveillance_FaceRecognition
                     }
 
                 }
-               
+
             }
+
+            jonel.Show();
         }
        
         public void fornextstudent()
@@ -126,8 +130,9 @@ namespace Surveillance_FaceRecognition
         
         public void fornextbook()
         {
-          
-                for (int i = 0; i <= 7; i++)
+
+            jonel.Hide();
+            for (int i = 0; i <= 7; i++)
                 {
                     try
                     {
@@ -147,9 +152,10 @@ namespace Surveillance_FaceRecognition
                     }
 
                 }
-            
-            
 
+
+
+            jonel.Show();
         }
 
 
@@ -163,7 +169,7 @@ namespace Surveillance_FaceRecognition
             }
             else
             {
-                _func.overWriteloadDataBook(bunifuMaterialTextbox1.Text);
+                _func.overWriteloadDataSTD(bunifuMaterialTextbox1.Text);
                 index = 0;
                 fornextbook();
             }
@@ -205,7 +211,7 @@ namespace Surveillance_FaceRecognition
                 }
                 else
                 {
-                    fornextbook();
+                    fornextbook() ;
                 }
             }
                          
@@ -215,7 +221,7 @@ namespace Surveillance_FaceRecognition
         {
             if (index >= 14)
             {
-                index -= 7 * 2;
+                index -= 8 * 2;
                 if (identify.Equals("STD"))
                 {
                     fornextstudent();
@@ -224,7 +230,7 @@ namespace Surveillance_FaceRecognition
                     fornextbook();
                 }
             }
-            else if (index > 7 && index < 14){
+            else if (index >= 0 && index < 14){
                 index = 0;
                 if (identify.Equals("STD"))
                 {
@@ -248,10 +254,14 @@ namespace Surveillance_FaceRecognition
             }
             else
             {
-                _func.overWriteloadDataBook(bunifuMaterialTextbox1.Text);
+                _func.overWriteloadDataSTD(bunifuMaterialTextbox1.Text);
                 index = 0;
                 fornextbook();
             }
+        }
+        public void resetIndex()
+        {
+            index = 0;
         }
     }
 }

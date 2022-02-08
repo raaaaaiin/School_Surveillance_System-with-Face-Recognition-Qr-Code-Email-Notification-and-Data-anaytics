@@ -9,11 +9,15 @@ namespace Surveillance_FaceRecognition
 {
     class DataHandler
     {
+        private static string[,] section_info;
         private static string[,] staff_info;
         private static string[,] std_info;
-        private static string[] slctd_staff = new string[13];
-        private static string[] slctd_std = new string[13];
+        
+        private static string[] user;
+        private static string[] slctd_staff = new string[30];
+        private static string[] slctd_std = new string[30];
         private static string[] user_std = new string[13];
+        private static string[] section = new string[10];
         
         private string selected_stdId;
         
@@ -44,7 +48,7 @@ namespace Surveillance_FaceRecognition
         {
             return slctd_std[index];
         }
-        public void populateuser_staff(int index, string info)
+        public void populateuser_std(int index, string info)
         {
             user_std[index] = info;
         }
@@ -54,8 +58,20 @@ namespace Surveillance_FaceRecognition
         }
         public void setstaff_info(int counter)
         {
-            
+
             staff_info = new string[counter, 3];
+        }
+        public void setSection_info(int counter)
+        {
+            section_info = new string[counter, 4];
+        }
+        public void populateSection_info(int counter, string data, int index)
+        {
+            section_info[counter, index] = data;
+        }
+        public string returnSection_info(int counter, int index)
+        {
+            return section_info[counter, index];
         }
         public void populatestaff_info(int counter,string data,int index)
         {

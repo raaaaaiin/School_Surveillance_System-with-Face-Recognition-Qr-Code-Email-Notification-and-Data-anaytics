@@ -160,29 +160,33 @@ namespace Surveillance_FaceRecognition
                     sy = (yy).ToString() + "-" + (yy + 1).ToString();
                 }
 
-                if (pressed == true)
-                {
-                }
-                else
-                {
-
-                    _main.addStd();
-                }
-
-                Switch(false);
-                pressed = true;
-                bonepu = bunifuButton2;
-                bunifuButton2.Enabled = true;
                 try
                 {
                     _func.addStd(stdID, LastNameText.Text, FirstNameText.Text, MiddleNameText.Text, SuffixText.Text, year, sec, program, sy);
-                }catch(Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
 
-                selectedbutton = bunifuButton3;
-                timer1.Start();
+                    if (pressed == true)
+                    {
+                    }
+                    else
+                    {
+
+                        _main.addStd();
+                    }
+
+                    Switch(false);
+                    pressed = true;
+                    bonepu = bunifuButton2;
+                    bunifuButton2.Enabled = true;
+
+
+                    selectedbutton = bunifuButton3;
+                    timer1.Start();
+                }
+                catch (Exception ex)
+                {
+                    _func.closecon();
+                    SSMessagebox MessageBox = new SSMessagebox("Invalid Input!"); MessageBox.Show();
+                }
             }
             catch(Exception ex) { SSMessagebox MessageBox = new SSMessagebox("Invalid Input!"); MessageBox.Show(); }
 
@@ -210,6 +214,8 @@ namespace Surveillance_FaceRecognition
         {
             Progd.Items.Clear();
             _func.fill("program", Progd, "stud_program", "where year = '" + Yeard.Text + "'");
+
+            _func.fill("Section", secD, "stud_section", "where year = '" + Yeard.Text + "' and program = '" + Progd.Text + "'");
         }
 
         private void Progd_SelectedIndexChanged_1(object sender, EventArgs e)

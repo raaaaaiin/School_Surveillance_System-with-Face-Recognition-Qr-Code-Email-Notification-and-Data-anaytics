@@ -1,5 +1,4 @@
 ﻿using System;
-
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,16 +25,22 @@ namespace Surveillance_FaceRecognition
         int mouseY = 0;
         byte[] savedFacedata;
         function _func = new function();
+        public long[] IDs;
+        public long faceCount = 0;
+        public string[] signalLock;
+        string count = "0";
+        public SSUserpanel studentshower;
+        public int trialcount = 0;
+        public int counter;
 
         // WinAPI procedure to release HBITMAP handles returned by FSDKCam.GrabFrame
-        [DllImport("gdi32.dll")]        static extern bool DeleteObject(IntPtr hObject);
+        [DllImport("gdi32.dll")]
+        static extern bool DeleteObject(IntPtr hObject);
 
         public LFRForm1()
         {
             InitializeComponent();
-            loaddata();
-            savedFacedata = _func.retrieveFaceData();
-            MessageBox.Show(savedFacedata.ToString());
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,10 +69,10 @@ namespace Surveillance_FaceRecognition
 
             int VideoFormat = 0; // choose a video format
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Width = this.Width;
+            pictureBox1.Height = this.Height - 50;
             //pictureBox1.Width = formatList[VideoFormat].Width;
             //pictureBox1.Height = formatList[VideoFormat].Height;
-            //this.Width = pictureBox1.Width +48;
-            //this.Height = pictureBox1.Height + 96;
             //this.Width = formatList[VideoFormat].Width + 48;
             //this.Height = formatList[VideoFormat].Height + 96;
         }
@@ -80,6 +85,7 @@ namespace Surveillance_FaceRecognition
         private void button1_Click(object sender, EventArgs e)
         {
             this.button1.Enabled = false;
+            timer1.Start();
             int cameraHandle = 0;
 
             int r = FSDKCam.OpenVideoCamera(ref cameraName, ref cameraHandle);
@@ -90,19 +96,29 @@ namespace Surveillance_FaceRecognition
             }
 
             int tracker = 0; 	// creating a Tracker
+            if (FSDK.FSDKE_OK != FSDK.LoadTrackerMemoryFromFile(ref tracker, TrackerMemoryFile))
+            {
+                MessageBox.Show("Not Loaded");
+                FSDK.CreateTracker(ref tracker);
+            }// try to load saved tracker state
+             // if could not be loaded, create a new tracker
+            //int err = 0; // set realtime face detection parameters
+            //without facemask
+            // FSDK.SetTrackerMultipleParameters(tracker, "HandleArbitraryRotations=false; DetectMultipleFaces=true; DetermineFaceRotationAngle=false; InternalResizeWidth=384; FaceDetectionThreshold=1;", ref err);
+
+            //with facemask
+
+            int err = 0;
+            FSDK.SetTrackerMultipleParameters(tracker, "RecognizeFaces=true; HandleArbitraryRotations=true;DetermineFaceRotationAngle = false; InternalResizeWidth = 1024; FaceDetectionThreshold = 1;FaceDetectionModel=fd_masks1.bin;TrimFacesWithUncertainFacialFeatures=false ", ref err);
+
             
-            //original file 
-            //if (FSDK.FSDKE_OK != FSDK.LoadTrackerMemoryFromFile(ref tracker, TrackerMemoryFile)) // try to load saved tracker state
 
-            if (FSDK.FSDKE_OK != FSDK.LoadTrackerMemoryFromBuffer(ref tracker, savedFacedata)) // try to load saved tracker state
-                    FSDK.CreateTracker(ref tracker); // if could not be loaded, create a new tracker
 
-            int err = 0; // set realtime face detection parameters
-            FSDK.SetTrackerMultipleParameters(tracker, "HandleArbitraryRotations=false; DetectMultipleFaces=true; DetermineFaceRotationAngle=false; InternalResizeWidth=384; FaceDetectionThreshold=1;", ref err);
-
-            while (!needClose) 
+            while (!needClose)
             {
                 Int32 imageHandle = 0;
+
+                
                 if (FSDK.FSDKE_OK != FSDKCam.GrabFrame(cameraHandle, ref imageHandle)) // grab the current frame from the camera
                 {
                     Application.DoEvents();
@@ -110,13 +126,14 @@ namespace Surveillance_FaceRecognition
                 }
                 FSDK.CImage image = new FSDK.CImage(imageHandle);
 
-                long[] IDs;
-                long faceCount = 0;
+                faceCount = 0;
                 FSDK.FeedFrame(tracker, 0, image.ImageHandle, ref faceCount, out IDs, sizeof(long) * 256); // maximum of 256 faces detected
                 Array.Resize(ref IDs, (int)faceCount);
+                counter = 0;
 
-                // make UI controls accessible (to find if the user clicked on a face)
-                Application.DoEvents();
+
+        // make UI controls accessible (to find if the user clicked on a face)
+        Application.DoEvents();
 
                 Image frameImage = image.ToCLRImage();
                 Graphics gr = Graphics.FromImage(frameImage);
@@ -129,57 +146,74 @@ namespace Surveillance_FaceRecognition
                     int left = facePosition.xc - (int)(facePosition.w * 0.6);
                     int top = facePosition.yc - (int)(facePosition.w * 0.5);
                     int w = (int)(facePosition.w * 1.2);
-                                        
-    			    String name;
-			        int res = FSDK.GetAllNames(tracker, IDs[i], out name, 65536); // maximum of 65536 characters
 
-			        if (FSDK.FSDKE_OK == res && name.Length > 0) { // draw name
-                        StringFormat format = new StringFormat();
-                        format.Alignment = StringAlignment.Center;
+                    String name;
+                    int res = FSDK.GetAllNames(tracker, IDs[i], out name, 65536); // maximum of 65536 characters
 
-                        gr.DrawString(name, new System.Drawing.Font("Arial", 16),
-                            new System.Drawing.SolidBrush(System.Drawing.Color.LightGreen),
-                            facePosition.xc, top + w + 5, format);
-                    }
-                    if (FSDK.FSDKE_OK == res && name.Equals("Unknown Face"))
+                    if (FSDK.FSDKE_OK == res && name.Length > 0)
                     { // draw name
                         StringFormat format = new StringFormat();
                         format.Alignment = StringAlignment.Center;
+                        
+                        gr.DrawString(name, new System.Drawing.Font("Arial", 16),
+                            new System.Drawing.SolidBrush(System.Drawing.Color.LightGreen),
+                            facePosition.xc, top + w + 5, format);
+                        gr.DrawString(_func.saveRecord(name.ToString(), studentshower), new System.Drawing.Font("Arial", 16),
+                            new System.Drawing.SolidBrush(System.Drawing.Color.LightGreen),
+                            facePosition.xc, top + 18 + w + 5, format);
+                        trialcount += 1;
+                        Console.WriteLine(trialcount + " :Face Detected");
+                        count = _func.getPendingViolation(name);
+                        if (count.Equals("0"))
+                        {
+                           
+                        }
+                        else
+                        {
+                            gr.DrawString("Violation: " + count, new System.Drawing.Font("Arial", 16),
+                          new System.Drawing.SolidBrush(System.Drawing.Color.Red),
+                          facePosition.xc, top + 18 + 18 + w + 5, format);
+                        }
+                       
 
+
+                    }
+                    if (FSDK.FSDKE_OK == res && name.Equals(""))
+                    {
+                        // draw name
+                        StringFormat format = new StringFormat();
+                        format.Alignment = StringAlignment.Center;
                         gr.DrawString(name, new System.Drawing.Font("Arial", 16),
                             new System.Drawing.SolidBrush(System.Drawing.Color.Red),
                             facePosition.xc, top + w + 5, format);
+                        trialcount += 1;
+                        Console.WriteLine(trialcount + " :Generate Sound not detected");
                     }
 
                     Pen pen = Pens.LightGreen;
-                    if (userName == null || userName.Length <= 0)
-                    {
-                        String s = "Unknown";
-                        FSDK.SetName(tracker, IDs[i], "Unknown Face");
-                    }
+
                     if (mouseX >= left && mouseX <= left + w && mouseY >= top && mouseY <= top + w)
                     {
                         pen = Pens.Blue;
                         if (ProgramState.psRemember == programState)
                         {
-                            
                             if (FSDK.FSDKE_OK == FSDK.LockID(tracker, IDs[i]))
                             {
-                                // get the user name
-                                
                                 LFRInputName inputName = new LFRInputName();
                                 if (DialogResult.OK == inputName.ShowDialog())
                                 {
                                     userName = inputName.userName;
-                                    if (userName == null || userName.Length <= 0)
+                                    if (userName == null || userName.Length == 0)
                                     {
-                                        String s = "";
-                                        FSDK.SetName(tracker, IDs[i], "");
-                                        FSDK.PurgeID(tracker, IDs[i]);
+                                        String s = "Unknown";
+                                        FSDK.SetName(tracker, IDs[i], "Unknown Face");
                                     }
                                     else
                                     {
                                         FSDK.SetName(tracker, IDs[i], userName);
+
+
+
                                     }
                                     FSDK.UnlockID(tracker, IDs[i]);
                                 }
@@ -188,14 +222,14 @@ namespace Surveillance_FaceRecognition
                     }
                     gr.DrawRectangle(pen, left, top, w, w);
                 }
-		        programState = ProgramState.psRecognize;
+                programState = ProgramState.psRecognize;
 
                 // display current frame
                 pictureBox1.Image = frameImage;
                 GC.Collect(); // collect the garbage after the deletion
             }
             //original code to save to file is below 
-            FSDK.SaveTrackerMemoryToFile(tracker, TrackerMemoryFile); 
+            FSDK.SaveTrackerMemoryToFile(tracker, TrackerMemoryFile);
 
             //Save to Database mysql free to delete
 
@@ -206,7 +240,7 @@ namespace Surveillance_FaceRecognition
             //end my personal file
             FSDK.FreeTracker(tracker);
             FSDKCam.CloseVideoCamera(cameraHandle);
-            FSDKCam.FinalizeCapturing();            
+            FSDKCam.FinalizeCapturing();
         }
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
@@ -231,111 +265,31 @@ namespace Surveillance_FaceRecognition
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-        }
-        public void checkData(byte[] trackerData)
-        {
-
-            Boolean isExist = false;
-            conn.condupe.Open();
-            conn.com = conn.condupe.CreateCommand();
-            conn.com.CommandType = System.Data.CommandType.Text;
-            conn.com.CommandText = "Select tracker from faceData";
-            conn.reader = conn.com.ExecuteReader();
-            if (conn.reader.Read())
-            {
-                isExist = true;
-                
-
-            }
-            else
-            {
-                isExist = false;
-                
-            }
-            conn.condupe.Close();
-
-            if (isExist == true)
-            {
-                try
-                {
-                    conn.condupe.Open();
-                    conn.com = conn.condupe.CreateCommand();
-                    conn.com.CommandType = System.Data.CommandType.Text;
-                    conn.com.Parameters.Add("@tracker", MySqlDbType.Blob).Value = trackerData;
-                    conn.com.CommandText = "Update faceData SET tracker = @tracker";
-                    conn.com.ExecuteNonQuery();
-                    conn.condupe.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Saving data failed Error");
-                    MessageBox.Show(ex.ToString());
-                    conn.condupe.Close();
-
-
-                }
-
-            } else if(isExist == false){
-                try
-                {
-                    conn.condupe.Open();
-                    conn.com = conn.condupe.CreateCommand();
-                    conn.com.CommandType = System.Data.CommandType.Text;
-                    conn.com.Parameters.Add("@tracker", MySqlDbType.Blob).Value = trackerData;
-                    conn.com.CommandText = "INSERT INTO faceData SET tracker = @tracker";
-                    conn.com.ExecuteNonQuery();
-                    conn.condupe.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Saving data failed Error");
-                    MessageBox.Show(ex.ToString());
-                    conn.condupe.Close();
-
-
-                }
-            }
-
-        }
-        public void loaddata()
-        {
-            try
-            {
-
-                conn.condupe.Open( );
-                conn.com = conn.condupe.CreateCommand();
-                conn.com.CommandType = System.Data.CommandType.Text;
-                conn.com.CommandText = "Select tracker from faceData";
-                conn.reader = conn.com.ExecuteReader();
-                if (conn.reader.Read())
-                {
-                    savedFacedata =(byte[]) conn.reader["tracker"]; 
-
-                }
-                else
-                {
-                    MessageBox.Show("Data Does not Exist");
-                }
-                conn.condupe.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Loading face data");
-                MessageBox.Show(ex.ToString()) ;
-                conn.condupe.Close();
-            }
-        }
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            
+            _func.resetLock();
         }
 
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        private void LFRForm1_ResizeBegin(object sender, EventArgs e)
         {
+            pictureBox1.Width = this.Width;
+            pictureBox1.Height = this.Height - 44;
+        }
 
+        private void LFRForm1_ResizeEnd(object sender, EventArgs e)
+        {
+            pictureBox1.Width = this.Width;
+            pictureBox1.Height = this.Height - 44;
+        }
+        public void Stop()
+        {
+            needClose = true;
+        }
+
+        private void LFRForm1_ClientSizeChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Width = this.Width;
+            pictureBox1.Height = this.Height - 44;
         }
     }
 }

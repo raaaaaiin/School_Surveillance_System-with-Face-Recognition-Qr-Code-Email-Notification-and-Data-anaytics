@@ -40,6 +40,7 @@ namespace Surveillance_FaceRecognition
         }
        public void process()
         {
+            
             if ((count % 2) == 0)
             {
                 panel1.BackColor = Color.FromArgb(250, 250, 250);
@@ -104,11 +105,11 @@ namespace Surveillance_FaceRecognition
             if (identify.Equals("STD"))
             {
                 _menu.showStdFrm(this.id);
-                MessageBox.Show("STD");
+                
             }
             else
             {
-                _menu.showbookFrm(this.id);
+                _menu.showstdinfoFrm(this.id);
             }
             
             
@@ -136,12 +137,10 @@ namespace Surveillance_FaceRecognition
 
         private void goldy(object sender, EventArgs e)
         {
-            panel2.BackColor = Color.Gold;
         }
 
         private void normaly(object sender, EventArgs e)
         {
-            panel2.BackColor = native;
         }
 
         private void bunifuPictureBox1_Click_1(object sender, EventArgs e)

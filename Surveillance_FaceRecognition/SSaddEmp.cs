@@ -14,6 +14,7 @@ namespace Surveillance_FaceRecognition
   
     public partial class AddstudentForm : Form
     {
+        fileHandler _file = new fileHandler();
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton bonepu;
         public bool pressed = false;
         static int count = 0;
@@ -66,24 +67,25 @@ namespace Surveillance_FaceRecognition
             accountType.SelectedIndex.Equals(accountType.Items[0]);
             try
             {
+                string secid = "";
                 string year = Yeard.Text;
-            string program = Progd.Text;
-            string sec = secD.Text;
-            string sy = "";
-            string priv = accountType.Text;
-            String sDate = DateTime.Now.ToString();
-            DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
-            int yy = datevalue.Year % 100;
-            int mn = datevalue.Month;
-            
-            if(mn <= 5)
-            {
-                sy = (yy - 1).ToString() + "-" + (yy).ToString();
-            }else if(mn >= 6)
-            {
-                sy = (yy).ToString() + "-" + (yy + 1).ToString();
-            }
-            
+                string program = Progd.Text;
+                string sec = secD.Text;
+                string sy = "";
+                string priv = accountType.Text;
+                String sDate = DateTime.Now.ToString();
+                DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
+                int yy = datevalue.Year % 100;
+                int mn = datevalue.Month;
+
+                if (mn <= 5)
+                {
+                    sy = (yy - 1).ToString() + "-" + (yy).ToString();
+                } else if (mn >= 6)
+                {
+                    sy = (yy).ToString() + "-" + (yy + 1).ToString();
+                }
+
                 if (pressed == true) {
                 }
                 else
@@ -91,16 +93,26 @@ namespace Surveillance_FaceRecognition
 
                     main.addstud();
                 }
-                
+
                 Switch(false);
                 pressed = true;
                 bonepu = bunifuButton2;
                 bunifuButton1.Enabled = true;
-                _func.addStudent(LastNameText.Text, FirstNameText.Text, MiddleNameText.Text, SuffixText.Text, year, sec, program, priv, sy);
+                if (year == null || sec == null || program == null)
+                {
+                    secid = "Not yet assigned";
+                }
+                else
+                {
+                     secid = _func.getSectionID(year, program, sec);
 
+                }
+                _func.addStudent(LastNameText.Text, FirstNameText.Text, MiddleNameText.Text, SuffixText.Text, year, sec, program, priv, sy, secid);
+               
                 timer1.Start();
-            } catch { SSMessagebox MessageBox = new SSMessagebox("Invalid Input!");MessageBox.Show();  }
-
+            } catch(Exception ex) { //SSMessagebox MessageBox = new SSMessagebox("Invalid Input!");
+                                    MessageBox.Show(ex.ToString()); }
+           
             
         }
         public void Switch(Boolean indicator)

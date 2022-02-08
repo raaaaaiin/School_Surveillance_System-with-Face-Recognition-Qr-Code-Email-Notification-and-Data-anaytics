@@ -84,20 +84,16 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton3_Click(object sender, EventArgs e)
         {
-            _con.condupe.Open();
+            SSMessagebox MessageBox;
+            try { _con.condupe.Open();
             _con.com = _con.condupe.CreateCommand();
             _con.com.CommandType = System.Data.CommandType.Text;
-            MessageBox.Show(year1.Text + prog1.Text + sec1.Text);
-            _con.com.CommandText = "SELECT Concat(Last_Name,' ',First_Name,' ',Middle_name) As Student_Name,Concat(stud_level,' ',stud_program,' ',stud_section)As Section,Borrowed_book as Book_Title,isReturned FROM `stud_info` inner join book_records on stud_info.uid = book_records.student_id where isReturned = 'false' and stud_level = '"+year1.Text+"' and stud_program = '"+prog1.Text+"' and stud_section ='"+sec1.Text+"' and stud_sy = '"+sy1.Text+"'";
+            _con.com.CommandText = "Update user_info set std_level = 'Graduate' ,std_program= 'Graduate' ,std_section= 'Graduate', std_sy ='Graduate', GraduatedFrom = '" + prog1+ " " + sec1 + " " + sy1 +"'  where std_level = '" + year1.Text + "' and std_program = '" + prog1.Text + "' and std_section ='" + sec1.Text + "' and std_sy = '" + sy2.Text + "'";
             _con.reader = _con.com.ExecuteReader();
-            while (_con.reader.Read())
-            {
-                MessageBox.Show("LOL");
-                qb = new SSQuestionBox("'" + _con.reader[0] + "' Did not return a book!");
-                qb.ShowDialog();
 
-            }
             _con.condupe.Close();
+             MessageBox = new SSMessagebox("Updated Successfully"); MessageBox.Show();} catch (Exception Ex) { MessageBox = new SSMessagebox("Failed"); MessageBox.Show(); }
+            
             reload();
 
         }
@@ -119,30 +115,16 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
-            _con.condupe.Open();
-            _con.com = _con.condupe.CreateCommand();
-            _con.com.CommandType = System.Data.CommandType.Text;
-            _con.com.CommandText = "SELECT Concat(Last_Name,' ',First_Name,' ',Middle_name) As Student_Name,Concat(stud_level,' ',stud_program,' ',stud_section)As Section,Borrowed_book as Book_Title,isReturned FROM `stud_info` inner join book_records on stud_info.uid = book_records.student_id where isReturned = 'false' and stud_level = '" + year2.Text + "' and stud_program = '" + prog2.Text + "' and stud_section ='" + sec2.Text + "' and stud_sy = '" + sy2.Text + "'";
-            _con.reader = _con.com.ExecuteReader();
-            while (_con.reader.Read())
-            {
-                record = true;
-                qb = new SSQuestionBox("'" + _con.reader[0] + "' Did not return a book!");
-                qb.ShowDialog();
 
-            }
             
-            _con.condupe.Close();
-            if (record == false)
-            {
                 _con.condupe.Open();
                 _con.com = _con.condupe.CreateCommand();
                 _con.com.CommandType = System.Data.CommandType.Text;
-                _con.com.CommandText = "Update user_info set stud_level = '" + year3.Text + "' ,stud_program= '" + prog3.Text + "' ,stud_section= '" + sec3.Text + "', stud_sy ='"+sy3.Text+"' where stud_level = '" + year2.Text + "' and stud_program = '" + prog2.Text + "' and stud_section ='" + sec2.Text + "' and stud_sy = '" + sy2.Text + "'";
+                _con.com.CommandText = "Update std set std_level = '" + year3.Text + "' ,std_program= '" + prog3.Text + "' ,std_section= '" + sec3.Text + "', std_sy ='"+sy3.Text+"' where std_level = '" + year2.Text + "' and std_program = '" + prog2.Text + "' and std_section ='" + sec2.Text + "' and std_sy = '" + sy2.Text + "'";
                 _con.com.ExecuteNonQuery();
                 SSMessagebox MessageBox = new SSMessagebox("Updated Successfully"); MessageBox.Show();
                 _con.condupe.Close();
-            }
+            
                 reload();
         }
 

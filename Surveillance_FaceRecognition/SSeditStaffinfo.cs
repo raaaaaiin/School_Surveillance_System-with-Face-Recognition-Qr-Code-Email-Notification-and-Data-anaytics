@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Net;
 
 namespace Surveillance_FaceRecognition
 {
@@ -26,7 +27,6 @@ namespace Surveillance_FaceRecognition
         {
 
 
-            MessageBox.Show(id);
             _func.Editstudent(id);
             this.id = id;
             loaddata();
@@ -36,6 +36,7 @@ namespace Surveillance_FaceRecognition
         }
         public void loaddata()
         {
+            gradelevel.Text = _cache.returnslctd_staff(10) + " " + _cache.returnslctd_staff(5);
             Username.Text = _cache.returnslctd_staff(7);
             Password.Text = _cache.returnslctd_staff(8);
             Confirmpass.Text =  _cache.returnslctd_staff(8);
@@ -44,6 +45,7 @@ namespace Surveillance_FaceRecognition
             gradelevel.Text = _cache.returnslctd_staff(4) + " " + _cache.returnslctd_staff(10) + " " + _cache.returnslctd_staff(5) ;
             firstname.Text = _cache.returnslctd_staff(0);
             label17.Text = _cache.returnslctd_staff(2) + " " + _cache.returnslctd_staff(0) + " " + _cache.returnslctd_staff(1);
+            staffID.Text = id;
             _func.fill("year", year, "stud_year");
             if (_cache.returnslctd_staff(9).ToString().Equals("Admin")){
                 Adminchk();
@@ -68,6 +70,13 @@ namespace Surveillance_FaceRecognition
                 objBitmap = new Bitmap(Image.FromFile(path + "Images\\default.jpeg"), new Size(150, 150));
             }
             bunifuPictureBox1.Image = objBitmap;
+            if (_cache.returnuser_std(8).Equals("Staff"))
+            {
+                bunifuButton1.Enabled = false;
+                bunifuButton2.Enabled = false;
+                bunifuButton3.Enabled = false;
+                bunifuButton4.Enabled = false;
+            }
         }
 
 
@@ -113,12 +122,15 @@ namespace Surveillance_FaceRecognition
             bunifuRadioButton2.RadioColor = Color.White;
             if (bunifuRadioButton1.Checked == true)
             {
+
+                bunifuRadioButton1.Checked = true;
                 bunifuRadioButton2.Checked = false;
             }
             else
             {
-                bunifuRadioButton2.Checked = false;
+
                 bunifuRadioButton1.Checked = true;
+                bunifuRadioButton2.Checked = false;
             }
         }
         public void Adminchk()
@@ -132,6 +144,8 @@ namespace Surveillance_FaceRecognition
             if (bunifuRadioButton2.Checked == true)
             {
 
+                bunifuRadioButton1.Checked = false;
+                bunifuRadioButton2.Checked = true;
             }
             else
             {
@@ -150,7 +164,7 @@ namespace Surveillance_FaceRecognition
             {
                 if (bunifuRadioButton1.Checked == true)
                 {
-                    _func.updatestudentacc(id, Username.Text, Confirmpass.Text, "Student");
+                    _func.updatestudentacc(id, Username.Text, Confirmpass.Text, "Staff");
 
                 }
                 else
@@ -204,7 +218,7 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            _func.Updatestudent(id, firstname.Text, middlename.Text, lastname.Text, suffix.Text, year.Text, section.Text, studsy.Text,program.Text);
+            _func.Updatestudent(id, firstname.Text, middlename.Text, lastname.Text, suffix.Text, year.Text, section.Text, email.Text,program.Text);
             loaddata();
             _func.loadDataStud();
             _main.showMenu2("STD");
@@ -212,7 +226,10 @@ namespace Surveillance_FaceRecognition
 
         private void year2d_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             _func.fill("program", program, "stud_program", "where year = '" + year.Text + "'");
+            SSMessagebox MessageBox;
+            SSMessagebox show = new SSMessagebox("Data Inserted Successfuly");
         }
 
         private void program_SelectedIndexChanged(object sender, EventArgs e)
@@ -227,10 +244,69 @@ namespace Surveillance_FaceRecognition
 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
-            _func.Updatestudent(id, firstname.Text, middlename.Text, lastname.Text, suffix.Text, year.Text, section.Text, studsy.Text, program.Text);
+            _func.Updatestudent(id, firstname.Text, middlename.Text, lastname.Text, suffix.Text, year.Text, section.Text, email.Text, program.Text);
+            loaddata();
+            _func.loadDataStud();
+            _main.showMenu2("STD");
+            SSMessagebox MessageBox;
+            SSMessagebox show = new SSMessagebox("Data Updated Successfuly");
+        }
+
+        private void label18_Click_1(object sender, EventArgs e)
+        {
+            string dest = "";
+            DialogResult result = openFileDialog1.ShowDialog();
+            try
+            {
+                if (result == DialogResult.OK)
+                {
+                    string source = openFileDialog1.FileName;
+                    Bitmap resize = new Bitmap(Image.FromFile(source), new Size(150, 150));
+                    dest = _file.path + "Images\\" + id + ".jpeg";
+                    resize.Save(dest, ImageFormat.Jpeg);
+                }
+            }
+            catch
+            {
+                System.GC.Collect();
+                System.GC.WaitForPendingFinalizers();
+                string source = openFileDialog1.FileName;
+                Bitmap resize = new Bitmap(Image.FromFile(source), new Size(150, 150));
+                dest = _file.path + "Images\\" + id + ".jpeg";
+                File.Delete(dest);
+                resize.Save(dest, ImageFormat.Jpeg);
+            }
             loaddata();
             _func.loadDataStud();
             _main.showMenu2("STD");
         }
+
+        private void bunifuButton5_Click(object sender, EventArgs e)
+        {
+            SaveImage();
+        }
+        private void SaveImage()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.FileName = _cache.returnslctd_staff(2);
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap Biitmap = new Bitmap(Image.FromFile(_file.path + "QrCode\\" + id + ".jpeg"), new Size(900, 900));
+                Biitmap.Save(sfd.FileName + ".jpeg");
+                SSMessagebox MessageBox;
+                SSMessagebox show = new SSMessagebox("Qr Generated Successfuly");
+            }
+           
+        }
+
+        private void bunifuButton4_Click_1(object sender, EventArgs e)
+        {
+            _func.delStud(_cache.returnslctd_staff(11));
+            loaddata();
+            _func.loadDataStud();
+            _main.showMenu2("STD");
+            SSMessagebox MessageBox;
+            SSMessagebox show = new SSMessagebox("Data Deleted Successfuly");
+        }
     }
-}
+    }

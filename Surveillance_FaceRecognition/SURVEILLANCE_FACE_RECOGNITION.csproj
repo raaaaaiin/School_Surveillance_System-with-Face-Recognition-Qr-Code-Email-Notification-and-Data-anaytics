@@ -48,9 +48,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>App-logo.ico</ApplicationIcon>
+    <ApplicationIcon>Untitled-1 %281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BasselTech CamCapture">
+      <HintPath>..\..\WebCam QR Code Scanner\bin\Debug\BasselTech CamCapture.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\Desktop\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
@@ -79,6 +91,9 @@
     <Reference Include="FaceSDK.NET">
       <HintPath>..\..\C#\bin\Debug\FaceSDK.NET.dll</HintPath>
     </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\WebCam QR Code Scanner\bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -95,6 +110,8 @@
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,8 +121,68 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SSviolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSviolation.Designer.cs">
+      <DependentUpon>SSviolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Former1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Former1.Designer.cs">
+      <DependentUpon>Former1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailSender.Designer.cs">
+      <DependentUpon>EmailSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSloginQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSloginQR.Designer.cs">
+      <DependentUpon>SSloginQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSprevilagesUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSprevilagesUser.Designer.cs">
+      <DependentUpon>SSprevilagesUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSnextback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSnextback.Designer.cs">
+      <DependentUpon>SSnextback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSclientUserBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSclientUserBox.Designer.cs">
+      <DependentUpon>SSclientUserBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSUserpanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSUserpanel.Designer.cs">
+      <DependentUpon>SSUserpanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="LFRForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +206,12 @@
     </Compile>
     <Compile Include="SSaddEmp.Designer.cs">
       <DependentUpon>SSaddEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SSsectionBox .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSsectionBox .Designer.cs">
+      <DependentUpon>SSsectionBox .cs</DependentUpon>
     </Compile>
     <Compile Include="SSmassdataupdate.cs">
       <SubType>Form</SubType>
@@ -154,12 +237,6 @@
     </Compile>
     <Compile Include="SSdbConfiguration.Designer.cs">
       <DependentUpon>SSdbConfiguration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SSadminrecord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SSadminrecord.Designer.cs">
-      <DependentUpon>SSadminrecord.cs</DependentUpon>
     </Compile>
     <Compile Include="SSeditStdinfo.cs">
       <SubType>Form</SubType>
@@ -220,14 +297,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SScourseBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SScourseBox.Designer.cs">
+      <DependentUpon>SScourseBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="SSstudentBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SSstudentBox.Designer.cs">
       <DependentUpon>SSstudentBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SSviolation.resx">
+      <DependentUpon>SSviolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Former1.resx">
+      <DependentUpon>Former1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LFRForm1.resx">
       <DependentUpon>LFRForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailSender.resx">
+      <DependentUpon>EmailSender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LFRInputName.resx">
       <DependentUpon>LFRInputName.cs</DependentUpon>
@@ -238,6 +333,22 @@
     <EmbeddedResource Include="SSaddEmp.resx">
       <DependentUpon>SSaddEmp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SSloginQR.resx">
+      <DependentUpon>SSloginQR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSprevilagesUser.resx">
+      <DependentUpon>SSprevilagesUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSnextback.resx">
+      <DependentUpon>SSnextback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSclientUserBox.resx">
+      <DependentUpon>SSclientUserBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSsectionBox .resx">
+      <DependentUpon>SSsectionBox .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SSmassdataupdate.resx">
       <DependentUpon>SSmassdataupdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,9 +357,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SSadminadddata.resx">
       <DependentUpon>SSadminadddata.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SSadminrecord.resx">
-      <DependentUpon>SSadminrecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SSdbConfiguration.resx">
       <DependentUpon>SSdbConfiguration.cs</DependentUpon>
@@ -267,12 +375,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="notificationBar.resx">
       <DependentUpon>notificationBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SSmenu.resx">
       <DependentUpon>SSmenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SSlogIn.resx">
       <DependentUpon>SSlogIn.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SSprevilages.resx">
       <DependentUpon>SSprevilages.cs</DependentUpon>
@@ -287,8 +398,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SScourseBox.resx">
+      <DependentUpon>SScourseBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SSstudentBox.resx">
       <DependentUpon>SSstudentBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SSUserpanel.resx">
+      <DependentUpon>SSUserpanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MyDbDataSet.xsc">
       <DependentUpon>MyDbDataSet.xsd</DependentUpon>
@@ -403,6 +520,7 @@
       <DependentUpon>MyDb.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Untitled-1 %281%29.ico" />
     <None Include="Resources\warning-icon-png-2749.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

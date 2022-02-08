@@ -45,6 +45,9 @@ namespace Surveillance_FaceRecognition
             _handler.dataTransfer[5] = Database.Text;
             _handler.createProperties();
             mainlogin.Refresh();
+            MessageBox.Show("Connection for " + User.Text + " on database " + Database.Text + " Is connected successfully");
+            SSlogIn log = new SSlogIn();
+            log.Show();
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)

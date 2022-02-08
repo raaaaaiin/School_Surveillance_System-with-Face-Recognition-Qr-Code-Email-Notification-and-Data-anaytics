@@ -179,7 +179,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label4.Font = new System.Drawing.Font("Roboto", 12F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label4.Location = new System.Drawing.Point(16, 127);
+            this.label4.Location = new System.Drawing.Point(16, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 110;
@@ -318,7 +318,7 @@
             this.sy1.FillIndicator = false;
             this.sy1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sy1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.sy1.ForeColor = System.Drawing.Color.White;
+            this.sy1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sy1.FormattingEnabled = true;
             this.sy1.Icon = null;
             this.sy1.IndicatorColor = System.Drawing.Color.Silver;
@@ -351,7 +351,7 @@
             this.sec1.FillIndicator = false;
             this.sec1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sec1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.sec1.ForeColor = System.Drawing.Color.White;
+            this.sec1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sec1.FormattingEnabled = true;
             this.sec1.Icon = null;
             this.sec1.IndicatorColor = System.Drawing.Color.Silver;
@@ -384,7 +384,7 @@
             this.prog1.FillIndicator = false;
             this.prog1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prog1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.prog1.ForeColor = System.Drawing.Color.White;
+            this.prog1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.prog1.FormattingEnabled = true;
             this.prog1.Icon = null;
             this.prog1.IndicatorColor = System.Drawing.Color.Silver;
@@ -417,7 +417,7 @@
             this.year1.FillIndicator = false;
             this.year1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.year1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.year1.ForeColor = System.Drawing.Color.White;
+            this.year1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.year1.FormattingEnabled = true;
             this.year1.Icon = null;
             this.year1.IndicatorColor = System.Drawing.Color.Silver;
@@ -457,7 +457,7 @@
             this.sy3.FillIndicator = false;
             this.sy3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sy3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.sy3.ForeColor = System.Drawing.Color.White;
+            this.sy3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sy3.FormattingEnabled = true;
             this.sy3.Icon = null;
             this.sy3.IndicatorColor = System.Drawing.Color.Silver;
@@ -489,7 +489,7 @@
             this.sec3.FillIndicator = false;
             this.sec3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sec3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.sec3.ForeColor = System.Drawing.Color.White;
+            this.sec3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sec3.FormattingEnabled = true;
             this.sec3.Icon = null;
             this.sec3.IndicatorColor = System.Drawing.Color.Silver;
@@ -522,7 +522,7 @@
             this.prog3.FillIndicator = false;
             this.prog3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prog3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.prog3.ForeColor = System.Drawing.Color.White;
+            this.prog3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.prog3.FormattingEnabled = true;
             this.prog3.Icon = null;
             this.prog3.IndicatorColor = System.Drawing.Color.Silver;
@@ -555,7 +555,7 @@
             this.year3.FillIndicator = false;
             this.year3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.year3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.year3.ForeColor = System.Drawing.Color.White;
+            this.year3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.year3.FormattingEnabled = true;
             this.year3.Icon = null;
             this.year3.IndicatorColor = System.Drawing.Color.Silver;
@@ -595,7 +595,7 @@
             this.sy2.FillIndicator = false;
             this.sy2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sy2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.sy2.ForeColor = System.Drawing.Color.White;
+            this.sy2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sy2.FormattingEnabled = true;
             this.sy2.Icon = null;
             this.sy2.IndicatorColor = System.Drawing.Color.Silver;
@@ -618,7 +618,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.label5.Font = new System.Drawing.Font("Roboto", 12F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label5.Location = new System.Drawing.Point(45, 180);
+            this.label5.Location = new System.Drawing.Point(45, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 19);
             this.label5.TabIndex = 133;
@@ -640,7 +640,7 @@
             this.sec2.FillIndicator = false;
             this.sec2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sec2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.sec2.ForeColor = System.Drawing.Color.White;
+            this.sec2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sec2.FormattingEnabled = true;
             this.sec2.Icon = null;
             this.sec2.IndicatorColor = System.Drawing.Color.Silver;
@@ -673,7 +673,7 @@
             this.prog2.FillIndicator = false;
             this.prog2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prog2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.prog2.ForeColor = System.Drawing.Color.White;
+            this.prog2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.prog2.FormattingEnabled = true;
             this.prog2.Icon = null;
             this.prog2.IndicatorColor = System.Drawing.Color.Silver;
@@ -706,7 +706,7 @@
             this.year2.FillIndicator = false;
             this.year2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.year2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.year2.ForeColor = System.Drawing.Color.White;
+            this.year2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.year2.FormattingEnabled = true;
             this.year2.Icon = null;
             this.year2.IndicatorColor = System.Drawing.Color.Silver;

@@ -35,9 +35,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +46,8 @@
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.bunifuPictureBox1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.bunifuButton1);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 65);
@@ -67,7 +65,7 @@
             this.bunifuPictureBox1.BorderRadius = 50;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(7, 9);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(4, 8);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(47, 47);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -78,39 +76,16 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Roboto", 8F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label2.Location = new System.Drawing.Point(63, 36);
+            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(93, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 16);
+            this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.label2.Click += new System.EventHandler(this.bunifuButton1_Click);
             this.label2.MouseHover += new System.EventHandler(this.goldy);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label1.Location = new System.Drawing.Point(55, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 35);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label1.Click += new System.EventHandler(this.bunifuButton1_Click);
-            this.label1.MouseHover += new System.EventHandler(this.goldy);
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(-11, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 78);
-            this.panel2.TabIndex = 12;
-            this.panel2.Click += new System.EventHandler(this.bunifuButton1_Click);
-            this.panel2.MouseLeave += new System.EventHandler(this.normaly);
-            this.panel2.MouseHover += new System.EventHandler(this.goldy);
             // 
             // bunifuButton1
             // 
@@ -142,14 +117,14 @@
             this.bunifuButton1.IconMarginLeft = 11;
             this.bunifuButton1.IconPadding = 10;
             this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.IdleBorderRadius = 3;
             this.bunifuButton1.IdleBorderThickness = 1;
             this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(191, 8);
+            this.bunifuButton1.Location = new System.Drawing.Point(192, -1);
             this.bunifuButton1.Name = "bunifuButton1";
             stateProperties1.BorderColor = System.Drawing.Color.Gold;
             stateProperties1.BorderRadius = 3;
@@ -169,13 +144,25 @@
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.bunifuButton1.OnPressedState = stateProperties2;
-            this.bunifuButton1.Size = new System.Drawing.Size(20, 49);
+            this.bunifuButton1.Size = new System.Drawing.Size(27, 78);
             this.bunifuButton1.TabIndex = 3;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextMarginLeft = 0;
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             this.bunifuButton1.MouseHover += new System.EventHandler(this.goldy);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(55, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 45);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            this.label1.MouseHover += new System.EventHandler(this.goldy);
             // 
             // SSstudentBox
             // 
@@ -196,7 +183,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;

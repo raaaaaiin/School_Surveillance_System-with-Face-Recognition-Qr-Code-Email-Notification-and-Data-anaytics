@@ -43,7 +43,6 @@ namespace Surveillance_FaceRecognition
         {
             con.Open();
             con.Close();
-            MessageBox.Show("Hello, world.");
         }
     }
 }

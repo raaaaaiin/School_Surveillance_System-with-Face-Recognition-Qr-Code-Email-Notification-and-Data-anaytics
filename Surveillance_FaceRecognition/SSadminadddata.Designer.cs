@@ -47,6 +47,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.year = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -81,11 +87,25 @@
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.timez = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.SchedDay4 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.SchedDay3 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.SchedDay5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SchedDay2 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.SchedDay1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dayz = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.secz = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.progz = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.yearz = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.bunifuButton5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,11 +129,11 @@
             // 
             this.year.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.year.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.year.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.year.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.year.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.year.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.year.Font = new System.Drawing.Font("Roboto", 11F);
-            this.year.ForeColor = System.Drawing.Color.White;
+            this.year.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.year.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.year.HintText = "Year";
             this.year.isPassword = false;
@@ -141,10 +161,11 @@
             // 
             this.program.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.program.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.program.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.program.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.program.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.program.Font = new System.Drawing.Font("Roboto", 11F);
-            this.program.ForeColor = System.Drawing.Color.White;
+            this.program.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.program.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.program.HintText = "Program";
             this.program.isPassword = false;
@@ -184,7 +205,7 @@
             this.year2d.FillIndicator = false;
             this.year2d.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.year2d.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.year2d.ForeColor = System.Drawing.Color.White;
+            this.year2d.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.year2d.FormattingEnabled = true;
             this.year2d.Icon = null;
             this.year2d.IndicatorColor = System.Drawing.Color.Silver;
@@ -212,11 +233,11 @@
             // 
             this.sec.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.sec.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.sec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.sec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.sec.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.sec.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.sec.Font = new System.Drawing.Font("Roboto", 11F);
-            this.sec.ForeColor = System.Drawing.Color.White;
+            this.sec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sec.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.sec.HintText = "Section";
             this.sec.isPassword = false;
@@ -224,7 +245,7 @@
             this.sec.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
             this.sec.LineMouseHoverColor = System.Drawing.Color.Gold;
             this.sec.LineThickness = 2;
-            this.sec.Location = new System.Drawing.Point(287, 79);
+            this.sec.Location = new System.Drawing.Point(287, 80);
             this.sec.Margin = new System.Windows.Forms.Padding(4);
             this.sec.MaxLength = 32767;
             this.sec.Name = "sec";
@@ -272,7 +293,7 @@
             this.yeard.FillIndicator = false;
             this.yeard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yeard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.yeard.ForeColor = System.Drawing.Color.White;
+            this.yeard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.yeard.FormattingEnabled = true;
             this.yeard.Icon = null;
             this.yeard.IndicatorColor = System.Drawing.Color.Silver;
@@ -311,7 +332,7 @@
             this.progd.FillIndicator = false;
             this.progd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.progd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.progd.ForeColor = System.Drawing.Color.White;
+            this.progd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.progd.FormattingEnabled = true;
             this.progd.Icon = null;
             this.progd.IndicatorColor = System.Drawing.Color.Silver;
@@ -321,13 +342,6 @@
             this.progd.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.progd.ItemHeight = 18;
             this.progd.ItemHighLightColor = System.Drawing.Color.Gold;
-            this.progd.Items.AddRange(new object[] {
-            "Collection",
-            "Book",
-            "Records",
-            "Section",
-            "User",
-            ""});
             this.progd.Location = new System.Drawing.Point(170, 86);
             this.progd.Name = "progd";
             this.progd.Size = new System.Drawing.Size(110, 24);
@@ -337,6 +351,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.label2.Font = new System.Drawing.Font("Roboto", 12F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.label2.Location = new System.Drawing.Point(45, 10);
@@ -348,6 +363,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label3.Font = new System.Drawing.Font("Roboto", 12F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.label3.Location = new System.Drawing.Point(24, 64);
@@ -359,7 +375,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.label4.Font = new System.Drawing.Font("Roboto", 12F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.label4.Location = new System.Drawing.Point(20, 89);
@@ -384,7 +400,7 @@
             this.yeardfill.FillIndicator = false;
             this.yeardfill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yeardfill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.yeardfill.ForeColor = System.Drawing.Color.White;
+            this.yeardfill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.yeardfill.FormattingEnabled = true;
             this.yeardfill.Icon = null;
             this.yeardfill.IndicatorColor = System.Drawing.Color.Silver;
@@ -401,7 +417,7 @@
             "Section",
             "User",
             ""});
-            this.yeardfill.Location = new System.Drawing.Point(96, 127);
+            this.yeardfill.Location = new System.Drawing.Point(96, 167);
             this.yeardfill.Name = "yeardfill";
             this.yeardfill.Size = new System.Drawing.Size(71, 24);
             this.yeardfill.TabIndex = 114;
@@ -431,7 +447,7 @@
             this.programdfill.FillIndicator = false;
             this.programdfill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.programdfill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.programdfill.ForeColor = System.Drawing.Color.White;
+            this.programdfill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.programdfill.FormattingEnabled = true;
             this.programdfill.Icon = null;
             this.programdfill.IndicatorColor = System.Drawing.Color.Silver;
@@ -441,14 +457,7 @@
             this.programdfill.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.programdfill.ItemHeight = 18;
             this.programdfill.ItemHighLightColor = System.Drawing.Color.Gold;
-            this.programdfill.Items.AddRange(new object[] {
-            "Collection",
-            "Book",
-            "Records",
-            "Section",
-            "User",
-            ""});
-            this.programdfill.Location = new System.Drawing.Point(170, 167);
+            this.programdfill.Location = new System.Drawing.Point(170, 207);
             this.programdfill.Name = "programdfill";
             this.programdfill.Size = new System.Drawing.Size(110, 24);
             this.programdfill.TabIndex = 119;
@@ -470,7 +479,7 @@
             this.yeard2fill.FillIndicator = false;
             this.yeard2fill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yeard2fill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.yeard2fill.ForeColor = System.Drawing.Color.White;
+            this.yeard2fill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.yeard2fill.FormattingEnabled = true;
             this.yeard2fill.Icon = null;
             this.yeard2fill.IndicatorColor = System.Drawing.Color.Silver;
@@ -487,7 +496,7 @@
             "Section",
             "User",
             ""});
-            this.yeard2fill.Location = new System.Drawing.Point(96, 167);
+            this.yeard2fill.Location = new System.Drawing.Point(96, 207);
             this.yeard2fill.Name = "yeard2fill";
             this.yeard2fill.Size = new System.Drawing.Size(71, 24);
             this.yeard2fill.TabIndex = 118;
@@ -518,7 +527,7 @@
             this.progd1fill.FillIndicator = false;
             this.progd1fill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.progd1fill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.progd1fill.ForeColor = System.Drawing.Color.White;
+            this.progd1fill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.progd1fill.FormattingEnabled = true;
             this.progd1fill.Icon = null;
             this.progd1fill.IndicatorColor = System.Drawing.Color.Silver;
@@ -528,14 +537,7 @@
             this.progd1fill.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.progd1fill.ItemHeight = 18;
             this.progd1fill.ItemHighLightColor = System.Drawing.Color.Gold;
-            this.progd1fill.Items.AddRange(new object[] {
-            "Collection",
-            "Book",
-            "Records",
-            "Section",
-            "User",
-            ""});
-            this.progd1fill.Location = new System.Drawing.Point(170, 207);
+            this.progd1fill.Location = new System.Drawing.Point(170, 247);
             this.progd1fill.Name = "progd1fill";
             this.progd1fill.Size = new System.Drawing.Size(110, 24);
             this.progd1fill.TabIndex = 123;
@@ -558,7 +560,7 @@
             this.yeard3fill.FillIndicator = false;
             this.yeard3fill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yeard3fill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.yeard3fill.ForeColor = System.Drawing.Color.White;
+            this.yeard3fill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.yeard3fill.FormattingEnabled = true;
             this.yeard3fill.Icon = null;
             this.yeard3fill.IndicatorColor = System.Drawing.Color.Silver;
@@ -575,7 +577,7 @@
             "Section",
             "User",
             ""});
-            this.yeard3fill.Location = new System.Drawing.Point(96, 207);
+            this.yeard3fill.Location = new System.Drawing.Point(96, 247);
             this.yeard3fill.Name = "yeard3fill";
             this.yeard3fill.Size = new System.Drawing.Size(71, 24);
             this.yeard3fill.TabIndex = 122;
@@ -598,7 +600,7 @@
             this.secdfill.FillIndicator = false;
             this.secdfill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.secdfill.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.secdfill.ForeColor = System.Drawing.Color.White;
+            this.secdfill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.secdfill.FormattingEnabled = true;
             this.secdfill.Icon = null;
             this.secdfill.IndicatorColor = System.Drawing.Color.Silver;
@@ -608,14 +610,7 @@
             this.secdfill.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.secdfill.ItemHeight = 18;
             this.secdfill.ItemHighLightColor = System.Drawing.Color.Gold;
-            this.secdfill.Items.AddRange(new object[] {
-            "Collection",
-            "Book",
-            "Records",
-            "Section",
-            "User",
-            ""});
-            this.secdfill.Location = new System.Drawing.Point(287, 207);
+            this.secdfill.Location = new System.Drawing.Point(287, 247);
             this.secdfill.Name = "secdfill";
             this.secdfill.Size = new System.Drawing.Size(54, 24);
             this.secdfill.TabIndex = 124;
@@ -625,10 +620,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.label7.Font = new System.Drawing.Font("Roboto", 12F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label7.Location = new System.Drawing.Point(15, 209);
+            this.label7.Location = new System.Drawing.Point(15, 249);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 19);
             this.label7.TabIndex = 128;
@@ -637,10 +632,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.label8.Font = new System.Drawing.Font("Roboto", 12F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label8.Location = new System.Drawing.Point(39, 128);
+            this.label8.Location = new System.Drawing.Point(39, 168);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 19);
             this.label8.TabIndex = 127;
@@ -649,9 +644,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label9.Font = new System.Drawing.Font("Roboto", 12F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.label9.Location = new System.Drawing.Point(21, 185);
+            this.label9.Location = new System.Drawing.Point(21, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 19);
             this.label9.TabIndex = 126;
@@ -694,7 +690,7 @@
             this.bunifuButton10.IdleIconLeftImage = null;
             this.bunifuButton10.IdleIconRightImage = null;
             this.bunifuButton10.IndicateFocus = false;
-            this.bunifuButton10.Location = new System.Drawing.Point(347, 207);
+            this.bunifuButton10.Location = new System.Drawing.Point(404, 244);
             this.bunifuButton10.Name = "bunifuButton10";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             stateProperties1.BorderRadius = 3;
@@ -758,7 +754,7 @@
             this.bunifuButton9.IdleIconLeftImage = null;
             this.bunifuButton9.IdleIconRightImage = null;
             this.bunifuButton9.IndicateFocus = false;
-            this.bunifuButton9.Location = new System.Drawing.Point(347, 167);
+            this.bunifuButton9.Location = new System.Drawing.Point(404, 204);
             this.bunifuButton9.Name = "bunifuButton9";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             stateProperties3.BorderRadius = 3;
@@ -822,7 +818,7 @@
             this.bunifuButton8.IdleIconLeftImage = null;
             this.bunifuButton8.IdleIconRightImage = null;
             this.bunifuButton8.IndicateFocus = false;
-            this.bunifuButton8.Location = new System.Drawing.Point(412, 126);
+            this.bunifuButton8.Location = new System.Drawing.Point(469, 164);
             this.bunifuButton8.Name = "bunifuButton8";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             stateProperties5.BorderRadius = 3;
@@ -886,7 +882,7 @@
             this.bunifuButton4.IdleIconLeftImage = null;
             this.bunifuButton4.IdleIconRightImage = null;
             this.bunifuButton4.IndicateFocus = false;
-            this.bunifuButton4.Location = new System.Drawing.Point(413, 86);
+            this.bunifuButton4.Location = new System.Drawing.Point(470, 86);
             this.bunifuButton4.Name = "bunifuButton4";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             stateProperties7.BorderRadius = 3;
@@ -950,7 +946,7 @@
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = false;
-            this.bunifuButton3.Location = new System.Drawing.Point(424, 61);
+            this.bunifuButton3.Location = new System.Drawing.Point(481, 61);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             stateProperties9.BorderRadius = 3;
@@ -1014,7 +1010,7 @@
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(413, 7);
+            this.bunifuButton2.Location = new System.Drawing.Point(470, 7);
             this.bunifuButton2.Name = "bunifuButton2";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             stateProperties11.BorderRadius = 3;
@@ -1044,27 +1040,316 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.panel11.Controls.Add(this.timez);
+            this.panel11.Controls.Add(this.SchedDay4);
+            this.panel11.Controls.Add(this.SchedDay3);
+            this.panel11.Controls.Add(this.SchedDay5);
+            this.panel11.Controls.Add(this.label1);
+            this.panel11.Controls.Add(this.SchedDay2);
+            this.panel11.Controls.Add(this.SchedDay1);
+            this.panel11.Controls.Add(this.bunifuButton1);
             this.panel11.Controls.Add(this.flowLayoutPanel5);
             this.panel11.Controls.Add(this.flowLayoutPanel4);
-            this.panel11.Controls.Add(this.flowLayoutPanel3);
             this.panel11.Controls.Add(this.flowLayoutPanel2);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Controls.Add(this.program);
             this.panel11.Controls.Add(this.label3);
             this.panel11.Controls.Add(this.bunifuButton3);
             this.panel11.Controls.Add(this.flowLayoutPanel1);
+            this.panel11.Controls.Add(this.flowLayoutPanel3);
             this.panel11.Location = new System.Drawing.Point(-11, -15);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(534, 415);
+            this.panel11.Size = new System.Drawing.Size(618, 415);
             this.panel11.TabIndex = 132;
             this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // timez
+            // 
+            this.timez.AllowDrop = true;
+            this.timez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.timez.BorderRadius = 1;
+            this.timez.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.timez.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.timez.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.timez.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.timez.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.timez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.timez.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.timez.FillDropDown = false;
+            this.timez.FillIndicator = false;
+            this.timez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timez.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.timez.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.timez.FormattingEnabled = true;
+            this.timez.Icon = null;
+            this.timez.IndicatorColor = System.Drawing.Color.Silver;
+            this.timez.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.timez.ItemBackColor = System.Drawing.Color.White;
+            this.timez.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.timez.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.timez.ItemHeight = 18;
+            this.timez.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.timez.Location = new System.Drawing.Point(421, 300);
+            this.timez.Name = "timez";
+            this.timez.Size = new System.Drawing.Size(54, 24);
+            this.timez.TabIndex = 157;
+            this.timez.Text = null;
+            this.timez.SelectedIndexChanged += new System.EventHandler(this.timez_SelectedIndexChanged);
+            // 
+            // SchedDay4
+            // 
+            this.SchedDay4.AllowDrop = true;
+            this.SchedDay4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.SchedDay4.BorderRadius = 1;
+            this.SchedDay4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.SchedDay4.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.SchedDay4.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SchedDay4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SchedDay4.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.SchedDay4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SchedDay4.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.SchedDay4.FillDropDown = false;
+            this.SchedDay4.FillIndicator = false;
+            this.SchedDay4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SchedDay4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SchedDay4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay4.FormattingEnabled = true;
+            this.SchedDay4.Icon = null;
+            this.SchedDay4.IndicatorColor = System.Drawing.Color.Silver;
+            this.SchedDay4.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.SchedDay4.ItemBackColor = System.Drawing.Color.White;
+            this.SchedDay4.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SchedDay4.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay4.ItemHeight = 18;
+            this.SchedDay4.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.SchedDay4.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.SchedDay4.Location = new System.Drawing.Point(326, 140);
+            this.SchedDay4.Name = "SchedDay4";
+            this.SchedDay4.Size = new System.Drawing.Size(95, 24);
+            this.SchedDay4.TabIndex = 149;
+            this.SchedDay4.Text = null;
+            // 
+            // SchedDay3
+            // 
+            this.SchedDay3.AllowDrop = true;
+            this.SchedDay3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.SchedDay3.BorderRadius = 1;
+            this.SchedDay3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.SchedDay3.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.SchedDay3.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SchedDay3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SchedDay3.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.SchedDay3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SchedDay3.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.SchedDay3.FillDropDown = false;
+            this.SchedDay3.FillIndicator = false;
+            this.SchedDay3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SchedDay3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SchedDay3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay3.FormattingEnabled = true;
+            this.SchedDay3.Icon = null;
+            this.SchedDay3.IndicatorColor = System.Drawing.Color.Silver;
+            this.SchedDay3.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.SchedDay3.ItemBackColor = System.Drawing.Color.White;
+            this.SchedDay3.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SchedDay3.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay3.ItemHeight = 18;
+            this.SchedDay3.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.SchedDay3.Location = new System.Drawing.Point(269, 140);
+            this.SchedDay3.Name = "SchedDay3";
+            this.SchedDay3.Size = new System.Drawing.Size(53, 24);
+            this.SchedDay3.TabIndex = 148;
+            this.SchedDay3.Text = null;
+            this.SchedDay3.SelectedIndexChanged += new System.EventHandler(this.SchedDay3_SelectedIndexChanged);
+            // 
+            // SchedDay5
+            // 
+            this.SchedDay5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.SchedDay5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.SchedDay5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.SchedDay5.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.SchedDay5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SchedDay5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.SchedDay5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay5.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay5.HintText = "24:00";
+            this.SchedDay5.isPassword = false;
+            this.SchedDay5.LineFocusedColor = System.Drawing.Color.Gold;
+            this.SchedDay5.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.SchedDay5.LineMouseHoverColor = System.Drawing.Color.Gold;
+            this.SchedDay5.LineThickness = 2;
+            this.SchedDay5.Location = new System.Drawing.Point(428, 133);
+            this.SchedDay5.Margin = new System.Windows.Forms.Padding(4);
+            this.SchedDay5.MaxLength = 32767;
+            this.SchedDay5.Name = "SchedDay5";
+            this.SchedDay5.Size = new System.Drawing.Size(46, 31);
+            this.SchedDay5.TabIndex = 143;
+            this.SchedDay5.Text = "00:00";
+            this.SchedDay5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SchedDay5.OnValueChanged += new System.EventHandler(this.SchedDay5_OnValueChanged);
+            this.SchedDay5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SchedDay5_MouseClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.label1.Location = new System.Drawing.Point(20, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 19);
+            this.label1.TabIndex = 142;
+            this.label1.Text = "Schedule :";
+            // 
+            // SchedDay2
+            // 
+            this.SchedDay2.AllowDrop = true;
+            this.SchedDay2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.SchedDay2.BorderRadius = 1;
+            this.SchedDay2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.SchedDay2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.SchedDay2.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SchedDay2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SchedDay2.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.SchedDay2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SchedDay2.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.SchedDay2.FillDropDown = false;
+            this.SchedDay2.FillIndicator = false;
+            this.SchedDay2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SchedDay2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SchedDay2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay2.FormattingEnabled = true;
+            this.SchedDay2.Icon = null;
+            this.SchedDay2.IndicatorColor = System.Drawing.Color.Silver;
+            this.SchedDay2.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.SchedDay2.ItemBackColor = System.Drawing.Color.White;
+            this.SchedDay2.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SchedDay2.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay2.ItemHeight = 18;
+            this.SchedDay2.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.SchedDay2.Location = new System.Drawing.Point(181, 140);
+            this.SchedDay2.Name = "SchedDay2";
+            this.SchedDay2.Size = new System.Drawing.Size(82, 24);
+            this.SchedDay2.TabIndex = 141;
+            this.SchedDay2.Text = null;
+            this.SchedDay2.SelectedIndexChanged += new System.EventHandler(this.SchedDay2_SelectedIndexChanged);
+            // 
+            // SchedDay1
+            // 
+            this.SchedDay1.AllowDrop = true;
+            this.SchedDay1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.SchedDay1.BorderRadius = 1;
+            this.SchedDay1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.SchedDay1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.SchedDay1.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SchedDay1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.SchedDay1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.SchedDay1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SchedDay1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.SchedDay1.FillDropDown = false;
+            this.SchedDay1.FillIndicator = false;
+            this.SchedDay1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SchedDay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SchedDay1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay1.FormattingEnabled = true;
+            this.SchedDay1.Icon = null;
+            this.SchedDay1.IndicatorColor = System.Drawing.Color.Silver;
+            this.SchedDay1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.SchedDay1.ItemBackColor = System.Drawing.Color.White;
+            this.SchedDay1.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.SchedDay1.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.SchedDay1.ItemHeight = 18;
+            this.SchedDay1.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.SchedDay1.Items.AddRange(new object[] {
+            "Collection",
+            "Book",
+            "Records",
+            "Section",
+            "User",
+            ""});
+            this.SchedDay1.Location = new System.Drawing.Point(107, 140);
+            this.SchedDay1.Name = "SchedDay1";
+            this.SchedDay1.Size = new System.Drawing.Size(67, 24);
+            this.SchedDay1.TabIndex = 140;
+            this.SchedDay1.Text = null;
+            this.SchedDay1.SelectedIndexChanged += new System.EventHandler(this.SchedDay1_SelectedIndexChanged);
+            // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.AllowToggling = false;
+            this.bunifuButton1.AnimationSpeed = 200;
+            this.bunifuButton1.AutoGenerateColors = false;
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton1.ButtonText = "Add Schedule";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.ColorContrastOnClick = 45;
+            this.bunifuButton1.ColorContrastOnHover = 45;
+            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges7;
+            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton1.IconMarginLeft = 11;
+            this.bunifuButton1.IconPadding = 10;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.bunifuButton1.IdleBorderRadius = 3;
+            this.bunifuButton1.IdleBorderThickness = 1;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.IndicateFocus = false;
+            this.bunifuButton1.Location = new System.Drawing.Point(480, 140);
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            stateProperties13.BorderRadius = 3;
+            stateProperties13.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties13.BorderThickness = 1;
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            stateProperties13.ForeColor = System.Drawing.Color.White;
+            stateProperties13.IconLeftImage = null;
+            stateProperties13.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            stateProperties14.BorderRadius = 3;
+            stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties14.BorderThickness = 1;
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            stateProperties14.ForeColor = System.Drawing.Color.White;
+            stateProperties14.IconLeftImage = null;
+            stateProperties14.IconRightImage = null;
+            this.bunifuButton1.OnPressedState = stateProperties14;
+            this.bunifuButton1.Size = new System.Drawing.Size(89, 24);
+            this.bunifuButton1.TabIndex = 139;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.TextMarginLeft = 0;
+            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click_1);
             // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.flowLayoutPanel5.Location = new System.Drawing.Point(2, 374);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(520, 42);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(613, 42);
             this.flowLayoutPanel5.TabIndex = 137;
             this.flowLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel5_Paint);
             // 
@@ -1073,23 +1358,15 @@
             this.flowLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.flowLayoutPanel4.Location = new System.Drawing.Point(2, 292);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(521, 42);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(636, 42);
             this.flowLayoutPanel4.TabIndex = 136;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(1, 213);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(521, 42);
-            this.flowLayoutPanel3.TabIndex = 135;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.flowLayoutPanel2.Location = new System.Drawing.Point(1, 131);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(521, 42);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(604, 42);
             this.flowLayoutPanel2.TabIndex = 134;
             // 
             // flowLayoutPanel1
@@ -1097,15 +1374,237 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 53);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(521, 42);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(615, 42);
             this.flowLayoutPanel1.TabIndex = 133;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(1, 213);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(614, 42);
+            this.flowLayoutPanel3.TabIndex = 135;
+            // 
+            // dayz
+            // 
+            this.dayz.AllowDrop = true;
+            this.dayz.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dayz.BorderRadius = 1;
+            this.dayz.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.dayz.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.dayz.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dayz.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dayz.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.dayz.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dayz.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dayz.FillDropDown = false;
+            this.dayz.FillIndicator = false;
+            this.dayz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dayz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.dayz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dayz.FormattingEnabled = true;
+            this.dayz.Icon = null;
+            this.dayz.IndicatorColor = System.Drawing.Color.Silver;
+            this.dayz.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dayz.ItemBackColor = System.Drawing.Color.White;
+            this.dayz.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.dayz.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.dayz.ItemHeight = 18;
+            this.dayz.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.dayz.Location = new System.Drawing.Point(312, 285);
+            this.dayz.Name = "dayz";
+            this.dayz.Size = new System.Drawing.Size(95, 24);
+            this.dayz.TabIndex = 156;
+            this.dayz.Text = null;
+            this.dayz.SelectedIndexChanged += new System.EventHandler(this.bunifuDropdown1_SelectedIndexChanged);
+            // 
+            // secz
+            // 
+            this.secz.AllowDrop = true;
+            this.secz.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.secz.BorderRadius = 1;
+            this.secz.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.secz.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.secz.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.secz.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.secz.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.secz.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.secz.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.secz.FillDropDown = false;
+            this.secz.FillIndicator = false;
+            this.secz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.secz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.secz.FormattingEnabled = true;
+            this.secz.Icon = null;
+            this.secz.IndicatorColor = System.Drawing.Color.Silver;
+            this.secz.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.secz.ItemBackColor = System.Drawing.Color.White;
+            this.secz.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.secz.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.secz.ItemHeight = 18;
+            this.secz.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.secz.Location = new System.Drawing.Point(255, 285);
+            this.secz.Name = "secz";
+            this.secz.Size = new System.Drawing.Size(53, 24);
+            this.secz.TabIndex = 155;
+            this.secz.Text = null;
+            this.secz.SelectedIndexChanged += new System.EventHandler(this.secz_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.label5.Font = new System.Drawing.Font("Roboto", 12F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.label5.Location = new System.Drawing.Point(6, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 19);
+            this.label5.TabIndex = 153;
+            this.label5.Text = "Schedule :";
+            // 
+            // progz
+            // 
+            this.progz.AllowDrop = true;
+            this.progz.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.progz.BorderRadius = 1;
+            this.progz.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.progz.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.progz.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.progz.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.progz.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.progz.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.progz.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.progz.FillDropDown = false;
+            this.progz.FillIndicator = false;
+            this.progz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.progz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.progz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.progz.FormattingEnabled = true;
+            this.progz.Icon = null;
+            this.progz.IndicatorColor = System.Drawing.Color.Silver;
+            this.progz.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.progz.ItemBackColor = System.Drawing.Color.White;
+            this.progz.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.progz.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.progz.ItemHeight = 18;
+            this.progz.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.progz.Location = new System.Drawing.Point(167, 285);
+            this.progz.Name = "progz";
+            this.progz.Size = new System.Drawing.Size(82, 24);
+            this.progz.TabIndex = 152;
+            this.progz.Text = null;
+            this.progz.SelectedIndexChanged += new System.EventHandler(this.progz_SelectedIndexChanged);
+            // 
+            // yearz
+            // 
+            this.yearz.AllowDrop = true;
+            this.yearz.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.yearz.BorderRadius = 1;
+            this.yearz.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.yearz.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.yearz.DisabledColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.yearz.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.yearz.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.yearz.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yearz.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.yearz.FillDropDown = false;
+            this.yearz.FillIndicator = false;
+            this.yearz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yearz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.yearz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.yearz.FormattingEnabled = true;
+            this.yearz.Icon = null;
+            this.yearz.IndicatorColor = System.Drawing.Color.Silver;
+            this.yearz.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.yearz.ItemBackColor = System.Drawing.Color.White;
+            this.yearz.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.yearz.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.yearz.ItemHeight = 18;
+            this.yearz.ItemHighLightColor = System.Drawing.Color.Gold;
+            this.yearz.Location = new System.Drawing.Point(93, 285);
+            this.yearz.Name = "yearz";
+            this.yearz.Size = new System.Drawing.Size(67, 24);
+            this.yearz.TabIndex = 151;
+            this.yearz.Text = null;
+            this.yearz.SelectedIndexChanged += new System.EventHandler(this.yearz_SelectedIndexChanged);
+            // 
+            // bunifuButton5
+            // 
+            this.bunifuButton5.AllowToggling = false;
+            this.bunifuButton5.AnimationSpeed = 200;
+            this.bunifuButton5.AutoGenerateColors = false;
+            this.bunifuButton5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton5.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.bunifuButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton5.BackgroundImage")));
+            this.bunifuButton5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButton5.ButtonText = "Remove Sched";
+            this.bunifuButton5.ButtonTextMarginLeft = 0;
+            this.bunifuButton5.ColorContrastOnClick = 45;
+            this.bunifuButton5.ColorContrastOnHover = 45;
+            this.bunifuButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.bunifuButton5.CustomizableEdges = borderEdges8;
+            this.bunifuButton5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButton5.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.bunifuButton5.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButton5.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButton5.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButton5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuButton5.ForeColor = System.Drawing.Color.White;
+            this.bunifuButton5.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton5.IconMarginLeft = 11;
+            this.bunifuButton5.IconPadding = 10;
+            this.bunifuButton5.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButton5.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.bunifuButton5.IdleBorderRadius = 3;
+            this.bunifuButton5.IdleBorderThickness = 1;
+            this.bunifuButton5.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(86)))));
+            this.bunifuButton5.IdleIconLeftImage = null;
+            this.bunifuButton5.IdleIconRightImage = null;
+            this.bunifuButton5.IndicateFocus = false;
+            this.bunifuButton5.Location = new System.Drawing.Point(466, 285);
+            this.bunifuButton5.Name = "bunifuButton5";
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            stateProperties15.BorderRadius = 3;
+            stateProperties15.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties15.BorderThickness = 1;
+            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            stateProperties15.ForeColor = System.Drawing.Color.White;
+            stateProperties15.IconLeftImage = null;
+            stateProperties15.IconRightImage = null;
+            this.bunifuButton5.onHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            stateProperties16.BorderRadius = 3;
+            stateProperties16.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties16.BorderThickness = 1;
+            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            stateProperties16.ForeColor = System.Drawing.Color.White;
+            stateProperties16.IconLeftImage = null;
+            stateProperties16.IconRightImage = null;
+            this.bunifuButton5.OnPressedState = stateProperties16;
+            this.bunifuButton5.Size = new System.Drawing.Size(89, 24);
+            this.bunifuButton5.TabIndex = 150;
+            this.bunifuButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton5.TextMarginLeft = 0;
+            this.bunifuButton5.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton5.Click += new System.EventHandler(this.bunifuButton5_Click_1);
             // 
             // SSadminadddata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(510, 551);
+            this.ClientSize = new System.Drawing.Size(592, 551);
+            this.Controls.Add(this.dayz);
+            this.Controls.Add(this.secz);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.progz);
+            this.Controls.Add(this.yearz);
+            this.Controls.Add(this.bunifuButton5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.secdfill);
@@ -1137,6 +1636,7 @@
             this.Controls.Add(this.bunifuButton2);
             this.Controls.Add(this.panel11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SSadminadddata";
             this.Text = "dt";
             this.Load += new System.EventHandler(this.adminrecord_Load);
@@ -1187,5 +1687,19 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuDropdown SchedDay2;
+        private Bunifu.UI.WinForms.BunifuDropdown SchedDay1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuDropdown SchedDay3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox SchedDay5;
+        private Bunifu.UI.WinForms.BunifuDropdown SchedDay4;
+        private Bunifu.UI.WinForms.BunifuDropdown timez;
+        private Bunifu.UI.WinForms.BunifuDropdown dayz;
+        private Bunifu.UI.WinForms.BunifuDropdown secz;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.UI.WinForms.BunifuDropdown progz;
+        private Bunifu.UI.WinForms.BunifuDropdown yearz;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton5;
     }
 }

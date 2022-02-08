@@ -556,6 +556,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddstudentForm";
             this.Text = "Addstudent";
             this.Load += new System.EventHandler(this.Addstudent_Load);

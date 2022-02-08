@@ -35,10 +35,12 @@ namespace Surveillance_FaceRecognition
             auth = _func.authentication();
             if (auth == true)
             {
-                SSmenu manu = new SSmenu();
+                    SSmenu manu = new SSmenu();
+
                 manu.setrole = _func.role;
                 manu.preInit();
                 manu.Show();
+                    this.Hide();
             }
             else
             {
@@ -85,6 +87,15 @@ namespace Surveillance_FaceRecognition
         {
             LFRForm1 reg = new LFRForm1();
             reg.Show();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Former1 shower = new Former1();
+            shower.Show();
+            this.Hide();
+
+            
         }
     }
 }
